@@ -1,12 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "(?<slug>[a-z0-9-]+)\\.tortolanistudio\\.com" }],
-      "destination": "/:slug/:path*"
+      "destination": "/:slug"
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "(?<slug>[a-z0-9-]+)\\.tortolanistudio\\.com" }],
+      "destination": "/:slug/:path+"
     }
   ],
   "headers": [
