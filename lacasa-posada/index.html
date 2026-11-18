@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel/posada La Casa — Alojamiento en Punta del Este, Av. París</title>
-  <meta name="description" content="Hotel/posada La Casa en Av. París, Punta del Este. Recepción abierta las 24 horas. Consultá disponibilidad y reservá directo por WhatsApp o teléfono.">
-  <meta property="og:title" content="Hotel/posada La Casa — Alojamiento en Punta del Este">
-  <meta property="og:description" content="Av. París, Punta del Este. Abierto las 24 horas. Reservá directo por WhatsApp.">
+  <title>La Casa — Posada en Punta del Este, Av. París | Reservá directo</title>
+  <meta name="description" content="La Casa, posada sobre Av. París en Punta del Este. Consultá disponibilidad y reservá directo con el lugar, por WhatsApp o por teléfono, sin intermediarios.">
+  <meta property="og:title" content="La Casa — Posada en Punta del Este">
+  <meta property="og:description" content="Av. París, Punta del Este. Consultá fechas y reservá directo por WhatsApp o teléfono.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hotel-posada-la-casa.vercel.app">
   <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&q=80">
@@ -14,203 +14,169 @@
   <link rel="llms.txt" href="/llms.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Hotel",
-    "name": "Hotel/posada La Casa",
+    "@type": "LodgingBusiness",
+    "name": "La Casa",
+    "description": "Posada sobre Av. París en Punta del Este, con reserva directa por WhatsApp y teléfono.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. París",
       "addressLocality": "Punta del Este",
-      "addressRegion": "Maldonado",
       "postalCode": "20100",
+      "addressRegion": "Maldonado",
       "addressCountry": "UY"
     },
     "telephone": "+59898274727",
     "openingHours": "Mo-Su 00:00-23:59",
     "url": "https://hotel-posada-la-casa.vercel.app",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&q=80",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "3.4",
-      "reviewCount": "592",
-      "bestRating": "5"
-    }
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&q=80"
   }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { bg:'#FAFAF7', alt:'#F1F0EC', ink:'#1F2328', muted:'#5E6670', accent:'#27406B', soft:'#E8EDF5', hair:'#E2E0DA' },
-        fontFamily: { display:['Manrope','system-ui','sans-serif'], body:['Inter','system-ui','sans-serif'] }
+        colors: { bg:'#F7F3EC', alt:'#EAE2D3', ink:'#1E2A32', accent:'#2E6E8E', warm:'#D9A066', muted:'#5F6B72', hair:'#DCD3C4' },
+        fontFamily: { display:['Lora','Georgia','serif'], body:['Karla','system-ui','sans-serif'] }
       } }
     }
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: Inter, system-ui, sans-serif; background:#FAFAF7; color:#1F2328; line-height:1.6; }
-    h1,h2,h3 { font-family: Manrope, system-ui, sans-serif; font-weight:700; letter-spacing:-0.02em; }
-    .reveal { transition:opacity .4s ease, transform .4s ease; }
-    .reveal.in { opacity:1; transform:none; }
-    .card { transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s; box-shadow:0 4px 24px rgba(0,0,0,.06); }
+    body { font-family: Karla, system-ui, sans-serif; background:#F7F3EC; color:#1E2A32; line-height:1.65; }
+    h1,h2,h3 { font-family: Lora, Georgia, serif; font-weight:600; letter-spacing:-0.01em; }
+    .rise { animation: rise .8s cubic-bezier(.16,1,.3,1) both; }
+    @keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+    .tile { overflow:hidden; border-radius:1rem; }
+    .tile img { transition: transform .8s cubic-bezier(.16,1,.3,1); }
+    .tile:hover img { transform: scale(1.03); }
+    .card { transition: transform .25s cubic-bezier(.16,1,.3,1); box-shadow:0 4px 24px rgba(0,0,0,.06); }
     .card:hover { transform: translateY(-2px); }
-    .skip { position:absolute; left:-999px; top:0; background:#27406B; color:#fff; padding:.75rem 1rem; z-index:100; }
+    .skip { position:absolute; left:-999px; top:0; background:#2E6E8E; color:#fff; padding:.75rem 1rem; z-index:100; }
     .skip:focus { left:0; }
-    a:focus-visible, button:focus-visible { outline:3px solid #27406B; outline-offset:3px; }
-    @media (prefers-reduced-motion: reduce) { .reveal { transform:none; transition:opacity .3s; } .card:hover { transform:none; } html { scroll-behavior:auto; } }
+    a:focus-visible, button:focus-visible { outline:3px solid #2E6E8E; outline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) { .rise { animation:none; } .tile:hover img, .card:hover { transform:none; } html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
   <a href="#contenido" class="skip">Saltar al contenido</a>
 
-  <header class="absolute top-0 inset-x-0 z-30">
-    <div class="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between text-white">
-      <span class="font-display font-bold text-lg">Hotel/posada La Casa</span>
-      <a href="https://wa.me/59898274727" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center min-h-[44px] px-4 rounded-full border border-white/60 text-sm font-medium hover:bg-white hover:text-ink transition">Escribinos por WhatsApp</a>
-    </div>
-  </header>
-
   <main id="contenido">
-    <!-- HERO -->
-    <section class="relative min-h-[92vh] flex items-end text-white">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&q=80" alt="Playa de arena con el mar en calma" class="absolute inset-0 w-full h-full object-cover" width="1600" height="1067" fetchpriority="high">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#14203a]/90 via-[#14203a]/45 to-[#14203a]/20"></div>
-      <div class="relative max-w-6xl mx-auto px-5 pb-16 pt-40 w-full">
-        <p class="text-xs uppercase tracking-widest font-medium mb-4 text-white/80">Punta del Este · Av. París</p>
-        <h1 class="text-[clamp(2.6rem,8vw,6rem)] leading-[1.02] max-w-4xl">Una cama en Punta del Este, a cualquier hora.</h1>
-        <p class="mt-6 text-lg max-w-xl text-white/90">Hotel/posada La Casa. Recepción abierta las 24 horas, todos los días.</p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a href="https://wa.me/59898274727" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-[#25D366] text-[#0b2a16] font-semibold hover:brightness-95 transition">Consultar por WhatsApp</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Hotel%2Fposada%20La%20Casa%20Av.%20Par%C3%ADs%20Punta%20del%20Este" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-white text-ink font-semibold hover:bg-soft transition">Cómo llegar</a>
+    <!-- HERO: mosaico de 3 fotos + bloque de título propio -->
+    <section class="max-w-6xl mx-auto px-5 pt-6 md:pt-8 pb-16">
+      <div class="flex items-center justify-between mb-6">
+        <span class="font-display font-semibold text-xl">La Casa</span>
+        <a href="tel:+59898274727" class="inline-flex items-center min-h-[44px] text-sm font-semibold text-accent hover:underline">098 274 727</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-[200px_200px] md:grid-rows-[230px_230px] gap-3">
+        <div class="tile col-span-2 row-span-2">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&auto=format&q=80" alt="Playa de arena con el mar en calma" width="1400" height="933" loading="eager" fetchpriority="high" class="w-full h-full object-cover">
+        </div>
+        <div class="tile col-span-1 row-span-1 md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&auto=format&q=80" alt="Habitación sencilla con cama doble y luz natural" width="900" height="600" loading="eager" class="w-full h-full object-cover">
+        </div>
+        <div class="tile col-span-1 row-span-1 md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=900&auto=format&q=80" alt="Olas llegando a la orilla" width="900" height="600" loading="eager" class="w-full h-full object-cover">
         </div>
       </div>
-    </section>
-
-    <!-- DATOS RÁPIDOS -->
-    <section class="border-b border-hair bg-bg">
-      <div class="max-w-6xl mx-auto px-5 py-8 grid grid-cols-1 sm:grid-cols-3 gap-6 reveal">
-        <div><p class="text-xs uppercase tracking-widest text-muted">Dónde</p><p class="font-display font-semibold mt-1">Av. París, Punta del Este</p></div>
-        <div><p class="text-xs uppercase tracking-widest text-muted">Cuándo</p><p class="font-display font-semibold mt-1">Abierto las 24 horas</p></div>
-        <div><p class="text-xs uppercase tracking-widest text-muted">Cómo</p><p class="font-display font-semibold mt-1">Reserva directa: 098 274 727</p></div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="py-24">
-      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-start">
-        <div class="md:col-span-5 reveal">
-          <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Sobre La Casa</p>
-          <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight">Una posada, no un número de habitación.</h2>
+      <div class="mt-8 md:mt-10 grid md:grid-cols-12 gap-8 items-end bg-alt rounded-2xl p-7 md:p-10">
+        <div class="md:col-span-8 rise">
+          <p class="text-xs uppercase tracking-widest font-semibold text-accent mb-3">Punta del Este · Av. París</p>
+          <h1 class="text-[clamp(2.4rem,6.5vw,4.75rem)] leading-[1.04]">Dormir cerca del mar, sin vueltas.</h1>
+          <p class="mt-5 text-lg text-muted max-w-xl">La Casa es una posada en Punta del Este. Escribís, te contamos qué hay para tus fechas y reservás directo con nosotros.</p>
         </div>
-        <div class="md:col-span-6 md:col-start-7 space-y-5 text-muted text-lg reveal">
-          <p>La Casa es un hotel/posada sobre Av. París, en Punta del Este. Un lugar para dormir bien y salir a recorrer la ciudad y la costa sin complicarte.</p>
-          <p>Escribís por WhatsApp o llamás, te contamos qué hay disponible y cerrás la reserva directo con nosotros. Sin intermediarios de por medio.</p>
-          <p>Si llegás de madrugada o salís tarde, la recepción está abierta las 24 horas.</p>
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <a href="https://wa.me/59898274727?text=Hola%2C%20quer%C3%ADa%20consultar%20disponibilidad%20para%E2%80%A6%20(fechas%20y%20cantidad%20de%20personas)" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[52px] px-6 rounded-full bg-accent text-white font-semibold text-center hover:opacity-90 transition">Consultar disponibilidad por WhatsApp</a>
+          <a href="#llegar" class="inline-flex items-center justify-center min-h-[52px] px-6 rounded-full border border-ink/25 font-semibold hover:bg-white/60 transition">Cómo llegar</a>
         </div>
       </div>
     </section>
 
     <!-- OFERTA -->
-    <section class="py-24 bg-alt">
+    <section class="py-20 md:py-24 border-t border-hair" id="oferta">
       <div class="max-w-6xl mx-auto px-5">
-        <div class="max-w-2xl mb-12 reveal">
-          <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Qué ofrecemos</p>
-          <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight">Alojamiento, simple y claro.</h2>
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs uppercase tracking-widest font-semibold text-accent mb-3">Qué es La Casa</p>
+          <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight">Un lugar donde quedarte, con alguien del otro lado.</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-          <article class="card bg-bg rounded-2xl overflow-hidden reveal">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&auto=format&q=80" alt="Habitación de hotel con cama doble y luz natural" loading="eager" width="900" height="600" class="w-full h-56 object-cover">
-            <div class="p-6"><span class="font-display text-3xl text-hair font-bold">01</span><h3 class="text-xl mt-1">Habitaciones</h3><p class="text-muted mt-2">Alojamiento para estadías cortas o largas. Consultá por WhatsApp qué tipos de habitación hay disponibles.</p></div>
+          <article class="card bg-white/60 rounded-2xl p-7">
+            <span class="font-display text-4xl text-warm font-semibold">01</span>
+            <h3 class="text-xl mt-2">Alojamiento</h3>
+            <p class="text-muted mt-3">Una posada sobre Av. París, en Punta del Este. Para saber qué habitaciones hay disponibles en tus fechas, escribinos y te respondemos.</p>
           </article>
-          <article class="card bg-bg rounded-2xl overflow-hidden reveal">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&auto=format&q=80" alt="Habitación con cama doble" loading="eager" width="900" height="600" class="w-full h-56 object-cover">
-            <div class="p-6"><span class="font-display text-3xl text-hair font-bold">02</span><h3 class="text-xl mt-1">Recepción 24 hs</h3><p class="text-muted mt-2">Llegadas y salidas a cualquier hora, los siete días de la semana.</p></div>
+          <article class="card bg-white/60 rounded-2xl p-7">
+            <span class="font-display text-4xl text-warm font-semibold">02</span>
+            <h3 class="text-xl mt-2">Reserva directa</h3>
+            <p class="text-muted mt-3">Hablás con el lugar, no con una plataforma. Contanos fechas y cuántos son, y lo resolvemos por WhatsApp o por teléfono.</p>
           </article>
-          <article class="card bg-bg rounded-2xl overflow-hidden reveal">
-            <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=900&auto=format&q=80" alt="Olas llegando a la costa" loading="eager" width="900" height="600" class="w-full h-56 object-cover">
-            <div class="p-6"><span class="font-display text-3xl text-hair font-bold">03</span><h3 class="text-xl mt-1">Reserva directa</h3><p class="text-muted mt-2">Hablás con el hotel, no con una plataforma. Respondemos por WhatsApp y por teléfono.</p></div>
+          <article class="card bg-white/60 rounded-2xl p-7">
+            <span class="font-display text-4xl text-warm font-semibold">03</span>
+            <h3 class="text-xl mt-2">Punta del Este a mano</h3>
+            <p class="text-muted mt-3">Un punto de partida para recorrer la ciudad y la costa de Maldonado a tu ritmo.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- POR QUÉ -->
-    <section class="py-24">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight max-w-2xl mb-12 reveal">En pocas palabras.</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="reveal border-t border-ink pt-5"><p class="font-display text-5xl font-bold text-accent">Directo</p><p class="text-muted mt-2">Reservás hablando con el hotel, por WhatsApp o por teléfono.</p></div>
-          <div class="reveal border-t border-ink pt-5"><p class="font-display text-5xl font-bold text-accent">24 hs</p><p class="text-muted mt-2">Abierto todos los días de la semana, según el horario publicado en Google.</p></div>
-          <div class="reveal border-t border-ink pt-5"><p class="font-display text-5xl font-bold text-accent">Av. París</p><p class="text-muted mt-2">Ubicado en Punta del Este, departamento de Maldonado.</p></div>
+    <!-- CONTACTO RÁPIDO -->
+    <section class="bg-accent text-white py-14" id="contacto">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-6">
+          <h2 class="text-[clamp(1.8rem,3.5vw,2.75rem)] leading-tight">¿Ya tenés fechas? Escribinos.</h2>
+          <p class="mt-3 text-white/85">Recepción abierta las 24 horas, todos los días. Mandá fechas y cantidad de personas y te contestamos.</p>
+        </div>
+        <div class="md:col-span-6 flex flex-wrap gap-3 md:justify-end">
+          <a href="https://wa.me/59898274727?text=Hola%2C%20quer%C3%ADa%20consultar%20disponibilidad%20para%E2%80%A6%20(fechas%20y%20cantidad%20de%20personas)" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[52px] px-7 rounded-full bg-[#25D366] text-[#0b2a16] font-semibold hover:brightness-95 transition">WhatsApp</a>
+          <a href="tel:+59898274727" class="inline-flex items-center justify-center min-h-[52px] px-7 rounded-full bg-white text-ink font-semibold hover:bg-bg transition">Llamar al 098 274 727</a>
         </div>
       </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="py-24 bg-alt">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight max-w-2xl mb-10 reveal">Punta del Este, para quedarse.</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&auto=format&q=80" alt="Playa al atardecer" loading="eager" width="900" height="1200" class="reveal w-full h-64 md:h-96 object-cover rounded-xl md:col-span-2">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&auto=format&q=80" alt="Cama doble con ropa blanca en una habitación luminosa" loading="eager" width="700" height="700" class="reveal w-full h-64 md:h-96 object-cover rounded-xl">
-          <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=700&auto=format&q=80" alt="Olas en la costa" loading="eager" width="700" height="700" class="reveal w-full h-64 md:h-96 object-cover rounded-xl">
+    <!-- SOBRE -->
+    <section class="py-20 md:py-24 bg-alt" id="sobre">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-start">
+        <div class="md:col-span-5">
+          <p class="text-xs uppercase tracking-widest font-semibold text-accent mb-3">Sobre La Casa</p>
+          <h2 class="text-[clamp(2rem,4vw,3.25rem)] leading-tight">Una posada, no un número de reserva.</h2>
+        </div>
+        <div class="md:col-span-6 md:col-start-7 space-y-5 text-lg text-muted">
+          <p>La Casa está sobre Av. París, en Punta del Este. Es un lugar para dormir bien y salir a conocer la ciudad y la costa sin complicarte.</p>
+          <p>Cuando escribís, te responde el propio lugar. Casi 600 reseñas en Google cuentan cómo es quedarse acá; la mejor forma de saber si es para vos es preguntarnos por tus fechas.</p>
         </div>
       </div>
     </section>
 
-    <!-- HORARIOS Y UBICACIÓN -->
-    <section class="py-24" id="ubicacion">
+    <!-- CÓMO LLEGAR -->
+    <section class="py-20 md:py-24" id="llegar">
       <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-stretch">
-        <div class="reveal">
-          <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Horarios y ubicación</p>
-          <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight">Abierto las 24 horas.</h2>
-          <p class="text-muted mt-5 text-lg">Lunes a domingo, todo el día. Av. París, 20100 Punta del Este, Maldonado.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Hotel%2Fposada%20La%20Casa%20Av.%20Par%C3%ADs%20Punta%20del%20Este" target="_blank" rel="noopener" class="mt-7 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-accent text-white font-semibold hover:opacity-90 transition">Cómo llegar</a>
+        <div>
+          <p class="text-xs uppercase tracking-widest font-semibold text-accent mb-3">Cómo llegar</p>
+          <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight">Av. París, Punta del Este.</h2>
+          <p class="text-muted mt-5 text-lg">Av. París, 20100 Punta del Este, Departamento de Maldonado, Uruguay.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Hotel%2Fposada%20La%20Casa%20Av.%20Par%C3%ADs%20Punta%20del%20Este" target="_blank" rel="noopener" class="mt-7 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-accent text-white font-semibold hover:opacity-90 transition">Abrir en Google Maps</a>
         </div>
-        <div class="reveal rounded-2xl overflow-hidden border border-hair min-h-[320px]">
-          <iframe title="Mapa de Hotel/posada La Casa" src="https://www.google.com/maps?q=Hotel%2Fposada%20La%20Casa%20Av.%20Par%C3%ADs%20%26%2C%2020100%20Punta%20del%20Este%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed" loading="eager" class="w-full h-full min-h-[320px] border-0" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="py-24 bg-accent text-white" id="contacto">
-      <div class="max-w-6xl mx-auto px-5 text-center reveal">
-        <h2 class="text-[clamp(2rem,5vw,3.75rem)] leading-tight">¿Fechas en mente? Escribinos.</h2>
-        <p class="mt-4 text-white/85 text-lg max-w-xl mx-auto">Te decimos qué hay disponible y reservás directo con el hotel.</p>
-        <div class="mt-9 flex flex-wrap gap-3 justify-center">
-          <a href="https://wa.me/59898274727" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[52px] px-8 rounded-full bg-[#25D366] text-[#0b2a16] font-semibold text-lg hover:brightness-95 transition">WhatsApp</a>
-          <a href="tel:+59898274727" class="inline-flex items-center justify-center min-h-[52px] px-8 rounded-full bg-white text-ink font-semibold text-lg hover:bg-soft transition">Llamar al 098 274 727</a>
+        <div class="rounded-2xl overflow-hidden border border-hair min-h-[320px]">
+          <iframe title="Mapa de La Casa en Punta del Este" src="https://www.google.com/maps?q=Hotel%2Fposada%20La%20Casa%20Av.%20Par%C3%ADs%20%26%2C%2020100%20Punta%20del%20Este%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed" loading="eager" class="w-full h-full min-h-[320px] border-0" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-ink text-white/80 py-12">
+  <footer class="bg-ink text-white/80 py-12 pb-24 md:pb-12">
     <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-8 text-sm">
-      <div><p class="font-display font-bold text-white text-lg">Hotel/posada La Casa</p><p class="mt-2">Alojamiento en Punta del Este.</p></div>
-      <div><p class="text-white font-medium mb-2">Dónde</p><p>Av. París, 20100 Punta del Este<br>Departamento de Maldonado, Uruguay</p></div>
-      <div><p class="text-white font-medium mb-2">Contacto</p><p>Abierto las 24 horas, todos los días<br><a class="underline" href="tel:+59898274727">098 274 727</a> · <a class="underline" href="https://wa.me/59898274727" target="_blank" rel="noopener">WhatsApp</a></p></div>
+      <div><p class="font-display font-semibold text-white text-lg">La Casa</p><p class="mt-2">Posada en Punta del Este.</p></div>
+      <div><p class="text-white font-semibold mb-2">Dónde</p><p>Av. París, 20100 Punta del Este<br>Departamento de Maldonado, Uruguay</p></div>
+      <div><p class="text-white font-semibold mb-2">Contacto</p><p>Lunes a domingo, abierto las 24 horas<br><a class="underline" href="tel:+59898274727">098 274 727</a> · <a class="underline" href="https://wa.me/59898274727" target="_blank" rel="noopener">WhatsApp</a></p></div>
     </div>
   </footer>
 
-  <a href="https://wa.me/59898274727" aria-label="Escribinos por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all" target="_blank" rel="noopener">
+  <a href="https://wa.me/59898274727?text=Hola%2C%20quer%C3%ADa%20consultar%20disponibilidad%20para%E2%80%A6%20(fechas%20y%20cantidad%20de%20personas)" aria-label="Escribinos por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
     <span class="hidden md:inline text-sm font-medium">Escribinos</span>
   </a>
-
-  <script>
-    (function () {
-      var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-      }, { threshold: 0.12 });
-      els.forEach(function (e) { io.observe(e); });
-    })();
-  </script>
 </body>
 </html>
