@@ -5,23 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Helar helados artesanales · Yatay 1404, Montevideo</title>
-  <meta name="description" content="Helar helados artesanales, en Yatay 1404, Montevideo. Calificación 4.9 en Google con 236 reseñas. Horarios, cómo llegar y encargos por WhatsApp.">
+  <meta name="description" content="Helar helados artesanales en Yatay 1404, Montevideo. Nota 4.9 en Google con 236 reseñas. Pasá por el local, pedí por WhatsApp o encargá. Abierto de martes a domingo.">
   <link rel="llms.txt" href="/llms.txt">
+  <meta name="theme-color" content="#B23A48">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Helar helados artesanales · Montevideo">
-  <meta property="og:description" content="Helado artesanal en Yatay 1404, Montevideo. 4.9 en Google (236 reseñas). Escribinos por WhatsApp.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200&auto=format&q=80">
+  <meta property="og:description" content="Heladería en Yatay 1404, Montevideo. 4.9 en Google (236 reseñas). Pasá, pedí por WhatsApp o encargá.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1514849302-984523450cf4?w=1200&auto=format&q=80">
   <meta property="og:locale" content="es_UY">
-  <meta name="theme-color" content="#D4622A">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "IceCreamShop",
     "name": "Helar helados artesanales",
-    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200&auto=format&q=80",
+    "image": "https://images.unsplash.com/photo-1514849302-984523450cf4?w=1200&auto=format&q=80",
     "telephone": "+59897680850",
-    "servesCuisine": "Helados artesanales",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Yatay 1404",
@@ -31,7 +30,6 @@
       "addressCountry": "UY"
     },
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "236" },
-    "hasMap": "https://maps.google.com/?cid=3258948866322040849",
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "13:00", "closes": "23:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "13:00", "closes": "23:59" },
@@ -43,203 +41,169 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://images.unsplash.com">
 
   <style>
-    :root{--bg:#FEFCF8;--ink:#1E1B18;--primary:#D4622A;--primary-dark:#B24E1D;--secondary:#4A7C59;--cream:#F5EDD8;--muted:#6B645A;--hairline:#E8E2D8}
+    :root{--bg:#FFF8EE;--ink:#1A2238;--primary:#B23A48;--secondary:#8FB9A8;--paper:#F3E6D0;--muted:#5B6275;--hairline:#E6D8C3}
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65}
-    .display{font-family:'Fraunces',Georgia,serif;font-variation-settings:"opsz" 144}
-    .label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-    :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:3px}
-    .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:100}
+    body{background:var(--bg);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;font-size:1rem;line-height:1.6}
+    .display{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+    .tag{display:inline-block;font-weight:600;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px;background:var(--secondary);color:var(--ink)}
+    .tag.red{background:var(--primary);color:#fff}
+    :focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:4px}
+    .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1rem;z-index:100}
     .skip:focus{left:0}
-    @keyframes bounce-in{0%{opacity:0;transform:translateY(40px) scale(.96)}100%{opacity:1;transform:none}}
-    .hero-title{animation:bounce-in 1s cubic-bezier(0.34,1.56,0.64,1) both}
-    .hero-sub{animation:bounce-in 1s .15s cubic-bezier(0.34,1.56,0.64,1) both}
-    .reveal{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-    .reveal.in{opacity:1;transform:none}
-    .photo{overflow:hidden;border-radius:1.25rem;background:var(--cream)}
-    .photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
-    .photo:hover img{transform:scale(1.03)}
-    .card{transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
-    .card:hover{transform:translateY(-2px);box-shadow:0 4px 24px rgba(0,0,0,.06)}
-    .today{background:var(--ink);color:#fff}
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .hero-title,.hero-sub{animation:none}
-      .reveal{transform:none;transition:opacity .4s}
-      .photo img,.card{transition:none}
-      .photo:hover img{transform:none}.card:hover{transform:none}
-    }
+    .card{background:var(--paper);border:2px solid var(--ink);border-radius:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.6rem;border-radius:999px;border:2px solid var(--ink);font-weight:600;transition:background .2s,color .2s}
+    .btn-red{background:var(--primary);color:#fff}.btn-red:hover{background:var(--ink)}
+    .btn-line{background:transparent;color:var(--ink)}.btn-line:hover{background:var(--ink);color:var(--bg)}
+    .link{background:linear-gradient(var(--primary),var(--primary)) 0 100%/0 2px no-repeat;transition:background-size .25s}
+    .link:hover{background-size:100% 2px}
+    .toldo{height:28px;background:repeating-linear-gradient(90deg,var(--primary) 0 28px,var(--bg) 28px 56px);border-bottom:2px solid var(--ink)}
+    .foto{background:var(--bg);padding:8px;border:1px solid var(--hairline);transform:rotate(-1deg);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+    .foto:nth-child(even){transform:rotate(1deg)}
+    .foto:hover{transform:rotate(0)}
+    .foto img{display:block;width:100%;height:100%;object-fit:cover}
+    .hoy{background:var(--ink);color:var(--bg)}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.foto,.link{transition:none}}
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <a href="#contenido" class="skip">Saltar al contenido</a>
+  <a href="#contacto" class="skip">Saltar al contenido</a>
 
-  <header class="fixed top-0 inset-x-0 z-40 bg-[#FEFCF8]/90 backdrop-blur border-b border-[#E8E2D8]">
-    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-      <a href="#" class="display text-xl font-semibold italic">Helar</a>
-      <nav class="hidden md:flex items-center gap-7 text-sm" aria-label="Principal">
-        <a href="#sabores" class="hover:text-[#B24E1D]">Sabores</a>
-        <a href="#historia" class="hover:text-[#B24E1D]">Historia</a>
-        <a href="#galeria" class="hover:text-[#B24E1D]">Galería</a>
-        <a href="#llegar" class="hover:text-[#B24E1D]">Cómo llegar</a>
-        <a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="bg-[#B24E1D] text-white px-4 py-2 rounded-full font-medium hover:bg-[#8f3e16] transition">WhatsApp</a>
-      </nav>
-      <a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="md:hidden bg-[#B24E1D] text-white px-4 py-2 rounded-full text-sm font-medium">WhatsApp</a>
+  <!-- HERO split -->
+  <header class="grid md:grid-cols-2 md:min-h-[100vh]">
+    <div class="bg-[#8FB9A8] flex flex-col justify-center px-6 md:px-14 py-14 md:py-20 order-1">
+      <p class="mb-6"><span class="tag red">Yatay 1404 · Montevideo</span></p>
+      <h1 class="display text-[clamp(3.4rem,9vw,7.5rem)] leading-[.95]">Helar</h1>
+      <p class="display text-[clamp(1.5rem,3vw,2.4rem)] leading-tight mt-2">helados artesanales</p>
+      <p class="mt-8 max-w-md text-lg">La heladería de siempre, ahora a un mensaje de distancia. Pasá, pedí o encargá.</p>
+      <p class="mt-4 font-semibold">★ 4.9 en Google · 236 reseñas</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="btn btn-red">Pedí por WhatsApp</a>
+        <a href="#contacto" class="btn btn-line">Horarios y mapa</a>
+      </div>
+    </div>
+    <div class="order-2 h-[55vh] md:h-auto bg-[#F3E6D0]">
+      <img src="https://images.unsplash.com/photo-1514849302-984523450cf4?w=1200&auto=format&q=80" alt="Cucuruchos de helado de distintos colores sostenidos en la mano" width="1200" height="1500" loading="eager" fetchpriority="high" class="w-full h-full object-cover">
     </div>
   </header>
+  <div class="toldo" aria-hidden="true"></div>
 
-  <main id="contenido">
-    <!-- HERO split -->
-    <section class="min-h-screen grid md:grid-cols-2 pt-16">
-      <div class="bg-[#D4622A] text-[#1E1B18] flex flex-col justify-center px-6 md:px-14 py-16 md:py-0 order-2 md:order-1">
-        <p class="label mb-6 hero-sub">Helados artesanales · Montevideo</p>
-        <h1 class="display hero-title font-bold italic leading-[.95] text-[clamp(3.2rem,8vw,7rem)]">Frío, cremoso,<br>hecho de a poco.</h1>
-        <p class="hero-sub mt-8 max-w-md text-lg">Una heladería de barrio en Yatay 1404, con 4.9 estrellas en Google. Pasá, elegí y quedate con el gusto.</p>
-        <div class="hero-sub mt-10 flex flex-wrap gap-3">
-          <a href="#sabores" class="bg-[#1E1B18] text-white px-7 py-3.5 rounded-full font-medium hover:bg-black transition">Ver sabores de hoy</a>
-          <a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="border-2 border-[#1E1B18] px-7 py-3.5 rounded-full font-medium hover:bg-[#1E1B18] hover:text-white transition">Escribinos</a>
-        </div>
+  <main>
+    <!-- SOBRE -->
+    <section id="sobre" class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="mb-4"><span class="tag">Sobre Helar</span></p>
+        <h2 class="display text-[clamp(2rem,4vw,3.5rem)] leading-tight">Una heladería de barrio, en Yatay.</h2>
       </div>
-      <div class="photo !rounded-none h-[55vh] md:h-auto order-1 md:order-2">
-        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200&auto=format&q=80" alt="Cucuruchos de helado artesanal de distintos colores" width="1200" height="1500" loading="eager" fetchpriority="high">
+      <div class="md:col-span-6 md:col-start-7 space-y-4 text-lg">
+        <p>Helar es una heladería artesanal en Yatay 1404, Montevideo. Un local para pasar a buscar tu helado, sin vueltas.</p>
+        <p>Abrimos de martes a domingo, con la tarde y la noche para el antojo: de martes a jueves hasta las 23, y viernes y sábados hasta medianoche.</p>
+        <p class="text-[#5B6275]">En Google nos califican con 4.9 sobre 5, en 236 reseñas. Mejor que lo cuenten ellos: pasá y probá.</p>
       </div>
     </section>
 
-    <!-- Confianza -->
-    <section class="bg-[#F5EDD8] border-y border-[#E8E2D8]">
-      <div class="max-w-6xl mx-auto px-5 py-8 grid sm:grid-cols-3 gap-6 text-center sm:text-left">
-        <div><p class="display text-4xl font-semibold italic text-[#B24E1D]">4.9 ★</p><p class="text-sm text-[#6B645A]">236 reseñas en Google</p></div>
-        <div><p class="display text-2xl font-semibold italic">Yatay 1404</p><p class="text-sm text-[#6B645A]">Montevideo, Uruguay</p></div>
-        <div><p class="display text-2xl font-semibold italic">Martes a domingo</p><p class="text-sm text-[#6B645A]">Los lunes cerramos</p></div>
-      </div>
-    </section>
+    <!-- OFERTA -->
+    <section id="oferta" class="bg-[#F3E6D0] border-y-2 border-[#1A2238]">
+      <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
+        <p class="mb-4"><span class="tag red">Cómo pedir</span></p>
+        <h2 class="display text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-12 max-w-2xl">Pasá, pedí o encargá.</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="card !bg-[#FFF8EE] p-7">
+            <p class="display text-5xl text-[#B23A48]">01</p>
+            <h3 class="display text-2xl mt-4 mb-2">Pasá por el local</h3>
+            <p class="text-[#5B6275]">Estamos en Yatay 1404. Entrá, mirá la vitrina y elegí.</p>
+          </article>
+          <article class="card !bg-[#FFF8EE] p-7">
+            <p class="display text-5xl text-[#B23A48]">02</p>
+            <h3 class="display text-2xl mt-4 mb-2">Pedí por WhatsApp</h3>
+            <p class="text-[#5B6275]">Escribinos al 097 680 850 y te contamos qué hay.</p>
+          </article>
+          <article class="card !bg-[#FFF8EE] p-7">
+            <p class="display text-5xl text-[#B23A48]">03</p>
+            <h3 class="display text-2xl mt-4 mb-2">Encargá</h3>
+            <p class="text-[#5B6275]">¿Querés llevar para compartir? Escribinos y te decimos qué se puede.</p>
+          </article>
+        </div>
 
-    <!-- Sabores -->
-    <section id="sabores" class="max-w-6xl mx-auto px-5 py-24">
-      <div class="grid md:grid-cols-12 gap-10 mb-14">
-        <div class="md:col-span-5">
-          <p class="label text-[#4A7C59] mb-3">01 · Sabores</p>
-          <h2 class="display font-semibold italic text-[clamp(2rem,4vw,3.5rem)] leading-tight">Los sabores cambian. Preguntá cuáles hay hoy.</h2>
-        </div>
-        <div class="md:col-span-6 md:col-start-7 self-end">
-          <p class="text-[#6B645A]">En una heladería artesanal los sabores pueden ir cambiando. Para saber qué hay hoy, lo más rápido es escribirnos.</p>
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <article class="card reveal bg-[#F5EDD8] rounded-2xl p-7">
-          <p class="display text-5xl text-[#B24E1D]/40 italic">01</p>
-          <h3 class="display italic text-2xl mt-6 mb-2">Cremas</h3>
-          <p class="text-sm text-[#6B645A]">Los clásicos de base láctea, suaves y de textura sedosa.</p>
-        </article>
-        <article class="card reveal bg-[#F5EDD8] rounded-2xl p-7" style="transition-delay:80ms">
-          <p class="display text-5xl text-[#4A7C59]/40 italic">02</p>
-          <h3 class="display italic text-2xl mt-6 mb-2">Frutales</h3>
-          <p class="text-sm text-[#6B645A]">Sabores de fruta, frescos y con algo de acidez para el calor.</p>
-        </article>
-        <article class="card reveal bg-[#F5EDD8] rounded-2xl p-7" style="transition-delay:160ms">
-          <p class="display text-5xl text-[#B24E1D]/40 italic">03</p>
-          <h3 class="display italic text-2xl mt-6 mb-2">Chocolates y dulces</h3>
-          <p class="text-sm text-[#6B645A]">Para quienes buscan algo más intenso y goloso.</p>
-        </article>
-        <article class="card reveal bg-[#F5EDD8] rounded-2xl p-7" style="transition-delay:240ms">
-          <p class="display text-5xl text-[#4A7C59]/40 italic">04</p>
-          <h3 class="display italic text-2xl mt-6 mb-2">Opciones especiales</h3>
-          <p class="text-sm text-[#6B645A]">¿Buscás algo sin TACC, vegano o sin azúcar? Consultanos y te decimos qué hay.</p>
-        </article>
-      </div>
-      <p class="mt-8"><a href="https://wa.me/59897680850?text=Hola%2C%20%C2%BFqu%C3%A9%20sabores%20tienen%20hoy%3F" target="_blank" rel="noopener" class="inline-block bg-[#B24E1D] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[#8f3e16] transition">Preguntar los sabores de hoy</a></p>
-    </section>
-
-    <!-- Historia -->
-    <section id="historia" class="bg-[#F5EDD8]">
-      <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-12 gap-12 items-center">
-        <div class="md:col-span-5 photo aspect-[4/5] reveal">
-          <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=1000&auto=format&q=80" alt="Bochas de helado artesanal servidas en una copa" width="1000" height="1250" loading="eager">
-        </div>
-        <div class="md:col-span-6 md:col-start-7">
-          <p class="label text-[#4A7C59] mb-3">02 · Historia</p>
-          <h2 class="display font-semibold italic text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-6">Un helado que se hace para comerse ahora.</h2>
-          <p class="mb-4">Helar es una heladería artesanal de Montevideo.</p>
-          <p class="mb-4">Nuestro local está en Yatay 1404. Es un lugar para pasar a buscar un cucurucho, llevarse un pote a casa o resolver el postre de una reunión.</p>
-          <p class="text-[#6B645A]">Hoy nos califican con 4.9 sobre 5 en Google, con 236 reseñas. Preferimos que lo veas vos mismo.</p>
+        <div class="mt-16 grid md:grid-cols-12 gap-8 items-end">
+          <div class="md:col-span-5">
+            <p class="mb-4"><span class="tag">Los sabores</span></p>
+            <h3 class="display text-[clamp(1.8rem,3.5vw,2.8rem)] leading-tight">Cremas, frutales y chocolates.</h3>
+          </div>
+          <div class="md:col-span-7">
+            <div class="flex flex-wrap gap-3 mb-6">
+              <span class="card px-5 py-2 !rounded-full font-semibold">Cremas</span>
+              <span class="card px-5 py-2 !rounded-full font-semibold">Frutales</span>
+              <span class="card px-5 py-2 !rounded-full font-semibold">Chocolates</span>
+            </div>
+            <p class="text-[#5B6275] mb-6">Los sabores del día los confirmamos por mensaje o en el local.</p>
+            <a href="https://wa.me/59897680850?text=Hola%2C%20%C2%BFqu%C3%A9%20sabores%20tienen%20hoy%3F" target="_blank" rel="noopener" class="btn btn-red">Preguntá los sabores de hoy</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Galería -->
-    <section id="galeria" class="max-w-6xl mx-auto px-5 py-24">
-      <p class="label text-[#4A7C59] mb-3">03 · Galería</p>
-      <h2 class="display font-semibold italic text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-12">Para ir haciendo agua la boca.</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="photo aspect-[3/4] reveal"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=800&auto=format&q=80" alt="Helado cremoso en cucurucho sobre fondo claro" width="800" height="1066" loading="eager"></div>
-        <div class="photo aspect-[3/4] md:mt-10 reveal" style="transition-delay:80ms"><img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=800&auto=format&q=80" alt="Helado artesanal de textura cremosa en un pote" width="800" height="1066" loading="eager"></div>
-        <div class="photo aspect-[3/4] reveal" style="transition-delay:160ms"><img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&auto=format&q=80" alt="Helado de colores en cucurucho, de cerca" width="800" height="1066" loading="eager"></div>
-        <div class="photo aspect-[3/4] md:mt-10 reveal" style="transition-delay:240ms"><img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=800&auto=format&q=80" alt="Cucuruchos de gelato en distintos sabores" width="800" height="1066" loading="eager"></div>
+    <!-- GALERÍA -->
+    <section id="galeria" class="max-w-6xl mx-auto px-5 py-20 md:py-28">
+      <p class="mb-4"><span class="tag">Galería</span></p>
+      <h2 class="display text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-12">Para ir abriendo el apetito.</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+        <div class="foto col-span-2 md:col-span-1 aspect-[4/3] md:aspect-[3/4]"><img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=800&auto=format&q=80" alt="Bochas de helado cremoso en un cucurucho" width="800" height="1066" loading="eager"></div>
+        <div class="foto aspect-[3/4]"><img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=800&auto=format&q=80" alt="Helado artesanal con cobertura en un cucurucho" width="800" height="1066" loading="eager"></div>
+        <div class="foto aspect-[3/4]"><img src="https://images.unsplash.com/photo-1629385701021-fcd568a743e8?w=800&auto=format&q=80" alt="Helado de frutilla y crema en un pote" width="800" height="1066" loading="eager"></div>
       </div>
     </section>
 
-    <!-- Encargos -->
-    <section class="today">
-      <div class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-12 gap-8 items-center">
-        <div class="md:col-span-8">
-          <p class="label text-[#F0A87F] mb-3">04 · Encargos</p>
-          <h2 class="display font-semibold italic text-[clamp(2rem,4vw,3.5rem)] leading-tight">¿Tenés una reunión, un cumpleaños o un antojo grande?</h2>
-          <p class="mt-4 text-white/75 max-w-xl">Contanos qué necesitás y para cuándo, y te respondemos por WhatsApp con lo que podamos preparar.</p>
-        </div>
-        <div class="md:col-span-4 md:text-right">
-          <a href="https://wa.me/59897680850?text=Hola%2C%20quiero%20hacer%20un%20encargo%20de%20helado." target="_blank" rel="noopener" class="inline-block bg-[#D4622A] text-[#1E1B18] px-8 py-4 rounded-full font-semibold hover:bg-[#e07440] transition">Hacer un encargo</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cómo llegar -->
-    <section id="llegar" class="max-w-6xl mx-auto px-5 py-24">
-      <p class="label text-[#4A7C59] mb-3">05 · Cómo llegar</p>
-      <h2 class="display font-semibold italic text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-12">Yatay 1404, Montevideo.</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <h3 class="label mb-4">Horarios</h3>
-          <ul class="divide-y divide-[#E8E2D8] border-y border-[#E8E2D8]" id="horarios">
-            <li class="flex justify-between py-3" data-d="1"><span>Lunes</span><span class="text-[#6B645A]">Cerrado</span></li>
-            <li class="flex justify-between py-3" data-d="2"><span>Martes</span><span>13:00 – 23:00</span></li>
-            <li class="flex justify-between py-3" data-d="3"><span>Miércoles</span><span>13:00 – 23:00</span></li>
-            <li class="flex justify-between py-3" data-d="4"><span>Jueves</span><span>13:00 – 23:00</span></li>
-            <li class="flex justify-between py-3" data-d="5"><span>Viernes</span><span>13:00 – 00:00</span></li>
-            <li class="flex justify-between py-3" data-d="6"><span>Sábado</span><span>12:00 – 00:00</span></li>
-            <li class="flex justify-between py-3" data-d="0"><span>Domingo</span><span>12:00 – 23:00</span></li>
-          </ul>
-          <p class="mt-6">Teléfono: <a class="text-[#B24E1D] font-medium underline" href="tel:+59897680850">097 680 850</a></p>
-        </div>
-        <div class="rounded-2xl overflow-hidden border border-[#E8E2D8] min-h-[340px]">
-          <iframe title="Mapa de Helar helados artesanales" class="w-full h-full min-h-[340px] border-0" loading="eager" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Helar%20helados%20artesanales%20Yatay%201404%2C%2011800%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay&output=embed"></iframe>
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-[#8FB9A8] border-t-2 border-[#1A2238]">
+      <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
+        <p class="mb-4"><span class="tag red">Horarios y mapa</span></p>
+        <h2 class="display text-[clamp(2rem,4vw,3.5rem)] leading-tight mb-12">Yatay 1404, Montevideo.</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card !bg-[#FFF8EE] p-6 md:p-8">
+            <h3 class="display text-2xl mb-4">Horarios</h3>
+            <ul id="horarios" class="divide-y divide-[#E6D8C3]">
+              <li class="flex justify-between py-3 px-2" data-d="1"><span>Lunes</span><span>Cerrado</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="2"><span>Martes</span><span>13:00 – 23:00</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="3"><span>Miércoles</span><span>13:00 – 23:00</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="4"><span>Jueves</span><span>13:00 – 23:00</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="5"><span>Viernes</span><span>13:00 – 00:00</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="6"><span>Sábado</span><span>12:00 – 00:00</span></li>
+              <li class="flex justify-between py-3 px-2" data-d="0"><span>Domingo</span><span>12:00 – 23:00</span></li>
+            </ul>
+            <p class="mt-6">Teléfono: <a class="link font-semibold" href="tel:+59897680850">097 680 850</a></p>
+            <a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="btn btn-red mt-5">Escribinos por WhatsApp</a>
+          </div>
+          <div class="card overflow-hidden min-h-[360px]">
+            <iframe title="Mapa de Helar helados artesanales" class="w-full h-full min-h-[360px] border-0" loading="eager" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Helar%20helados%20artesanales%20Yatay%201404%2C%2011800%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay&output=embed"></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-[#1E1B18] text-white/80">
-    <div class="max-w-6xl mx-auto px-5 py-14 grid md:grid-cols-3 gap-10">
+  <footer class="bg-[#1A2238] text-[#FFF8EE]/85">
+    <div class="max-w-6xl mx-auto px-5 py-14 grid md:grid-cols-3 gap-10 text-sm">
       <div>
-        <p class="display text-3xl italic font-semibold text-white">Helar</p>
-        <p class="text-sm mt-2">helados artesanales</p>
+        <p class="display text-3xl text-[#FFF8EE]">Helar</p>
+        <p class="mt-1">helados artesanales</p>
+        <p class="mt-3">★ 4.9 en Google · 236 reseñas</p>
       </div>
-      <div class="text-sm">
-        <p class="label text-white mb-3">Dirección</p>
+      <div>
+        <p class="tag mb-3">Dirección</p>
         <p>Yatay 1404, 11800<br>Montevideo, Uruguay</p>
-        <p class="mt-3"><a href="tel:+59897680850" class="underline">097 680 850</a></p>
+        <p class="mt-3"><a href="tel:+59897680850" class="link">097 680 850</a></p>
       </div>
-      <div class="text-sm">
-        <p class="label text-white mb-3">Horarios</p>
+      <div>
+        <p class="tag mb-3">Horarios</p>
         <p>Mar a jue: 13:00 – 23:00<br>Vie: 13:00 – 00:00<br>Sáb: 12:00 – 00:00<br>Dom: 12:00 – 23:00<br>Lun: cerrado</p>
-        <p class="mt-4"><a href="https://wa.me/59897680850" target="_blank" rel="noopener" class="underline">Escribinos por WhatsApp</a></p>
       </div>
     </div>
-    <div class="border-t border-white/10 text-center text-xs py-5 text-white/50">© 2026 Helar helados artesanales</div>
+    <div class="border-t border-white/10 text-center text-xs py-5 text-[#FFF8EE]/60">© 2026 Helar helados artesanales</div>
   </footer>
 
   <a href="https://wa.me/59897680850" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all">
@@ -249,10 +213,8 @@
 
   <script>
     (function(){
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
-      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-      var today=document.querySelector('#horarios [data-d="'+new Date().getDay()+'"]');
-      if(today){today.classList.add('font-semibold','text-[#B24E1D]')}
+      var hoy=document.querySelector('#horarios [data-d="'+new Date().getDay()+'"]');
+      if(hoy){hoy.classList.add('hoy','rounded-lg','font-semibold')}
     })();
   </script>
 </body>
