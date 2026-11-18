@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiQU | Heladería | Cafetería · Montevideo, Uruguay</title>
+  <meta name="description" content="Heladería y cafetería en Montevideo, Dr. Juan José de Amézaga 2294. Helado artesanal y café de martes a domingo desde las 14 h. Puntuación 4.9 en Google." />
+  <meta property="og:title" content="BiQU | Heladería | Cafetería · Montevideo" />
+  <meta property="og:description" content="Helado artesanal y café en Dr. Juan José de Amézaga 2294. Abierto de martes a domingo desde las 14 h." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://biqu.tortolanistudio.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=1200&auto=format&q=80" />
+  <link rel="llms.txt" href="/llms.txt" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "IceCreamShop",
+    "name": "BiQU | Heladería | Cafetería",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dr. Juan José de Amézaga 2294",
+      "postalCode": "11800",
+      "addressLocality": "Montevideo",
+      "addressRegion": "Montevideo",
+      "addressCountry": "UY"
+    },
+    "telephone": "+59899507075",
+    "servesCuisine": "Helados artesanales",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "62" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "14:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "14:00", "closes": "22:30" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { bg:'#FEFCF8', ink:'#1E1B18', primary:'#D4622A', salvia:'#4A7C59', cream:'#F5EDD8', muted:'#7A7268', hairline:'#E8E2D8' },
+      fontFamily: { display:['Fraunces','Georgia','serif'], body:['Inter','system-ui','sans-serif'] }
+    } } }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background:#FEFCF8; color:#1E1B18; line-height:1.65; }
+    .display { font-family:'Fraunces',Georgia,serif; font-variation-settings:'opsz' 144; }
+    .label { font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; }
+    .skip { position:absolute; left:-999px; top:0; background:#1E1B18; color:#fff; padding:.75rem 1rem; z-index:100; }
+    .skip:focus { left:0; }
+    a:focus-visible, button:focus-visible { outline:3px solid #D4622A; outline-offset:3px; }
+    .hero-title span { display:inline-block; animation:bounce-in .9s cubic-bezier(0.34,1.56,0.64,1) both; }
+    .hero-title span:nth-child(2) { animation-delay:.12s; }
+    .hero-title span:nth-child(3) { animation-delay:.24s; }
+    @keyframes bounce-in { from { transform:translateY(32px) scale(.96); } to { transform:none; } }
+    .reveal { transition:opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.pre { opacity:0; transform:scale(.95) translateY(16px); }
+    .reveal.pre.in { opacity:1; transform:none; }
+    .photo { overflow:hidden; border-radius:1rem; background:#F5EDD8; }
+    .photo img { width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(0.16,1,0.3,1); }
+    .photo:hover img { transform:scale(1.03); }
+    .card { transition:transform .25s, box-shadow .25s, border-color .25s; }
+    .card:hover { transform:translateY(-2px); box-shadow:0 4px 24px rgba(0,0,0,.06); border-color:#D4622A; }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.4)} 70%{box-shadow:0 0 0 10px rgba(34,197,94,0)} }
+    #fab { animation:pulse 2.5s infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-title span { animation:none; opacity:1; transform:none; }
+      .reveal, .reveal.pre { transform:none; transition:opacity .4s; }
+      .photo:hover img, .card:hover { transform:none; }
+      #fab { animation:none; }
+      html { scroll-behavior:auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="absolute top-0 inset-x-0 z-30">
+    <div class="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between">
+      <a href="#" class="display text-2xl font-bold text-white drop-shadow">BiQU</a>
+      <nav class="hidden md:flex gap-7 text-sm font-medium text-white" aria-label="Principal">
+        <a href="#sabores" class="hover:text-cream">Helado y café</a>
+        <a href="#historia" class="hover:text-cream">El local</a>
+        <a href="#galeria" class="hover:text-cream">Galería</a>
+        <a href="#visitanos" class="hover:text-cream">Cómo llegar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="relative min-h-[92vh] flex items-end text-white">
+      <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=1600&auto=format&q=80" alt="Cucuruchos de helado artesanal de distintos colores sostenidos a la luz del día" class="absolute inset-0 w-full h-full object-cover" width="1600" height="1067" fetchpriority="high" />
+      <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(30,27,24,.72), rgba(30,27,24,.18) 60%, rgba(30,27,24,.28))"></div>
+      <div class="relative max-w-6xl mx-auto px-5 pb-16 pt-40 w-full">
+        <p class="label text-cream mb-5">Heladería · Cafetería · Montevideo</p>
+        <h1 class="display hero-title font-bold italic leading-[.95]" style="font-size:clamp(3rem,9vw,7.5rem)">
+          <span>Helado,</span> <span>café</span> <span>y tarde.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-white/90">Abrimos a las 14 h, de martes a domingo. Pasá por Amézaga 2294 y elegí tu sabor.</p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#sabores" class="bg-primary hover:bg-[#b9501f] text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Ver qué hay para probar</a>
+          <span class="text-sm text-white/90">★ 4.9 en Google · 62 reseñas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oferta -->
+    <section id="sabores" class="py-24 md:py-32 bg-bg">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid md:grid-cols-12 gap-8 mb-14">
+          <p class="label text-primary md:col-span-3">01 — La carta</p>
+          <div class="md:col-span-9">
+            <h2 class="display font-semibold italic leading-tight" style="font-size:clamp(2rem,4.5vw,3.75rem)">Helado y café, para la tarde.</h2>
+            <p class="mt-5 text-muted max-w-2xl">Escribinos por WhatsApp y te contamos qué hay hoy, o pasá por el local.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="card reveal border border-hairline rounded-2xl p-7 bg-white">
+            <p class="display text-6xl text-hairline mb-4">01</p>
+            <h3 class="display italic text-2xl font-medium">Helado artesanal</h3>
+            <p class="mt-3 text-muted">Helado artesanal para disfrutar en la tarde. Preguntanos por los sabores disponibles.</p>
+            <p class="label text-salvia mt-5">Consultá por WhatsApp</p>
+          </article>
+          <article class="card reveal border border-hairline rounded-2xl p-7 bg-white">
+            <p class="display text-6xl text-hairline mb-4">02</p>
+            <h3 class="display italic text-2xl font-medium">Café</h3>
+            <p class="mt-3 text-muted">Café para acompañar la tarde, solo o junto al helado.</p>
+            <p class="label text-salvia mt-5">De martes a domingo</p>
+          </article>
+          <article class="card reveal border border-hairline rounded-2xl p-7 bg-white sm:col-span-2 lg:col-span-1">
+            <p class="display text-6xl text-hairline mb-4">03</p>
+            <h3 class="display italic text-2xl font-medium">Helado con café</h3>
+            <p class="mt-3 text-muted">Cuando no podés decidir, pedí las dos cosas.</p>
+            <p class="label text-salvia mt-5">Desde las 14 h</p>
+          </article>
+        </div>
+        <p class="mt-8 text-sm text-muted">¿Buscás algo en particular (sin TACC, vegano, sin azúcar)? <a class="text-primary underline underline-offset-4" href="https://wa.me/59899507075?text=Hola%20BiQU%2C%20quer%C3%ADa%20consultar%20qu%C3%A9%20sabores%20tienen%20hoy" target="_blank" rel="noopener">Preguntanos por WhatsApp</a>.</p>
+      </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="py-24 md:py-32 bg-cream">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-5 photo reveal aspect-[4/5]">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000&auto=format&q=80" alt="Taza de café con espuma sobre una mesa de madera con luz natural" width="1000" height="1250" />
+        </div>
+        <div class="md:col-span-7 md:pl-8">
+          <p class="label text-primary mb-4">02 — El local</p>
+          <h2 class="display font-semibold italic leading-tight mb-6" style="font-size:clamp(2rem,4vw,3.5rem)">Una heladería y cafetería en Amézaga.</h2>
+          <div class="space-y-4 text-lg text-ink/85 max-w-xl">
+            <p>BiQU es una heladería y cafetería sobre Dr. Juan José de Amézaga, en Montevideo. Abre a las 14 h y cierra a la noche.</p>
+            <p>La idea es simple: helado y café. Sesenta y dos personas ya nos dejaron su opinión en Google, con un promedio de 4.9.</p>
+            <p>Los lunes descansamos. De martes a domingo, la puerta está abierta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-24 md:py-32 bg-bg">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="label text-primary mb-4">03 — Galería</p>
+        <h2 class="display font-semibold italic leading-tight mb-12" style="font-size:clamp(2rem,4vw,3.5rem)">Imágenes de helado y café.</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+          <div class="photo reveal aspect-[3/4] md:row-span-2 md:aspect-auto"><img loading="lazy" src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900&auto=format&q=80" alt="Bochas de helado artesanal en un cucurucho de galleta" width="900" height="1200" /></div>
+          <div class="photo reveal aspect-square"><img loading="lazy" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=900&auto=format&q=80" alt="Helado cremoso de colores suaves servido en una copa" width="900" height="900" /></div>
+          <div class="photo reveal aspect-square"><img loading="lazy" src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=900&auto=format&q=80" alt="Helado de frutilla en cucurucho al aire libre" width="900" height="900" /></div>
+          <div class="photo reveal aspect-[3/4] md:row-span-2 md:aspect-auto"><img loading="lazy" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&auto=format&q=80" alt="Café en taza blanca sobre una mesa de cafetería" width="900" height="1200" /></div>
+          <div class="photo reveal aspect-[2/1] col-span-2"><img loading="lazy" src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=1200&auto=format&q=80" alt="Bochas de helado de distintos colores" width="1200" height="600" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Encargos -->
+    <section class="py-20 bg-primary text-white">
+      <div class="max-w-4xl mx-auto px-5 text-center">
+        <h2 class="display italic font-semibold leading-tight" style="font-size:clamp(2rem,4.5vw,3.5rem)">¿Querés saber qué hay hoy?</h2>
+        <p class="mt-4 text-white/90 text-lg">Escribinos por WhatsApp y te respondemos. También para consultas especiales o encargos.</p>
+        <a href="https://wa.me/59899507075?text=Hola%20BiQU%2C%20quer%C3%ADa%20consultar%20por%20sabores%20y%20encargos" target="_blank" rel="noopener" class="inline-block mt-8 bg-ink hover:bg-black text-white font-semibold px-8 py-4 rounded-full transition-colors">Escribir por WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Cómo llegar -->
+    <section id="visitanos" class="py-24 md:py-32 bg-cream">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="label text-primary mb-4">04 — Cómo llegar</p>
+          <h2 class="display font-semibold italic leading-tight mb-8" style="font-size:clamp(2rem,4vw,3.5rem)">Te esperamos en Amézaga.</h2>
+          <address class="not-italic text-lg mb-8">
+            Dr. Juan José de Amézaga 2294<br />11800 Montevideo, Uruguay<br />
+            <a class="text-primary underline underline-offset-4" href="tel:+59899507075">099 507 075</a>
+          </address>
+          <h3 class="label text-muted mb-3">Horarios</h3>
+          <dl class="divide-y divide-hairline max-w-sm">
+            <div class="flex justify-between py-2"><dt>Lunes</dt><dd class="text-muted">Cerrado</dd></div>
+            <div class="flex justify-between py-2"><dt>Martes a jueves</dt><dd>14:00 – 22:00</dd></div>
+            <div class="flex justify-between py-2"><dt>Viernes a domingo</dt><dd>14:00 – 22:30</dd></div>
+          </dl>
+        </div>
+        <div class="rounded-2xl overflow-hidden min-h-[360px] border border-hairline">
+          <iframe title="Mapa de BiQU en Montevideo" class="w-full h-full min-h-[360px]" src="https://www.google.com/maps?q=BiQU%20%7C%20Helader%C3%ADa%20%7C%20Cafeter%C3%ADa%20Dr.%20Juan%20Jos%C3%A9%20de%20Am%C3%A9zaga%202294%2C%2011800%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/80 py-14">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="display text-3xl font-bold text-white">BiQU</p>
+        <p class="mt-2 text-sm">Heladería · Cafetería</p>
+        <p class="mt-4 text-sm">★ 4.9 en Google · 62 reseñas</p>
+      </div>
+      <div class="text-sm">
+        <p class="label text-white mb-3">Dónde</p>
+        <p>Dr. Juan José de Amézaga 2294<br />11800 Montevideo</p>
+        <p class="mt-3"><a class="hover:text-white underline underline-offset-4" href="tel:+59899507075">099 507 075</a></p>
+      </div>
+      <div class="text-sm">
+        <p class="label text-white mb-3">Horarios</p>
+        <p>Lunes: cerrado<br />Martes a jueves: 14:00 – 22:00<br />Viernes a domingo: 14:00 – 22:30</p>
+        <a class="inline-block mt-4 hover:text-white underline underline-offset-4" href="https://wa.me/59899507075" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <p class="max-w-6xl mx-auto px-5 mt-10 pt-6 border-t border-white/10 text-xs text-white/50">© BiQU | Heladería | Cafetería · Montevideo, Uruguay</p>
+  </footer>
+
+  <a id="fab" href="https://wa.me/59899507075" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.700.6.7.2 1.400.2 1.900.1.600-.1 1.700-.7 1.900-1.400.2-.7.2-1.200.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2z"/></svg>
+    <span class="hidden md:inline text-sm font-medium">Escribinos</span>
+  </a>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) return;
+      var vh = window.innerHeight;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            var siblings = Array.prototype.slice.call(en.target.parentNode.children).filter(function (c) { return c.classList.contains('reveal'); });
+            en.target.style.transitionDelay = (siblings.indexOf(en.target) * 80) + 'ms';
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) {
+        if (e.getBoundingClientRect().top > vh) { e.classList.add('pre'); io.observe(e); }
+      });
+    })();
+  </script>
+</body>
+</html>
