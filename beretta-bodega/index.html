@@ -3,230 +3,301 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bodega Beretta Vinos Finos · Bodega en Camino la Renga, Montevideo</title>
-<meta name="description" content="Bodega Beretta Vinos Finos en Camino la Renga, Montevideo. Vinos, visita a la bodega y alojamiento rural. Lunes a sábado. Escribinos por WhatsApp.">
+<title>Bodega Beretta | Bodega en Montevideo rural</title>
+<meta name="description" content="Bodega Beretta en Montevideo rural (Cam. la Renga 2443). Lun a vie 10:30-17:00, sáb 10:30-14:00. Consultá por WhatsApp para visitar, comprar o alojarte.">
 <meta name="robots" content="noindex">
-<link rel="llms.txt" href="/llms.txt">
-<link rel="canonical" href="/">
-
+<meta name="theme-color" content="#1E2B22">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_UY">
-<meta property="og:title" content="Bodega Beretta Vinos Finos · Montevideo">
-<meta property="og:description" content="Vinos, visita a la bodega y alojamiento rural en Camino la Renga, Montevideo. Escribinos por WhatsApp.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&auto=format&q=80">
-<meta property="og:url" content="/">
-
+<meta property="og:title" content="Bodega Beretta | Bodega en Montevideo rural">
+<meta property="og:description" content="Bodega Beretta en Montevideo rural (Cam. la Renga 2443). Lun a vie 10:30-17:00, sáb 10:30-14:00. Consultá por WhatsApp para visitar, comprar o alojarte.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1566995541428-f2246c17cda1?w=1200&auto=format&q=80">
+<link rel="llms.txt" href="/llms.txt">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Winery",
   "name": "Bodega Beretta Vinos Finos",
-  "description": "Bodega en Camino la Renga, Montevideo, con vinos, visitas y alojamiento rural.",
-  "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&auto=format&q=80",
-  "telephone": "+59897037534",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Cam. la Renga 2443",
     "postalCode": "12500",
     "addressLocality": "Montevideo",
-    "addressRegion": "Departamento de Montevideo",
+    "addressRegion": "Montevideo",
     "addressCountry": "UY"
   },
+  "telephone": "+59897037534",
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:30", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:30", "closes": "14:00" }
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:30", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:30", "closes": "14:00"}
   ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "230" }
-}
-</script>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { bg:'#FAFAF7', 'bg-alt':'#F1F0EC', ink:'#1F2328', muted:'#5E6670', accent:'#6B2737', 'accent-2':'#F4E9EB', hairline:'#E2E0DA' },
-    fontFamily: { display:['Manrope','sans-serif'], body:['Inter','sans-serif'] }
-  } }
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "230"}
 }
 </script>
 <style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; line-height: 1.6; background:#FAFAF7; color:#1F2328; }
-  h1,h2,h3 { font-family: 'Manrope', sans-serif; font-weight: 700; }
-  .reveal { opacity: 0; transition: opacity .4s ease; }
-  .reveal.in { opacity: 1; }
-  a:focus-visible, button:focus-visible { outline: 3px solid #6B2737; outline-offset: 3px; }
-  .hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .skip { position:absolute; left:-999px; top:0; background:#fff; padding:.75rem 1rem; z-index:100; }
-  .skip:focus { left:0; }
-  .gal { aspect-ratio: 4/3; width:100%; object-fit:cover; background:#F1F0EC; }
-  @media (prefers-reduced-motion: reduce) { .reveal { transition:none; opacity:1; } html { scroll-behavior:auto; } }
+:root{
+  --cal:#F4EEE1; --cal-2:#EBE3D1; --botella:#1E2B22; --barro:#B4643A; --barro-d:#8F4B27;
+  --paja:#C8A24C; --tinta:#23271F; --muted:#575B4E; --line:#D9CFB8;
+  --serif:'Fraunces',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;font-size:1.0625rem;line-height:1.6;color:var(--tinta);background:var(--cal);padding-bottom:72px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--paja);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--cal);color:var(--tinta);padding:.75rem 1rem;z-index:100}
+.skip:focus{left:0}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;line-height:1.1}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.vers{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.4rem;border-radius:2px;font-weight:500;text-decoration:none;border:2px solid var(--barro);background:var(--barro);color:#fff;transition:background .2s,transform .2s;text-align:center}
+.btn:hover{background:var(--barro-d);border-color:var(--barro-d);transform:translateY(-2px)}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1);border-color:currentColor}
+.btn.dark{background:transparent;color:var(--tinta);border-color:var(--tinta)}
+.btn.dark:hover{background:var(--tinta);color:var(--cal)}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;background:var(--botella);color:#F4EEE1;display:flex;flex-direction:column}
+.hero-foto{position:absolute;inset:0;background:var(--botella) center 40%/cover no-repeat}
+.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,43,34,.25),rgba(30,43,34,.8))}
+.hero-panel{position:relative;margin-top:auto;padding:2rem 1.25rem 2.5rem}
+.etiqueta{border:1px solid var(--paja);outline:1px solid var(--paja);outline-offset:4px;padding:1.5rem 1.25rem;margin:6px}
+.hero h1{font-size:clamp(2.4rem,9vw,3.6rem);margin:.7rem 0 1rem}
+.hero .vers{color:var(--paja)}
+.hero p.baj{max-width:34ch;margin-bottom:1.5rem}
+.hero .resumen{display:none}
+.hero .acts{display:flex;flex-wrap:wrap;gap:.75rem}
+.credito{font-size:.72rem;opacity:.7}
+.credito a{text-decoration:underline}
+.hero .credito{position:relative;padding:0 1.25rem .75rem;color:#F4EEE1}
+@media (min-width:900px){
+  .hero{flex-direction:row;min-height:100vh}
+  .hero-foto{position:relative;inset:auto;order:2;flex:0 0 42%;background-position:center}
+  .hero-foto::after{display:none}
+  .hero-panel{order:1;flex:1;margin:0;padding:4rem 4rem 4rem 5vw;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:clamp(3rem,4.6vw,4.6rem)}
+  .hero .resumen{display:block;margin:0 0 1.75rem;font-size:.95rem;color:#E3DCC8}
+  .hero .resumen b{font-family:var(--serif);font-weight:600;color:#F4EEE1}
+  .hero .credito{position:absolute;right:1rem;bottom:.5rem;padding:0;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+}
+
+/* FRANJA */
+.franja{background:var(--cal-2);border-bottom:1px solid var(--line)}
+.franja .wrap{display:grid;gap:1rem;padding-top:2rem;padding-bottom:2rem}
+.bloque{border:1px solid var(--paja);outline:1px solid var(--paja);outline-offset:3px;padding:1rem 1.1rem;margin:4px;background:var(--cal)}
+.bloque .vers{color:var(--muted)}
+.bloque .big{font-family:var(--serif);font-weight:600;font-size:1.4rem;line-height:1.2;margin:.25rem 0}
+.bloque .star{color:var(--paja)}
+.bloque small{color:var(--muted);font-size:.9rem}
+@media (min-width:800px){.franja .wrap{grid-template-columns:repeat(3,1fr)}}
+
+section{padding:4.5rem 0}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin:.5rem 0 1rem}
+.filete{display:block;width:64px;height:5px;border-top:1px solid var(--paja);border-bottom:1px solid var(--paja);margin-bottom:.6rem}
+.intro{color:var(--muted);max-width:52ch;margin-bottom:2rem}
+
+/* CONSULTAS */
+.cons{display:grid;gap:0;border-top:1px solid var(--tinta)}
+.cons article{display:grid;gap:.75rem;padding:1.75rem 0;border-bottom:1px solid var(--line)}
+.cons h3{font-size:1.6rem}
+.cons p{color:var(--muted);max-width:46ch}
+.cons .btn{justify-self:start}
+@media (min-width:800px){
+  .cons article{grid-template-columns:220px 1fr auto;align-items:center;gap:2rem}
+  .cons article:nth-child(2){padding-left:3rem}
+  .cons article:nth-child(3){padding-left:6rem}
+}
+
+/* GALERIA */
+.galeria{background:var(--botella);color:#F4EEE1}
+.galeria .intro{color:#CFC8B3}
+.galeria .vers{color:var(--paja)}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.gal figure{position:relative;background:#2C3B30;overflow:hidden;aspect-ratio:4/3}
+.gal figure.a{grid-column:span 2}
+.gal .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:0;bottom:0;padding:.2rem .5rem;background:rgba(30,43,34,.75);color:#F4EEE1}
+.tira{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:.6rem;padding-bottom:.5rem}
+.tira figure{position:relative;flex:0 0 70%;max-width:300px;aspect-ratio:3/4;background:#2C3B30;scroll-snap-align:start;overflow:hidden}
+.tira .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tira figcaption{position:absolute;left:0;bottom:0;padding:.2rem .5rem;background:rgba(30,43,34,.75);color:#F4EEE1}
+@media (min-width:800px){
+  .gal{grid-template-columns:repeat(6,1fr)}
+  .gal figure{grid-column:span 2;aspect-ratio:4/3}
+  .gal figure.a{grid-column:span 4;aspect-ratio:16/9}
+  .gal figure.b{grid-column:span 2}
+}
+
+/* LLEGAR */
+.camino{display:grid;gap:2rem}
+.dir{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.05}
+.camino .sub{color:var(--muted);margin:.4rem 0 1rem}
+.camino .nota{border-left:4px solid var(--barro);padding-left:1rem;margin:1.25rem 0;max-width:42ch}
+.acts2{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0}
+.horas{display:grid;gap:.75rem;margin-top:1.5rem}
+.mapa{width:100%;height:420px;border:0;background:var(--cal-2)}
+@media (min-width:900px){
+  .camino{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .mapa{height:640px}
+}
+
+/* CONTACTO */
+.contacto{background:var(--cal-2);text-align:left}
+.contacto .btn{font-size:1.15rem;padding:1rem 2rem;margin:1rem 0}
+.contacto a.tel{display:inline-block;min-height:44px;padding:.6rem 0;text-decoration:underline;text-underline-offset:4px}
+
+footer{background:var(--botella);color:#E3DCC8;padding:3rem 0 6rem}
+footer .etiqueta{max-width:520px}
+footer p{margin:.3rem 0}
+footer .serif{font-size:1.5rem;color:#F4EEE1}
+
+/* WA */
+.wabar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#1f7a4a;color:#fff;display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;font-weight:500;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+.wabar svg{width:24px;height:24px;fill:currentColor}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  footer{padding-bottom:3rem}
+  .wabar{left:auto;right:1.5rem;bottom:1.5rem;border-radius:999px;padding:0 1.4rem;min-height:52px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  .wabar .m{display:none}
+}
+@media (max-width:899px){.wabar .d{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+[data-foto-credito]:empty{display:none}
 </style>
 </head>
 <body>
-<a href="#oferta" class="skip">Saltar al contenido</a>
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<!-- HERO -->
-<header class="relative min-h-[100svh] flex flex-col text-white bg-ink">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&auto=format&q=80" alt="Hileras de viñedo al atardecer" width="1200" height="800" loading="eager" fetchpriority="high">
-  <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(15,10,12,.72) 0%,rgba(15,10,12,.62) 50%,rgba(15,10,12,.82) 100%)"></div>
-
-  <nav class="relative z-10 max-w-6xl w-full mx-auto px-5 py-5 flex items-center justify-between">
-    <span class="font-display font-bold text-base sm:text-lg tracking-tight">Bodega Beretta</span>
-    <a href="https://wa.me/59897037534" target="_blank" rel="noopener" class="inline-flex items-center min-h-[44px] px-4 rounded-full bg-white text-ink text-sm font-medium hover:bg-bg-alt transition-colors">WhatsApp</a>
-  </nav>
-
-  <div class="relative z-10 flex-1 flex items-end">
-    <div class="max-w-6xl w-full mx-auto px-5 pb-14 sm:pb-20">
-      <p class="text-xs uppercase tracking-widest text-white/85 mb-4">Bodega · Camino la Renga, Montevideo</p>
-      <h1 class="text-[clamp(2.5rem,8vw,6rem)] leading-[1.02] max-w-4xl">Vino fino,<br>a minutos de la ciudad.</h1>
-      <p class="mt-6 max-w-xl text-lg text-white/90">Bodega Beretta Vinos Finos. Vinos, visitas y alojamiento rural en Montevideo.</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="https://wa.me/59897037534" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-green-500 hover:bg-green-600 text-white font-medium transition-colors">Escribinos por WhatsApp</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Bodega%20Beretta%20Vinos%20Finos%20Cam.%20la%20Renga%202443%20Montevideo" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/70 text-white font-medium hover:bg-white/10 transition-colors">Cómo llegar</a>
+<header class="hero" id="inicio">
+  <div class="hero-foto" data-foto="0" role="img" aria-label="Foto de Bodega Beretta subida a Google"></div>
+  <div class="hero-panel">
+    <div class="etiqueta">
+      <p class="vers">Montevideo · Rural</p>
+      <h1>Bodega Beretta, en Montevideo rural</h1>
+      <p class="baj">Escribinos por WhatsApp para visitar, comprar vino o alojarte. Abrimos de lunes a sábado.</p>
+      <p class="resumen"><b>Lun a vie 10:30 a 17:00</b> · <b>Sáb 10:30 a 14:00</b></p>
+      <div class="acts">
+        <a class="btn" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5.05-1.6A9.94 9.94 0 1 0 12.04 2zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12-.43-.13-.98-.32-1.68-.62-2.96-1.28-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.58-.37.78-.37h.56c.18 0 .42-.07.65.5.25.6.85 2.07.92 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.5-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.72-.17 1.42z"/></svg>Escribinos por WhatsApp</a>
+        <a class="btn line" href="#como-llegar">Cómo llegar</a>
       </div>
-      <p class="mt-8 text-sm text-white/85">★ 4.5 en Google · 230 reseñas</p>
     </div>
   </div>
+  <p class="credito" data-foto-credito="0"></p>
 </header>
 
-<main>
-<!-- OFERTA -->
-<section id="oferta" class="py-20 sm:py-24">
-  <div class="max-w-6xl mx-auto px-5 reveal">
-    <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Qué ofrecemos</p>
-    <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight max-w-2xl">Vinos, bodega y alojamiento</h2>
-    <p class="mt-4 text-muted max-w-xl">Tres cosas en un mismo lugar. Para el detalle de cada una, escribinos.</p>
+<main id="contenido">
+<div class="franja">
+  <div class="wrap">
+    <div class="bloque"><p class="vers">Nota</p><p class="big">4,5 <span class="star" aria-hidden="true">★</span></p><small>230 reseñas en Google</small></div>
+    <div class="bloque"><p class="vers">Horario</p><p class="big">Lun a vie 10:30 a 17:00</p><small>Sáb 10:30 a 14:00 · Dom cerrado</small></div>
+    <div class="bloque"><p class="vers">Consultas</p><p class="big">Visitar, comprar o alojarte</p><small>Consultá por WhatsApp</small></div>
+  </div>
+</div>
 
-    <div class="mt-12 grid gap-5 md:grid-cols-3">
-      <article class="bg-white border border-hairline rounded-2xl p-7 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-transform hover:-translate-y-0.5">
-        <span class="text-sm font-display font-bold text-accent">01</span>
-        <h3 class="mt-3 text-xl">Vinos finos</h3>
-        <p class="mt-2 text-muted">Vinos elaborados en la bodega, para llevar o para compartir en una visita.</p>
+<section id="consultas">
+  <div class="wrap">
+    <span class="filete"></span>
+    <h2>Qué podés consultar</h2>
+    <p class="intro">Escribinos y te contestamos. Contanos qué te interesa.</p>
+    <div class="cons">
+      <article>
+        <h3>Comprar vino</h3>
+        <p>Si querés comprar vino, consultanos qué hay y cómo conseguirlo.</p>
+        <a class="btn dark" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20consultar%20por%20comprar%20vino." target="_blank" rel="noopener">Consultar por vino</a>
       </article>
-      <article class="bg-white border border-hairline rounded-2xl p-7 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-transform hover:-translate-y-0.5">
-        <span class="text-sm font-display font-bold text-accent">02</span>
-        <h3 class="mt-3 text-xl">Visita a la bodega</h3>
-        <p class="mt-2 text-muted">Conocé el lugar donde se hace el vino. Coordiná tu visita por WhatsApp.</p>
+      <article>
+        <h3>Visitar la bodega</h3>
+        <p>Si querés ir, consultanos antes. Te decimos cuándo conviene pasar.</p>
+        <a class="btn dark" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20consultar%20por%20una%20visita." target="_blank" rel="noopener">Consultar por una visita</a>
       </article>
-      <article class="bg-white border border-hairline rounded-2xl p-7 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-transform hover:-translate-y-0.5">
-        <span class="text-sm font-display font-bold text-accent">03</span>
-        <h3 class="mt-3 text-xl">Alojamiento rural</h3>
-        <p class="mt-2 text-muted">Una opción para quedarte en el campo sin salir de Montevideo. Consultá disponibilidad.</p>
+      <article>
+        <h3>Alojarte</h3>
+        <p>¿Te interesa quedarte? Consultanos por alojamiento.</p>
+        <a class="btn dark" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20consultar%20por%20alojamiento." target="_blank" rel="noopener">Consultar por alojamiento</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- SOBRE -->
-<section class="py-20 sm:py-24 bg-bg-alt">
-  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 reveal">
-    <div class="md:col-span-5">
-      <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Sobre la bodega</p>
-      <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight">Campo y vino, dentro de Montevideo</h2>
+<section class="galeria" id="fotos">
+  <div class="wrap">
+    <span class="filete"></span>
+    <h2>Fotos de la bodega</h2>
+    <p class="intro">Las subieron a Google visitantes y la propia bodega.</p>
+    <div class="gal">
+      <figure class="a"><img class="ph" data-foto="1" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="1"></figcaption></figure>
+      <figure class="b"><img class="ph" data-foto="3" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="3"></figcaption></figure>
+      <figure class="b"><img class="ph" data-foto="4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="4"></figcaption></figure>
+      <figure class="a"><img class="ph" data-foto="5" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="5"></figcaption></figure>
     </div>
-    <div class="md:col-span-6 md:col-start-7 space-y-5 text-lg">
-      <p>Bodega Beretta está sobre Camino la Renga, en la zona rural de Montevideo. Se llega en auto desde la ciudad y se siente otro ritmo.</p>
-      <p class="text-muted">Es una bodega, una casa de campo y un lugar para recibir visitas. Si querés saber qué vinos hay, cómo es la visita o qué fechas hay libres para quedarte, la forma más rápida es escribirnos.</p>
-      <p class="text-muted">230 personas ya dejaron su opinión en Google y la nota es 4.5.</p>
+    <div class="tira" aria-label="Más fotos, deslizá para ver">
+      <figure><img class="ph" data-foto="2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="2"></figcaption></figure>
+      <figure><img class="ph" data-foto="6" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="6"></figcaption></figure>
+      <figure><img class="ph" data-foto="7" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Foto de Bodega Beretta subida a Google" loading="lazy"><figcaption class="credito" data-foto-credito="7"></figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- GALERIA -->
-<section class="py-20 sm:py-24">
-  <div class="max-w-6xl mx-auto px-5 reveal">
-    <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Galería</p>
-    <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight max-w-2xl">Viñedo, copa y barrica</h2>
-    <div class="mt-10 grid grid-cols-2 gap-3 sm:gap-4">
-      <img class="gal rounded-xl" loading="lazy" width="1200" height="900" src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=1200&auto=format&q=80" alt="Hileras de vid en un viñedo con luz de la mañana">
-      <img class="gal rounded-xl" loading="lazy" width="1200" height="900" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&q=80" alt="Copas de vino tinto sobre una mesa">
-      <img class="gal rounded-xl" loading="lazy" width="1200" height="900" src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=1200&auto=format&q=80" alt="Barricas de roble apiladas en una bodega">
-      <img class="gal rounded-xl" loading="lazy" width="1200" height="900" src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=1200&auto=format&q=80" alt="Degustación de vino en una bodega">
-    </div>
-    <p class="mt-4 text-sm text-muted">Imágenes ilustrativas del rubro.</p>
-  </div>
-</section>
-
-<!-- LLEGAR Y CONTACTO -->
-<section id="contacto" class="py-20 sm:py-24 bg-bg-alt">
-  <div class="max-w-6xl mx-auto px-5 reveal">
-    <p class="text-xs uppercase tracking-widest text-accent font-medium mb-3">Cómo llegar y contacto</p>
-    <h2 class="text-[clamp(2rem,4vw,3rem)] leading-tight max-w-2xl">Escribinos y coordinamos</h2>
-
-    <div class="mt-10 grid gap-10 md:grid-cols-2">
-      <div>
-        <a href="https://wa.me/59897037534" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 min-h-[56px] w-full sm:w-auto px-8 rounded-full bg-green-500 hover:bg-green-600 text-white text-lg font-medium transition-colors">
-          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2z"/></svg>
-          WhatsApp 097 037 534
-        </a>
-        <dl class="mt-8 space-y-6">
-          <div>
-            <dt class="text-xs uppercase tracking-widest text-muted">Dirección</dt>
-            <dd class="mt-1">Cam. la Renga 2443, 12500 Montevideo, Uruguay</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-widest text-muted">Teléfono</dt>
-            <dd class="mt-1"><a class="underline underline-offset-4 decoration-hairline hover:decoration-accent" href="tel:+59897037534">097 037 534</a></dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-widest text-muted">Horarios</dt>
-            <dd class="mt-1">
-              <ul class="divide-y divide-hairline max-w-xs">
-                <li class="flex justify-between py-1.5"><span>Lunes a viernes</span><span>10:30 – 17:00</span></li>
-                <li class="flex justify-between py-1.5"><span>Sábado</span><span>10:30 – 14:00</span></li>
-                <li class="flex justify-between py-1.5"><span>Domingo</span><span class="text-muted">Cerrado</span></li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Bodega%20Beretta%20Vinos%20Finos%20Cam.%20la%20Renga%202443%20Montevideo" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-accent text-white font-medium hover:opacity-90 transition-opacity">Cómo llegar</a>
+<section id="como-llegar">
+  <div class="wrap camino">
+    <div>
+      <span class="filete"></span>
+      <h2>Cómo llegar</h2>
+      <p class="dir">Cam. la Renga 2443</p>
+      <p class="sub">Montevideo, zona rural · CP 12500</p>
+      <p class="nota">El camino es rural: avisanos por WhatsApp y te orientamos.</p>
+      <div class="acts2">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bodega%20Beretta%20Vinos%20Finos%20Cam.%20la%20Renga%202443%2C%2012500%20Montevideo" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        <a class="btn dark" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Pienso%20ir%20y%20quiero%20que%20me%20orienten%20para%20llegar." target="_blank" rel="noopener">Avisanos que vas (WhatsApp)</a>
       </div>
-      <div class="rounded-2xl overflow-hidden border border-hairline min-h-[320px]">
-        <iframe title="Mapa de Bodega Beretta Vinos Finos" class="w-full h-full min-h-[360px] border-0" src="https://www.google.com/maps?q=Bodega%20Beretta%20Vinos%20Finos%20Cam.%20la%20Renga%202443%2C%2012500%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="horas">
+        <div class="bloque"><p class="vers">Lunes a viernes</p><p class="big">10:30 a 17:00</p></div>
+        <div class="bloque"><p class="vers">Sábados</p><p class="big">10:30 a 14:00</p></div>
+        <div class="bloque"><p class="vers">Domingos</p><p class="big">Cerrado</p></div>
       </div>
     </div>
+    <iframe class="mapa" title="Mapa de Bodega Beretta, Cam. la Renga 2443, Montevideo" src="https://www.google.com/maps?q=Bodega%20Beretta%20Vinos%20Finos%20Cam.%20la%20Renga%202443%2C%2012500%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <span class="filete"></span>
+    <h2>Escribinos</h2>
+    <p class="intro">Por WhatsApp o llamando al 097 037 534.</p>
+    <a class="btn" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5.05-1.6A9.94 9.94 0 1 0 12.04 2zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12-.43-.13-.98-.32-1.68-.62-2.96-1.28-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.58-.37.78-.37h.56c.18 0 .42-.07.65.5.25.6.85 2.07.92 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.5-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.72-.17 1.42z"/></svg>Escribinos por WhatsApp</a><br>
+    <a class="tel" href="tel:+59897037534">Llamar al 097 037 534</a>
   </div>
 </section>
 </main>
 
-<footer class="py-10 border-t border-hairline">
-  <div class="max-w-6xl mx-auto px-5 grid gap-6 sm:grid-cols-3 text-sm text-muted">
-    <div>
-      <p class="font-display font-bold text-ink">Bodega Beretta Vinos Finos</p>
-      <p class="mt-1">Cam. la Renga 2443, 12500 Montevideo, Uruguay</p>
-    </div>
-    <div>
-      <p>Lun a vie 10:30 – 17:00</p>
-      <p>Sáb 10:30 – 14:00 · Dom cerrado</p>
-    </div>
-    <div>
-      <p><a class="hover:text-ink" href="tel:+59897037534">097 037 534</a></p>
-      <p><a class="hover:text-ink" href="https://wa.me/59897037534" target="_blank" rel="noopener">WhatsApp</a></p>
+<footer>
+  <div class="wrap">
+    <div class="etiqueta">
+      <p class="serif">Bodega &amp; Viñedos Beretta</p>
+      <p>Cam. la Renga 2443, 12500 Montevideo</p>
+      <p>097 037 534 · Lun a vie 10:30 a 17:00 · Sáb 10:30 a 14:00 · Dom cerrado</p>
+      <p>4,5 en Google (230 reseñas)</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/59897037534" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"
-   class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all">
-  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.600 15L2 22l5.200-1.400A10 10 0 1012 2z"/></svg>
-  <span class="hidden md:inline text-sm font-medium">Escribinos</span>
-</a>
+<a class="wabar" href="https://wa.me/59897037534?text=Hola%2C%20vi%20la%20web%20de%20Bodega%20Beretta.%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5.05-1.6A9.94 9.94 0 1 0 12.04 2zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12-.43-.13-.98-.32-1.68-.62-2.96-1.28-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.46c.27-.3.58-.37.78-.37h.56c.18 0 .42-.07.65.5.25.6.85 2.07.92 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.5-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.72-.17 1.42z"/></svg><span class="m">Escribinos por WhatsApp</span><span class="d">Escribinos</span></a>
 
 <script>
-  (function () {
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold: 0.08 });
-    els.forEach(function (e) { io.observe(e); });
-  })();
+(function(){var h=location.hostname,q='?demo='+(h.endsWith('.tortolanistudio.com')?h.split('.')[0]:location.pathname.split('/')[1]);
+fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
+document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
+if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
+var c=document.querySelector('[data-foto-credito="'+i+'"]');if(c&&f.autor){c.textContent='Foto: ';
+var a=document.createElement(f.autorUrl?'a':'span');a.textContent=f.autor;if(f.autorUrl){a.href=f.autorUrl;a.target='_blank';a.rel='noopener';}
+c.appendChild(a);c.appendChild(document.createTextNode(' · Google'));}});}).catch(function(){});})();
 </script>
 </body>
 </html>
