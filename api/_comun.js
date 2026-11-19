@@ -8,9 +8,17 @@ const DOMINIO = /^([a-z0-9-]+)\.tortolanistudio\.com$/
 const SLUG = /^[a-z0-9-]{1,60}$/
 
 // La demo se identifica por el subdominio (o ?demo=<slug> en las URLs de vercel.app).
+function hostDe(valor) {
+  // "a.com, b.com" → "a.com"; "https://a.com/x" → "a.com"; sin puerto
+  let v = String(valor || '').split(',')[0].trim().toLowerCase()
+  try { if (v.includes('://')) v = new URL(v).hostname } catch { return '' }
+  return v.split(':')[0]
+}
+
 function demoDe(req) {
-  const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0].toLowerCase()
-  const m = host.match(DOMINIO)
+  const h = req.headers
+  const candidatos = [h['x-forwarded-host'], h.host, h.referer, h.origin].map(hostDe)
+  const m = candidatos.map((x) => x.match(DOMINIO)).find(Boolean)
   const slug = m ? m[1] : String(req.query.demo || '')
   if (!SLUG.test(slug)) return null
   try {
