@@ -399,7 +399,7 @@ footer{padding:2rem 0 6rem;font-size:.9rem;color:var(--hueso-2);border-top:1px s
 </script>
 
 <script>
-(function(){var q=location.hostname.endsWith('tortolanistudio.com')?'':'?demo='+location.pathname.split('/')[1];
+(function(){var h=location.hostname,q='?demo='+(h.endsWith('.tortolanistudio.com')?h.split('.')[0]:location.pathname.split('/')[1]);
 fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
 document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
 if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
