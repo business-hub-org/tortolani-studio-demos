@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Teodoro Parrilla y Restaurant | Punta del Este</title>
-<meta name="description" content="Parrilla y restaurant en San Ciro, Punta del Este. Almuerzo y cena los 7 días, 4.6 en Google con 819 reseñas. Escribinos por WhatsApp.">
+<meta name="description" content="Parrilla y restaurant en San Ciro, Punta del Este. Almuerzo y cena los 7 días, 4,6 en Google con 819 reseñas. Escribinos por WhatsApp.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0E2A23">
+<meta name="theme-color" content="#1B242C">
 <link rel="llms.txt" href="/llms.txt">
 
 <meta property="og:type" content="website">
@@ -30,12 +30,7 @@
     "addressRegion": "Maldonado",
     "addressCountry": "UY"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "reviewCount": "819",
-    "bestRating": "5"
-  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "819", "bestRating": "5" },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "11:30", "closes": "15:30" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "19:30", "closes": "23:30" },
@@ -49,261 +44,333 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --bg:#0E2A23; --bg2:#143830; --ink:#ECEBE4; --sage:#9FB0A8; --cu:#CB8A5C;
-    --line:rgba(236,235,228,.14);
-    --shadow:0 18px 40px -18px rgba(4,16,12,.7);
+    --bg:#1B242C; --band:#25313B; --pino:#C99A62; --luz:#F4EEDF; --lampara:#F0C27B; --muted:#A9B4BC;
+    --line:rgba(244,238,223,.14);
+    --long:12px 18px 0 -8px rgba(8,13,18,.55);
     --ease:cubic-bezier(.16,1,.3,1);
   }
-  *{border-radius:0}
-  html{scroll-behavior:smooth;background:var(--bg)}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.disp{font-family:'Bricolage Grotesque','DM Sans',sans-serif;letter-spacing:-.035em;line-height:.98}
-  .num{font-family:'DM Sans',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
-  .cu{color:var(--cu)}
-  .sage{color:var(--sage)}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--cu);outline-offset:3px}
-  .skip{position:absolute;left:-999px;top:0;background:var(--cu);color:var(--bg);padding:.75rem 1rem;z-index:100}
-  .skip:focus{left:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--luz);font-family:'Figtree',system-ui,sans-serif;font-size:1.0625rem;line-height:1.7;margin:0;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.fg{font-family:'Familjen Grotesk',system-ui,sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.02}
+  .num{font-family:'Familjen Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-weight:600;letter-spacing:-.03em}
+  .muted{color:var(--muted)}
+  .wrap{max-width:1200px;margin:0 auto;padding-inline:1.25rem}
+  @media(min-width:768px){.wrap{padding-inline:2rem}}
+  section{padding-block:4.5rem}
+  @media(min-width:768px){section{padding-block:7rem}}
+  h2{font-size:clamp(2.25rem,6vw,4.25rem)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--lampara);outline-offset:3px}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.6rem;font-weight:500;transition:transform .5s var(--ease),background .3s,color .3s,border-color .3s}
-  .btn-cu{background:var(--cu);color:#0E2A23}
-  .btn-cu:hover{transform:translateY(-2px);background:#d89b6f}
-  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--cu);color:var(--cu);transform:translateY(-2px)}
+  /* botones */
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;font-weight:600;font-family:'Figtree',sans-serif;text-decoration:none;transition:transform .5s var(--ease),background .3s;border-radius:0}
+  .btn-main{background:var(--pino);color:#1B242C;box-shadow:var(--long)}
+  .btn-main:hover{transform:translateY(-2px);background:#D6A96F}
+  .btn-sec{border:1px solid rgba(244,238,223,.4);color:var(--luz)}
+  .btn-sec:hover{border-color:var(--pino);color:var(--pino)}
 
-  /* Hero */
-  .hero{display:grid;grid-template-columns:1fr;min-height:100svh}
-  @media(min-width:1024px){.hero{grid-template-columns:7fr 5fr}}
-  .hero-photo{position:relative;min-height:70svh;background:linear-gradient(160deg,#143830 0%,#143830 55%,rgba(203,138,92,.14) 100%);overflow:hidden}
-  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero-name{font-size:clamp(3.6rem,13.5vw,11rem);font-weight:800;text-transform:uppercase;letter-spacing:-.055em;line-height:.9;margin:0}
+  /* madera */
+  .listones{background:repeating-linear-gradient(90deg,#B98A55 0 13px,#9D7242 13px 15px,#C99A62 15px 28px,#8E6638 28px 30px)}
+  .listones-noche{background:repeating-linear-gradient(90deg,#25313B 0 13px,#1F2A33 13px 15px,#2A3742 15px 28px,#1B242C 28px 30px)}
 
-  /* Dos fuegos */
-  .slot{background:var(--bg2);box-shadow:var(--shadow);padding:clamp(1.5rem,4vw,3rem);position:relative;border-top:2px solid transparent;transition:border-color .6s var(--ease)}
-  .slot.on{border-top-color:var(--cu)}
-  .bighour{font-size:clamp(4.5rem,15vw,11rem);font-weight:800;line-height:.85;margin:0}
-  .live{display:inline-flex;align-items:center;gap:.6rem;font-weight:500}
-  .dot{width:10px;height:10px;background:var(--cu);border-radius:50%!important;display:inline-block;animation:breathe 3.2s ease-in-out infinite}
-  @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
-  .hrow{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
-  .hrow:last-child{border-bottom:0}
-  .hrow.today{color:var(--cu)}
+  /* HERO */
+  .hero{padding-block:2.5rem 4rem}
+  @media(min-width:900px){.hero{padding-block:4rem 6rem}}
+  .hero-grid{display:grid;gap:2.5rem}
+  @media(min-width:900px){.hero-grid{grid-template-columns:5fr 7fr;align-items:end;gap:3.5rem}}
+  .fit{container-type:inline-size;min-width:0}
+  .h1-teodoro{font-size:19cqi;margin:0;white-space:nowrap;text-transform:uppercase;line-height:.95}
+  .big-rating{font-size:clamp(4rem,22cqi,7rem);line-height:.9;color:var(--pino)}
 
-  /* Galería */
-  .strip{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;align-items:flex-end;padding:0 clamp(1.25rem,4vw,3rem) 1rem;scrollbar-width:thin;scrollbar-color:var(--cu) var(--bg2)}
-  .strip figure{flex:0 0 auto;margin:0;scroll-snap-align:start;width:min(78vw,380px)}
-  .strip .ph{width:100%;background:linear-gradient(160deg,#143830,rgba(203,138,92,.16));overflow:hidden;box-shadow:var(--shadow)}
-  .strip .ph>div,.strip .ph img{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .9s var(--ease);display:block;object-fit:cover}
-  .strip figure:hover .ph>div,.strip figure:hover .ph img{transform:scale(1.04)}
-  .strip figcaption{min-height:1.4rem;margin-top:.5rem}
+  .portal{position:relative;max-width:560px;margin-inline:auto;width:100%}
+  @media(min-width:900px){.portal{max-width:none;margin:0}}
+  .mono{display:block;margin:0 auto .75rem;width:56px;height:56px}
+  .portal-body{display:grid;grid-template-columns:minmax(34px,1fr) 4fr minmax(34px,1fr);box-shadow:var(--long)}
+  .lado{display:flex;overflow:hidden;min-height:100%}
+  .lado i{flex:1;display:block;transform-origin:top;animation:baja .9s var(--ease) both}
+  .lado i:nth-child(1){background:#B98A55;animation-delay:.05s}
+  .lado i:nth-child(2){background:#C99A62;animation-delay:.12s}
+  .lado i:nth-child(3){background:#A97B48;animation-delay:.19s}
+  .lado i:nth-child(4){background:#C99A62;animation-delay:.26s}
+  .lado i:nth-child(5){background:#9D7242;animation-delay:.33s}
+  .lado i + i{box-shadow:inset 2px 0 0 rgba(30,20,10,.3)}
+  @keyframes baja{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .vano{position:relative;aspect-ratio:3/5;background-color:var(--band);background-size:cover;background-position:center;overflow:hidden}
+  @media(min-width:900px){.vano{aspect-ratio:4/6}}
+  .vano.fallback::before{content:"";position:absolute;inset:0}
+  .dintel{height:26px;margin-inline:0;box-shadow:inset 0 -3px 0 rgba(30,20,10,.3)}
 
-  /* Reveal */
+  /* HORARIO */
+  .band{background:var(--band)}
+  .estado{display:inline-flex;align-items:center;gap:.6rem;font-weight:500}
+  .estado .luz{width:10px;height:10px;border-radius:50%;background:#56626B;display:none}
+  .estado.abierto .luz{display:inline-block;background:var(--lampara);box-shadow:0 0 0 3px rgba(240,194,123,.18)}
+  .eje{position:relative;height:340px;margin-top:2rem;display:grid;grid-template-columns:44px repeat(7,1fr);column-gap:8px}
+  @media(min-width:768px){.eje{height:420px;column-gap:14px;grid-template-columns:56px repeat(7,1fr)}}
+  .marcas{position:relative}
+  .marcas span{position:absolute;right:6px;transform:translateY(-50%);font-size:.8rem;color:var(--muted)}
+  .liston{position:relative;background:repeating-linear-gradient(90deg,#2B3844 0 9px,#222E38 9px 10px);border-top:3px solid #3A4753}
+  .liston .franja{position:absolute;left:0;right:0;background:repeating-linear-gradient(90deg,#C99A62 0 9px,#B98A55 9px 10px);transform-origin:top;transform:scaleY(0);transition:transform 1s var(--ease)}
+  .eje.in .franja{transform:scaleY(1)}
+  .liston.hoy{border-top-color:var(--lampara);outline:2px solid var(--lampara);outline-offset:3px}
+  .liston.hoy .franja{background:repeating-linear-gradient(90deg,#D9AC72 0 9px,#C99A62 9px 10px)}
+  .dias{display:grid;grid-template-columns:44px repeat(7,1fr);column-gap:8px;margin-top:.9rem;text-align:center}
+  @media(min-width:768px){.dias{grid-template-columns:56px repeat(7,1fr);column-gap:14px}}
+  .dias span{font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:1.15rem}
+  .dias span.hoy{color:var(--lampara)}
+  .cifras{display:grid;gap:1.25rem;grid-template-columns:1fr 1fr;margin-top:3rem}
+  .cifras .num{font-size:clamp(2.1rem,8vw,4.5rem);line-height:1;color:var(--luz)}
+  .cifras small{display:block;color:var(--muted);font-size:.9rem;margin-top:.35rem}
+  .lista-h{margin:2.5rem 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .lista-h li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+  .lista-h .num{font-size:1.1rem;text-align:right}
+
+  /* GALERÍA */
+  .gal{display:grid;gap:12px}
+  @media(min-width:768px){.gal{grid-template-columns:3fr 2fr;gap:16px;align-items:start}}
+  .gal-col{display:grid;gap:12px}
+  @media(min-width:768px){.gal-col{gap:16px}}
+  .foto{position:relative;overflow:hidden;background-color:var(--band);box-shadow:var(--long)}
+  .foto>div,.foto>img{width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center;background-color:var(--band);transition:transform 1.2s var(--ease)}
+  .foto:hover>div,.foto:hover>img{transform:scale(1.04)}
+  .h-ancha{height:260px}.h-vert{height:420px}.h-med{height:240px}.h-chica{height:170px}
+  @media(min-width:768px){.h-ancha{height:360px}.h-vert{height:560px}.h-med{height:280px}.h-chica{height:190px}}
+  .damero{height:48px;background:conic-gradient(#F4EEDF 25%,#1B242C 0 50%,#F4EEDF 0 75%,#1B242C 0) 0 0/48px 48px}
+
+  /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
   .rv.in{opacity:1;transform:none}
-  .hero-in{opacity:0;transform:translateY(22px);animation:up .9s var(--ease) forwards}
-  @keyframes up{to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){
+    .rv{opacity:1;transform:none;transition:none}
+    .lado i{animation:none}
+    .liston .franja{transition:none;transform:scaleY(1)}
+    .foto>div,.foto>img{transition:none}.foto:hover>div,.foto:hover>img{transform:none}
     html{scroll-behavior:auto}
-    .rv,.hero-in{opacity:1;transform:none;animation:none;transition:none}
-    .dot{animation:none}
-    .strip figure:hover .ph>div,.strip figure:hover .ph img{transform:none}
-    .btn:hover{transform:none}
   }
-  iframe{border:0;width:100%;height:100%;min-height:340px;filter:saturate(.7) hue-rotate(-8deg) brightness(.92)}
+
+  .sobre-grid{display:grid;gap:2rem}
+  @media(min-width:900px){.sobre-grid{grid-template-columns:5fr 7fr;gap:4rem}}
+  .carta-box{display:grid;gap:2rem;align-items:center}
+  @media(min-width:900px){.carta-box{grid-template-columns:7fr 5fr}}
+  .mapa{width:100%;height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.05)}
+  @media(min-width:900px){.mapa{height:100%;min-height:420px}}
+  footer a{color:var(--luz)}
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
-<style>[data-foto-credito]{display:none!important}</style>
 </head>
 <body>
-<a href="#contenido" class="skip">Saltar al contenido</a>
 
-<main id="contenido">
+<header class="wrap" style="padding-top:1.25rem">
+  <p class="fg" style="margin:0;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase">Teodoro <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:500">· Punta del Este</span></p>
+</header>
 
+<main>
 <!-- HERO -->
-<header class="hero">
-  <div class="flex flex-col justify-between px-6 py-8 md:px-12 lg:px-16 lg:py-14 gap-14" style="background:var(--bg)">
-    <div class="flex items-baseline gap-x-8 gap-y-2 flex-wrap hero-in" style="animation-delay:.05s">
-      <div class="flex items-baseline gap-2"><span class="disp num text-5xl md:text-6xl font-extrabold cu">4.6</span><span class="sage text-sm">en Google</span></div>
-      <div class="flex items-baseline gap-2"><span class="disp num text-5xl md:text-6xl font-extrabold">819</span><span class="sage text-sm">reseñas</span></div>
+<section class="hero" style="padding-top:2rem">
+  <div class="wrap hero-grid">
+    <div class="fit">
+      <h1 class="h1-teodoro rv">Teodoro<span class="sr-only"> Parrilla y Restaurant</span></h1>
+      <p class="fg rv" style="font-size:clamp(1.15rem,5.5cqi,1.6rem);margin:.9rem 0 0;font-weight:500" aria-hidden="true">Parrilla y Restaurant</p>
+      <p class="rv muted" style="margin:1.5rem 0 0;max-width:34ch">Abierto los siete días, mediodía y noche. Escribinos por WhatsApp y te pasamos la carta.</p>
+      <div class="rv" style="display:flex;align-items:flex-end;gap:1rem;margin:2rem 0">
+        <span class="num big-rating">4,6</span>
+        <span class="muted" style="padding-bottom:.4rem;line-height:1.3">819 reseñas<br>en Google</span>
+      </div>
+      <div class="rv" style="display:flex;flex-wrap:wrap;gap:.75rem">
+        <a class="btn btn-main" href="https://wa.me/59899096606?text=Hola%2C%20les%20escribo%20desde%20su%20web.%20Quer%C3%ADa%20consultar%20por%20una%20mesa%20en%20Teodoro." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+        <a class="btn btn-sec" href="#horarios">Ver horarios</a>
+      </div>
     </div>
 
-    <div>
-      <h1 class="hero-name hero-in" style="animation-delay:.15s">Teodoro<span class="sr-only"> Parrilla y Restaurant</span></h1>
-      <p class="sage mt-4 text-sm tracking-wide hero-in" style="animation-delay:.22s" aria-hidden="true">Parrilla y Restaurant</p>
-      <p class="mt-8 max-w-md text-lg hero-in" style="animation-delay:.3s">Parrilla en Punta del Este, mediodía y noche. Abrimos todos los días a las 11:30 y a las 19:30.</p>
-      <div class="mt-9 flex flex-wrap gap-3 hero-in" style="animation-delay:.4s">
-        <a class="btn btn-cu" href="https://wa.me/59899096606?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-        <a class="btn btn-ghost" href="#horarios">Ver horarios</a>
+    <div class="portal">
+      <svg class="mono" viewBox="0 0 56 56" fill="none" stroke="#F4EEDF" stroke-width="1.25" stroke-linecap="square" aria-hidden="true">
+        <path d="M10 14H46M28 14V46"/>
+        <path d="M10 10V18M46 10V18" stroke-width=".75"/>
+      </svg>
+      <div class="dintel listones" aria-hidden="true"></div>
+      <div class="portal-body">
+        <div class="lado listones-w" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="vano listones-noche" data-foto="0" role="img" aria-label="Portal de listones de madera de la entrada de Teodoro Parrilla y Restaurant, foto de Google Maps"></div>
+        <div class="lado" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="hero-photo">
-    <img data-foto="0" loading="eager" fetchpriority="high" alt="Foto de Teodoro Parrilla y Restaurant en Punta del Este" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-    <p data-foto-credito="0" class="absolute bottom-3 left-4 text-xs sage" style="text-shadow:0 1px 6px #0E2A23"></p>
-  </div>
-</header>
-
-<!-- DOS FUEGOS -->
-<section id="horarios" class="px-6 md:px-12 lg:px-16 py-24 md:py-32" style="background:var(--bg)">
-  <div class="max-w-6xl mx-auto">
+<!-- HORARIOS -->
+<section id="horarios" class="band">
+  <div class="wrap">
     <div class="rv">
-      <h2 class="text-5xl md:text-7xl font-extrabold">Dos fuegos al día</h2>
-      <p class="sage mt-4 text-lg">Mediodía y noche, todos los días.</p>
-      <p id="estado" class="live mt-6 text-lg" aria-live="polite"></p>
+      <h2>Horarios</h2>
+      <p class="muted" style="margin:.75rem 0 1rem;font-size:1.15rem">Almuerzo y cena, los 7 días.</p>
+      <p id="estado" class="estado" role="status"><span class="luz" aria-hidden="true"></span><span id="estado-txt">Almuerzo desde las 11:30, cena desde las 19:30</span></p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6 mt-12">
-      <article id="slot-m" class="slot rv">
-        <h3 class="text-2xl font-bold">Mediodía</h3>
-        <p class="bighour num mt-6 cu">11:30</p>
-        <div class="mt-10 text-base">
-          <div class="hrow" data-d="1 2 3 4 5"><span>Lunes a viernes</span><span class="num">11:30 a 15:30</span></div>
-          <div class="hrow" data-d="6"><span>Sábado</span><span class="num">11:30 a 16:00</span></div>
-          <div class="hrow" data-d="0"><span>Domingo</span><span class="num">11:30 a 16:00</span></div>
-        </div>
-      </article>
-      <article id="slot-n" class="slot rv" style="transition-delay:.1s">
-        <h3 class="text-2xl font-bold">Noche</h3>
-        <p class="bighour num mt-6 cu">19:30</p>
-        <div class="mt-10 text-base">
-          <div class="hrow" data-d="1 2 3 4 5"><span>Lunes a viernes</span><span class="num">19:30 a 23:30</span></div>
-          <div class="hrow" data-d="6"><span>Sábado</span><span class="num">19:30 a 00:00</span></div>
-          <div class="hrow" data-d="0"><span>Domingo</span><span class="num">19:30 a 23:00</span></div>
-        </div>
-      </article>
+    <div class="eje" id="eje" aria-hidden="true"></div>
+    <div class="dias" id="dias" aria-hidden="true"></div>
+
+    <div class="cifras rv">
+      <div><span class="num">11:30</span><small>Almuerzo, todos los días</small></div>
+      <div><span class="num">19:30</span><small>Cena, todos los días</small></div>
     </div>
+
+    <ul class="lista-h rv">
+      <li><span>Lunes a viernes</span><span class="num">11:30 a 15:30 · 19:30 a 23:30</span></li>
+      <li><span>Sábado</span><span class="num">11:30 a 16:00 · 19:30 a 00:00</span></li>
+      <li><span>Domingo</span><span class="num">11:30 a 16:00 · 19:30 a 23:00</span></li>
+    </ul>
   </div>
 </section>
 
 <!-- GALERÍA -->
-<section class="py-20 md:py-28" style="background:var(--bg2)" aria-label="Fotos de Teodoro">
-  <div class="px-6 md:px-12 lg:px-16 max-w-6xl mx-auto mb-10 rv">
-    <h2 class="text-4xl md:text-6xl font-extrabold">Así se ve Teodoro</h2>
-    <p class="sage mt-3">Fotos publicadas en Google. Deslizá para ver más.</p>
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="gal">
+      <div class="gal-col">
+        <div class="foto h-ancha rv"><div data-foto="5" role="img" aria-label="Fachada de Teodoro de noche, foto de Google Maps"></div></div>
+        <div class="foto h-med rv"><div data-foto="3" role="img" aria-label="Carne envuelta con papas y una copa de tinto, foto de Google Maps"></div></div>
+        <div class="foto h-chica rv"><div data-foto="6" role="img" aria-label="Bife con chimichurri, foto de Google Maps"></div></div>
+      </div>
+      <div class="gal-col">
+        <div class="foto h-vert rv"><div data-foto="7" role="img" aria-label="Salón de Teodoro con piso de damero, foto de Google Maps"></div></div>
+        <div class="foto h-med rv"><div data-foto="1" role="img" aria-label="Sándwich sobre una mesa de madera, foto de Google Maps"></div></div>
+      </div>
+    </div>
   </div>
-  <div class="strip" tabindex="0" role="group" aria-label="Galería de fotos, deslizable">
-    <figure class="rv"><div class="ph" style="aspect-ratio:3/4"><div data-foto="1" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 1"></div></div><figcaption><span data-foto-credito="1" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:1/1"><div data-foto="2" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 2"></div></div><figcaption><span data-foto-credito="2" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:4/5;min-height:420px"><div data-foto="3" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 3"></div></div><figcaption><span data-foto-credito="3" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:4/3"><div data-foto="4" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 4"></div></div><figcaption><span data-foto-credito="4" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:3/4"><div data-foto="5" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 5"></div></div><figcaption><span data-foto-credito="5" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:1/1"><div data-foto="6" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 6"></div></div><figcaption><span data-foto-credito="6" class="text-xs sage"></span></figcaption></figure>
-    <figure class="rv"><div class="ph" style="aspect-ratio:4/5"><div data-foto="7" role="img" aria-label="Foto de Teodoro Parrilla y Restaurant, 7"></div></div><figcaption><span data-foto-credito="7" class="text-xs sage"></span></figcaption></figure>
-  </div>
+  <div class="damero" style="margin-top:4.5rem" aria-hidden="true"></div>
 </section>
 
 <!-- SOBRE -->
-<section class="px-6 md:px-12 lg:px-16 py-24 md:py-32" style="background:var(--bg)">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
-    <div class="md:col-span-7 rv">
-      <h2 class="text-4xl md:text-6xl font-extrabold">Parrilla en San Ciro</h2>
-      <p class="mt-8 text-lg max-w-xl">Teodoro es una parrilla y restaurant en San Ciro, Punta del Este. Cocinamos a la parrilla y servimos almuerzo y cena los 7 días de la semana.</p>
-      <p class="mt-5 text-lg max-w-xl sage">Más de 800 personas ya nos dejaron su opinión en Google y la nota es 4.6.</p>
-    </div>
-    <div class="md:col-span-5 rv" style="transition-delay:.1s">
-      <div class="slot h-full flex flex-col justify-between gap-8">
-        <div>
-          <h3 class="text-3xl font-bold">Consultas</h3>
-          <p class="sage mt-3">Escribinos por WhatsApp para cualquier consulta.</p>
-        </div>
-        <a class="btn btn-cu self-start" href="https://wa.me/59899096606?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-      </div>
+<section>
+  <div class="wrap sobre-grid">
+    <div class="fit"><h2 class="rv" style="font-size:clamp(2.25rem,13cqi,4.25rem)">La parrilla de San Ciro</h2></div>
+    <div class="rv" style="max-width:60ch">
+      <p style="margin:0 0 1.25rem">Teodoro es una parrilla y restaurant en San Ciro, Punta del Este. Cocinamos a la parrilla y servimos almuerzo y cena los siete días de la semana.</p>
+      <p class="muted" style="margin:0">Más de 800 personas ya dejaron su opinión en Google y la nota es 4,6. Una consulta por WhatsApp y te respondemos, sin formularios ni llamadas.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="px-6 md:px-12 lg:px-16 py-24 md:py-32" style="background:var(--bg2)">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-    <div class="rv">
-      <h2 class="text-4xl md:text-6xl font-extrabold">Cómo llegar</h2>
-      <p class="mt-6 text-lg max-w-md">Escribinos por WhatsApp o llamanos al <a class="cu num underline underline-offset-4" href="tel:+59899096606">099 096 606</a>. Estamos en San Ciro, Punta del Este.</p>
-      <address class="not-italic sage mt-6">San Ciro &amp;, 20100 Punta del Este,<br>Departamento de Maldonado, Uruguay</address>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <a class="btn btn-cu" href="https://wa.me/59899096606?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-        <a class="btn btn-ghost" href="tel:+59899096606">Llamar</a>
-      </div>
+<!-- CARTA -->
+<section class="band">
+  <div class="wrap carta-box">
+    <div class="fit rv">
+      <h2 style="font-size:clamp(2.25rem,16cqi,4.25rem)">La carta</h2>
+      <p class="muted" style="margin:1rem 0 0;max-width:36ch">Preguntanos por WhatsApp y te la mandamos.</p>
     </div>
-    <div class="rv" style="box-shadow:var(--shadow);min-height:340px;transition-delay:.1s">
-      <iframe title="Mapa de Teodoro Parrilla y Restaurant en Punta del Este" src="https://www.google.com/maps?q=Teodoro%20Parrilla%20Y%20Restaurant%20San%20Ciro%20%26%2C%2020100%20Punta%20del%20Este%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="rv">
+      <a class="btn btn-main" href="https://wa.me/59899096606?text=Hola%2C%20%C2%BFme%20pasan%20la%20carta%3F" target="_blank" rel="noopener">Pedí la carta por WhatsApp</a>
+      <p class="num muted" style="margin:1rem 0 0;font-size:1.05rem">099 096 606</p>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO LLEGAR -->
+<section>
+  <div class="wrap" style="display:grid;gap:2.5rem">
+    <div class="fit rv"><h2 style="font-size:clamp(2.25rem,12cqi,4.25rem)">Cómo llegar</h2></div>
+    <div style="display:grid;gap:2rem" class="llegar">
+      <div class="rv">
+        <p style="margin:0 0 1.5rem;max-width:40ch">Estamos en San Ciro, Punta del Este. Escribinos por WhatsApp o llamanos al <a href="tel:+59899096606" class="num" style="color:var(--pino);text-decoration:none">099 096 606</a>.</p>
+        <a class="btn btn-main" href="https://wa.me/59899096606?text=Hola%2C%20les%20escribo%20desde%20su%20web.%20Quer%C3%ADa%20consultar%20por%20una%20mesa%20en%20Teodoro." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+        <address class="muted" style="font-style:normal;margin-top:1.75rem">San Ciro &amp;, 20100 Punta del Este<br>Departamento de Maldonado, Uruguay</address>
+      </div>
+      <div class="rv" style="box-shadow:var(--long)">
+        <iframe class="mapa" title="Mapa de Teodoro Parrilla y Restaurant en San Ciro, Punta del Este" loading="lazy" src="https://www.google.com/maps?q=Teodoro%20Parrilla%20Y%20Restaurant%20San%20Ciro%20%26%2C%2020100%20Punta%20del%20Este%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed"></iframe>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="px-6 md:px-12 lg:px-16 py-14" style="background:var(--bg);border-top:1px solid var(--line)">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-sm">
-    <div>
-      <p class="disp text-2xl font-extrabold uppercase">Teodoro</p>
-      <p class="sage mt-2">Parrilla y Restaurant</p>
-      <p class="sage mt-4">San Ciro &amp;, 20100 Punta del Este,<br>Maldonado, Uruguay</p>
-      <p class="mt-4"><a class="cu num" href="tel:+59899096606">099 096 606</a></p>
-    </div>
-    <div>
-      <p class="font-medium mb-3">Horarios</p>
-      <div class="sage num leading-7">
-        <p>Lunes a viernes: 11:30 a 15:30 y 19:30 a 23:30</p>
-        <p>Sábado: 11:30 a 16:00 y 19:30 a 00:00</p>
-        <p>Domingo: 11:30 a 16:00 y 19:30 a 23:00</p>
+<footer style="background:var(--band);padding-block:3.5rem 6rem">
+  <div class="wrap" style="display:grid;gap:2.5rem">
+    <div style="display:grid;gap:2.5rem" class="foot-grid">
+      <div>
+        <p class="fg" style="margin:0 0 .5rem;font-size:1.5rem;text-transform:uppercase">Teodoro</p>
+        <p class="muted" style="margin:0">Parrilla y Restaurant<br>San Ciro &amp;, 20100 Punta del Este<br>Maldonado, Uruguay</p>
+      </div>
+      <div>
+        <p class="fg" style="margin:0 0 .5rem;font-size:1.1rem">Horarios</p>
+        <p class="muted num" style="margin:0;font-weight:400;font-size:.95rem;letter-spacing:0;line-height:1.8">Lun a vie: 11:30 a 15:30 · 19:30 a 23:30<br>Sáb: 11:30 a 16:00 · 19:30 a 00:00<br>Dom: 11:30 a 16:00 · 19:30 a 23:00</p>
+      </div>
+      <div>
+        <p class="fg" style="margin:0 0 .5rem;font-size:1.1rem">Contacto</p>
+        <p class="muted" style="margin:0"><a href="tel:+59899096606">099 096 606</a><br><a href="https://wa.me/59899096606?text=Hola%2C%20les%20escribo%20desde%20su%20web.%20Quer%C3%ADa%20consultar%20por%20una%20mesa%20en%20Teodoro." target="_blank" rel="noopener">WhatsApp</a></p>
       </div>
     </div>
-    <div>
-      <p class="font-medium mb-3">Escribinos</p>
-      <p class="sage">Consultas por WhatsApp.</p>
-      <a class="btn btn-ghost mt-4" href="https://wa.me/59899096606" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+    <p class="muted" style="margin:0;font-size:.85rem">4,6 en Google · 819 reseñas</p>
   </div>
 </footer>
+<style>
+  @media(min-width:768px){.foot-grid{grid-template-columns:1.2fr 1.6fr 1fr}.llegar{grid-template-columns:5fr 7fr}}
+</style>
 
-<a href="https://wa.me/59899096606" class="fixed bottom-6 right-6 z-50 bg-[#CB8A5C] hover:bg-[#b57a4f] text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" style="border-radius:9999px">
-  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.700.6.7.2 1.400.2 1.900.1.600-.1 1.700-.7 2-1.400.2-.7.2-1.300.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3.100.8.8-3-.2-.3A8.200 8.200 0 1 1 12 20.200z"/></svg>
+<a href="https://wa.me/59899096606?text=Hola%2C%20les%20escribo%20desde%20su%20web.%20Quer%C3%ADa%20consultar%20por%20una%20mesa%20en%20Teodoro."
+   class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center gap-2 transition-all"
+   target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.21 4.24-9.45 9.46-9.45 2.52 0 4.9.99 6.68 2.77a9.4 9.4 0 0 1 2.76 6.69c0 5.21-4.24 9.45-9.42 9.45zM20.5 3.5A11.36 11.36 0 0 0 12.05.2C5.8.2.72 5.28.72 11.53c0 2 .52 3.95 1.52 5.67L.6 23.8l6.74-1.77a11.3 11.3 0 0 0 5.4 1.38h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg>
   <span class="hidden md:inline text-sm font-medium">Escribinos</span>
 </a>
 
 <script>
 (function(){
-  /* Reveal al scroll */
-  var els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-    els.forEach(function(el){io.observe(el)});
-  }else{els.forEach(function(el){el.classList.add('in')})}
-
-  /* Estado en vivo (America/Montevideo) con los horarios del brief */
-  var S={ // dia 0=domingo: [[abre,cierra],[abre,cierra]] en minutos
-    0:[[690,960],[1170,1380]],
-    1:[[690,930],[1170,1410]],2:[[690,930],[1170,1410]],3:[[690,930],[1170,1410]],4:[[690,930],[1170,1410]],5:[[690,930],[1170,1410]],
-    6:[[690,960],[1170,1440]]
-  };
-  function hm(m){var h=Math.floor(m/60),n=m%60;return h+':'+(n<10?'0':'')+n}
+  var DIAS=['L','M','X','J','V','S','D'];
+  // minutos desde medianoche; semana L..D
+  var SEMANA=[
+    [[690,930],[1170,1410]],[[690,930],[1170,1410]],[[690,930],[1170,1410]],
+    [[690,930],[1170,1410]],[[690,930],[1170,1410]],
+    [[690,960],[1170,1440]],[[690,960],[1170,1380]]
+  ];
+  var INI=690,FIN=1440,TOT=FIN-INI;
+  function hhmm(m){m=m%1440;var h=Math.floor(m/60),mm=m%60;return (h<10?'0':'')+h+':'+(mm<10?'0':'')+mm;}
   function ahora(){
     var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Montevideo',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
     var o={};p.forEach(function(x){o[x.type]=x.value});
-    var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
-    return{d:d,m:(+o.hour%24)*60+(+o.minute)};
+    var idx={Mon:0,Tue:1,Wed:2,Thu:3,Fri:4,Sat:5,Sun:6}[o.weekday];
+    return {d:idx,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
   }
-  function render(){
-    var t=ahora(),tr=S[t.d],on=-1,txt='',next=null;
-    for(var i=0;i<2;i++){if(t.m>=tr[i][0]&&t.m<tr[i][1]){on=i;break}}
-    if(on>-1){txt='Abierto ahora'}
-    else{
-      for(var j=0;j<2;j++){if(t.m<tr[j][0]){next=tr[j][0];break}}
-      txt=next!==null?'Abre a las '+hm(next):'Abre mañana a las 11:30';
-    }
-    var st=document.getElementById('estado');
-    st.innerHTML=(on>-1?'<span class="dot" aria-hidden="true"></span>':'')+'<span>'+txt+'</span>';
-    document.getElementById('slot-m').classList.toggle('on',on===0);
-    document.getElementById('slot-n').classList.toggle('on',on===1);
-    document.querySelectorAll('.hrow').forEach(function(r){
-      r.classList.toggle('today',r.getAttribute('data-d').split(' ').indexOf(String(t.d))>-1);
+  var n=ahora();
+  var eje=document.getElementById('eje'),dias=document.getElementById('dias');
+  var marcas=document.createElement('div');marcas.className='marcas';
+  [[12,720],[15,900],[18,1080],[21,1260],[24,1440]].forEach(function(a){
+    var s=document.createElement('span');s.className='num';s.style.top=((a[1]-INI)/TOT*100)+'%';s.textContent=(a[0]<10?'0':'')+a[0]+':00';marcas.appendChild(s);
+  });
+  eje.appendChild(marcas);
+  var pie=document.createElement('span');dias.appendChild(pie);
+  SEMANA.forEach(function(fr,i){
+    var l=document.createElement('div');l.className='liston'+(i===n.d?' hoy':'');
+    fr.forEach(function(f){
+      var b=document.createElement('div');b.className='franja';
+      b.style.top=((f[0]-INI)/TOT*100)+'%';b.style.height=((f[1]-f[0])/TOT*100)+'%';
+      b.style.transitionDelay=(i*70)+'ms';l.appendChild(b);
     });
-  }
-  render();setInterval(render,60000);
+    eje.appendChild(l);
+    var s=document.createElement('span');s.textContent=DIAS[i];if(i===n.d)s.className='hoy';dias.appendChild(s);
+  });
+
+  // estado en vivo
+  var est=document.getElementById('estado'),txt=document.getElementById('estado-txt');
+  var hoy=SEMANA[n.d],abierto=null,proxima=null;
+  hoy.forEach(function(f){
+    if(n.m>=f[0]&&n.m<f[1])abierto=f;
+    else if(n.m<f[0]&&proxima===null)proxima=f[0];
+  });
+  if(abierto){est.classList.add('abierto');txt.textContent='Abierto ahora, cierra a las '+hhmm(abierto[1]);}
+  else if(proxima!==null){txt.textContent='Abre a las '+hhmm(proxima);}
+  else{txt.textContent='Abre mañana a las '+hhmm(SEMANA[(n.d+1)%7][0][0]);}
+
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}})},{threshold:.3});
+    io2.observe(eje);
+  }else{els.forEach(function(e){e.classList.add('in')});eje.classList.add('in');}
 })();
 </script>
 
@@ -312,7 +379,7 @@
 fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
 document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
 if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
-if(f.autor){if(el.tagName==='IMG'){el.alt=(el.alt?el.alt+'. ':'')+'Foto: '+f.autor;}else{el.setAttribute('role','img');el.setAttribute('aria-label','Foto: '+f.autor);}}});}).catch(function(){});})();
+if(f.autor){var t='Foto de '+f.autor+' en Google';if(el.tagName==='IMG'){el.alt=t;}else{el.setAttribute('role','img');el.setAttribute('aria-label',t);}}});}).catch(function(){});})();
 </script>
 </body>
 </html>
