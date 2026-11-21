@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toti Comedor | Almuerzo en Maldonado, lunes a viernes</title>
+<meta name="description" content="Toti Comedor, en Manuel A. Ledesma 505, Maldonado. Abierto de lunes a viernes de 10:00 a 16:00. 4.8 en Google con 97 reseñas.">
+<meta name="theme-color" content="#F3E7B8">
+<link rel="llms.txt" href="/llms.txt">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_UY">
+<meta property="og:title" content="Toti Comedor | Almuerzo en Maldonado, lunes a viernes">
+<meta property="og:description" content="Abierto de lunes a viernes de 10:00 a 16:00 en Manuel A. Ledesma 505, Maldonado. 4.8 en Google con 97 reseñas.">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Toti Comedor",
+  "telephone": "+59893318611",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Manuel A. Ledesma 505",
+    "postalCode": "20000",
+    "addressLocality": "Maldonado",
+    "addressRegion": "Maldonado",
+    "addressCountry": "UY"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "97",
+    "bestRating": "5"
+  },
+  "sameAs": ["https://www.instagram.com/toticomedor"],
+  "hasMap": "https://maps.google.com/?cid=2116411896399526066"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --papel:#F3E7B8;
+    --papel-claro:#FBF5DC;
+    --mostaza:#E9C766;
+    --tinta:#2B1F14;
+    --zanahoria:#E4571B;
+    --tinta-suave:#5A4632;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--papel);color:var(--tinta);font-family:'Figtree',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65}
+  .serif{font-family:'Young Serif',Georgia,serif;font-weight:400}
+  :focus-visible{outline:3px solid var(--zanahoria);outline-offset:3px}
+  .skip{position:absolute;left:-999px;top:0;background:var(--tinta);color:var(--papel);padding:.75rem 1rem;z-index:100}
+  .skip:focus{left:0}
+
+  /* Vale de comedor: troquel hecho en CSS */
+  .vale{
+    --r:14px;
+    position:relative;
+    background:var(--mostaza);
+    color:var(--tinta);
+    transform:rotate(-1.5deg);
+    padding:1.75rem 2.25rem 1.75rem 2.25rem;
+    -webkit-mask:
+      radial-gradient(circle var(--r) at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,
+      radial-gradient(circle var(--r) at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+            mask:
+      radial-gradient(circle var(--r) at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,
+      radial-gradient(circle var(--r) at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+    filter:drop-shadow(0 0 0 transparent);
+  }
+  .vale-wrap{transform:rotate(-1.5deg);filter:drop-shadow(5px 6px 0 var(--tinta))}
+  .vale{transform:none}
+  .vale::before{
+    content:"";position:absolute;inset:.6rem;border:2px dashed var(--tinta);opacity:.55;pointer-events:none;border-radius:4px
+  }
+  .vale-hora{font-size:clamp(3rem,11vw,6.25rem);line-height:.95;letter-spacing:-.02em}
+  .perfora{border-top:2px dashed rgba(43,31,20,.45)}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.6rem;min-height:48px;
+    background:var(--zanahoria);color:var(--papel-claro);
+    border:2px solid var(--tinta);border-radius:999px;
+    padding:.8rem 1.5rem;font-weight:700;text-decoration:none;
+    box-shadow:3px 3px 0 var(--tinta);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{transform:translate(-1px,-2px);box-shadow:4px 5px 0 var(--tinta)}
+  .btn-sec{background:transparent;color:var(--tinta)}
+
+  .subrayado{background:linear-gradient(var(--zanahoria),var(--zanahoria)) 0 92%/100% .22em no-repeat;padding-bottom:.05em}
+
+  .foto{background:var(--mostaza);overflow:hidden;border:2px solid var(--tinta);border-radius:6px;position:relative}
+  .foto img{width:100%;height:100%;object-fit:cover;display:block}
+  .cred{font-size:.72rem;opacity:.7;margin-top:.35rem;min-height:1em}
+  .cred a{text-decoration:underline}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{transform:none;transition:opacity .4s ease}
+    .btn,.btn:hover{transition:none;transform:none}
+  }
+
+  .wa-flotante{
+    position:fixed;right:1rem;bottom:1rem;z-index:50;
+    background:var(--zanahoria);color:var(--papel-claro);
+    border:2px solid var(--tinta);border-radius:999px;
+    box-shadow:3px 3px 0 var(--tinta);
+    display:flex;align-items:center;gap:.5rem;
+    min-width:56px;min-height:56px;padding:.9rem;justify-content:center;
+    font-weight:700;text-decoration:none;
+  }
+  @media (min-width:768px){.wa-flotante{padding:.9rem 1.3rem;right:1.5rem;bottom:1.5rem}}
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<a href="#contenido" class="skip">Ir al contenido</a>
+
+<header class="max-w-6xl mx-auto px-5 pt-5 flex items-center justify-between">
+  <span class="serif text-xl tracking-tight">Toti Comedor</span>
+  <nav aria-label="Principal" class="hidden sm:flex gap-6 text-sm font-semibold">
+    <a href="#fotos" class="hover:underline">Fotos</a>
+    <a href="#lugar" class="hover:underline">Qué encontrás</a>
+    <a href="#donde" class="hover:underline">Dónde estamos</a>
+    <a href="#contacto" class="hover:underline">Contacto</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-5 pt-10 pb-16 md:pt-16 md:pb-24 grid md:grid-cols-12 gap-10 md:gap-6 items-center">
+    <div class="md:col-span-7">
+      <p class="text-sm font-bold uppercase tracking-widest" style="color:var(--zanahoria)">Maldonado · Uruguay</p>
+      <h1 class="serif text-[clamp(2.4rem,6.2vw,4.6rem)] leading-[1.05] mt-3">
+        Toti Comedor: <span class="subrayado">almorzá en Maldonado</span> de lunes a viernes
+      </h1>
+      <p class="mt-6 text-lg max-w-xl" style="color:var(--tinta-suave)">
+        Abrimos de 10:00 a 16:00 en Manuel A. Ledesma 505. Sábado y domingo cerrado.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a class="btn" href="https://wa.me/59893318611?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.700.6.7.2 1.400.2 1.900.1.600-.1 1.700-.7 1.900-1.400.2-.7.2-1.200.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+        <p class="text-sm font-semibold" aria-label="Valoración en Google: 4.8 sobre 5, 97 reseñas">
+          <span class="serif text-2xl align-middle">4.8</span> ★ en Google · 97 reseñas
+        </p>
+      </div>
+    </div>
+
+    <!-- Vale de comedor -->
+    <div class="md:col-span-5 flex justify-center md:justify-end">
+      <div class="vale-wrap w-full max-w-md" role="group" aria-label="Horario: lunes a viernes de 10:00 a 16:00. Sábado y domingo cerrado.">
+        <div class="vale">
+          <p class="text-xs font-bold uppercase tracking-[.25em] flex justify-between">
+            <span>Vale de comedor</span><span>Nº 4.8</span>
+          </p>
+          <div class="perfora mt-3 pt-4">
+            <p class="vale-hora serif">10:00<br><span class="opacity-60 text-[.55em] align-middle">a</span> 16:00</p>
+          </div>
+          <p class="serif text-2xl mt-3">Lunes a viernes</p>
+          <div class="perfora mt-4 pt-3 flex justify-between text-sm font-semibold">
+            <span>Sáb · Dom: cerrado</span>
+            <span>Ledesma 505</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOS EN VIVO DESDE GOOGLE -->
+  <section id="fotos" class="py-16 md:py-20" style="background:var(--papel-claro)">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="serif text-[clamp(1.8rem,4vw,2.8rem)] leading-tight reveal">El comedor, en fotos</h2>
+      <p class="mt-2 max-w-xl reveal" style="color:var(--tinta-suave)">Imágenes publicadas en Google por el comedor y por quienes pasaron.</p>
+
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:grid-rows-2">
+        <figure class="col-span-2 md:row-span-2 reveal">
+          <div class="foto h-72 md:h-full md:min-h-[420px]">
+            <img data-foto="0" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Foto de Toti Comedor publicada en Google Maps" width="800" height="1000" fetchpriority="high">
+          </div>
+          <figcaption data-foto-credito="0" class="cred"></figcaption>
+        </figure>
+        <figure class="col-span-2 reveal">
+          <div class="foto h-48 md:h-56">
+            <img data-foto="1" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Segunda foto de Toti Comedor publicada en Google Maps" width="1200" height="675">
+          </div>
+          <figcaption data-foto-credito="1" class="cred"></figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="foto h-44 md:h-52">
+            <img data-foto="3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Foto de Toti Comedor en Google Maps" width="600" height="800">
+          </div>
+          <figcaption data-foto-credito="3" class="cred"></figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="foto h-44 md:h-52">
+            <img data-foto="6" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Otra foto de Toti Comedor en Google Maps" width="800" height="600">
+          </div>
+          <figcaption data-foto-credito="6" class="cred"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ ENCONTRÁS -->
+  <section id="lugar" class="max-w-6xl mx-auto px-5 py-16 md:py-24">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <h2 class="serif text-[clamp(1.8rem,4vw,2.8rem)] leading-tight reveal">Un comedor de mediodía</h2>
+        <p class="mt-4 reveal" style="color:var(--tinta-suave)">
+          Toti Comedor es un comedor de mediodía en Manuel A. Ledesma 505, Maldonado. Atiende de lunes a viernes, de 10:00 a 16:00.
+        </p>
+      </div>
+      <ol class="md:col-span-7 divide-y-2 divide-dashed" style="border-color:rgba(43,31,20,.4)">
+        <li class="py-6 flex gap-5 reveal">
+          <span class="serif text-4xl md:text-5xl" style="color:var(--zanahoria)" aria-hidden="true">01</span>
+          <div>
+            <h3 class="serif text-xl">El horario, a la vista</h3>
+            <p style="color:var(--tinta-suave)">Lunes a viernes, de 10:00 a 16:00. Sábado y domingo no abrimos.</p>
+          </div>
+        </li>
+        <li class="py-6 flex gap-5 reveal">
+          <span class="serif text-4xl md:text-5xl" style="color:var(--zanahoria)" aria-hidden="true">02</span>
+          <div>
+            <h3 class="serif text-xl">4.8 en Google</h3>
+            <p style="color:var(--tinta-suave)">97 reseñas de quienes ya pasaron por el comedor.</p>
+          </div>
+        </li>
+        <li class="py-6 flex gap-5 reveal">
+          <span class="serif text-4xl md:text-5xl" style="color:var(--zanahoria)" aria-hidden="true">03</span>
+          <div>
+            <h3 class="serif text-xl">Fácil de encontrar</h3>
+            <p style="color:var(--tinta-suave)">Manuel A. Ledesma 505, con mapa para llegar directo.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- DÓNDE ESTAMOS -->
+  <section id="donde" class="py-16 md:py-24" style="background:var(--mostaza)">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-5">
+        <h2 class="serif text-[clamp(1.8rem,4vw,2.8rem)] leading-tight reveal">Dónde estamos</h2>
+        <address class="not-italic mt-5 text-lg reveal">
+          Manuel A. Ledesma 505<br>
+          20000 Maldonado, Uruguay
+        </address>
+        <table class="mt-6 w-full max-w-sm text-base reveal">
+          <caption class="sr-only">Horarios de atención</caption>
+          <tbody class="divide-y-2 divide-dashed" style="border-color:rgba(43,31,20,.4)">
+            <tr><th scope="row" class="text-left font-semibold py-2">Lunes a viernes</th><td class="py-2 text-right serif">10:00 – 16:00</td></tr>
+            <tr><th scope="row" class="text-left font-semibold py-2">Sábado</th><td class="py-2 text-right">Cerrado</td></tr>
+            <tr><th scope="row" class="text-left font-semibold py-2">Domingo</th><td class="py-2 text-right">Cerrado</td></tr>
+          </tbody>
+        </table>
+        <a class="btn btn-sec mt-8" href="https://maps.google.com/?cid=2116411896399526066" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+      <div class="md:col-span-7 reveal">
+        <div class="foto" style="background:var(--papel-claro)">
+          <iframe title="Mapa de Toti Comedor, Manuel A. Ledesma 505, Maldonado"
+            src="https://www.google.com/maps?q=TOTI%20COMEDOR%20Manuel%20A%20Ledesma%20505%2C%2020000%20Maldonado%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-[320px] md:h-[420px] block border-0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="max-w-4xl mx-auto px-5 py-16 md:py-24 text-center">
+    <h2 class="serif text-[clamp(1.8rem,4vw,2.8rem)] leading-tight reveal">¿Una consulta? Escribinos</h2>
+    <p class="mt-4 max-w-xl mx-auto reveal" style="color:var(--tinta-suave)">
+      Escribinos por WhatsApp. Más novedades en Instagram: <a class="font-semibold underline" href="https://www.instagram.com/toticomedor" target="_blank" rel="noopener">@toticomedor</a>.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4 reveal">
+      <a class="btn" href="https://wa.me/59893318611?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.700.6.7.2 1.400.2 1.900.1.600-.1 1.700-.7 1.900-1.400.2-.7.2-1.200.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+      <a class="btn btn-sec" href="https://www.instagram.com/toticomedor" target="_blank" rel="noopener">Instagram @toticomedor</a>
+    </div>
+    <p class="mt-6 text-sm" style="color:var(--tinta-suave)">WhatsApp: <a class="underline font-semibold" href="tel:+59893318611">093 318 611</a></p>
+  </section>
+</main>
+
+<footer class="py-10" style="background:var(--tinta);color:var(--papel)">
+  <div class="max-w-6xl mx-auto px-5 grid sm:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="serif text-2xl">Toti Comedor</p>
+      <p class="mt-2 opacity-80">Comedor de mediodía en Maldonado.<br>4.8 ★ en Google · 97 reseñas</p>
+    </div>
+    <div>
+      <p class="font-bold uppercase tracking-widest text-xs opacity-70">Dirección y horario</p>
+      <p class="mt-2">Manuel A. Ledesma 505<br>20000 Maldonado, Uruguay</p>
+      <p class="mt-2">Lunes a viernes, 10:00 – 16:00<br>Sábado y domingo cerrado</p>
+    </div>
+    <div>
+      <p class="font-bold uppercase tracking-widest text-xs opacity-70">Contacto</p>
+      <p class="mt-2"><a class="underline" href="tel:+59893318611">093 318 611</a></p>
+      <p><a class="underline" href="https://wa.me/59893318611?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a class="underline" href="https://www.instagram.com/toticomedor" target="_blank" rel="noopener">Instagram @toticomedor</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flotante" href="https://wa.me/59893318611?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.700.6.7.2 1.400.2 1.900.1.600-.1 1.700-.7 1.900-1.400.2-.7.2-1.200.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2z"/></svg>
+  <span class="hidden md:inline text-sm">Escribinos</span>
+</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<script>
+(function(){var h=location.hostname,q='?demo='+(h.endsWith('.tortolanistudio.com')?h.split('.')[0]:location.pathname.split('/')[1]);
+fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
+document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
+if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
+var c=document.querySelector('[data-foto-credito="'+i+'"]');if(c&&f.autor){c.textContent='Foto: ';
+var a=document.createElement(f.autorUrl?'a':'span');a.textContent=f.autor;if(f.autorUrl){a.href=f.autorUrl;a.target='_blank';a.rel='noopener';}
+c.appendChild(a);c.appendChild(document.createTextNode(' · Google'));}});}).catch(function(){});})();
+</script>
+</body>
+</html>
