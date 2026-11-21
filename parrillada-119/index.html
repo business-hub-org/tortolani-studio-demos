@@ -59,6 +59,7 @@ h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transfor
 a:focus-visible{outline:3px solid var(--senal);outline-offset:2px}
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
+<style>[data-foto-credito]{display:none!important}</style>
 </head>
 <body>
 
@@ -216,9 +217,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
 document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
 if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
-var c=document.querySelector('[data-foto-credito="'+i+'"]');if(c&&f.autor){c.textContent='Foto: ';
-var a=document.createElement(f.autorUrl?'a':'span');a.textContent=f.autor;if(f.autorUrl){a.href=f.autorUrl;a.target='_blank';a.rel='noopener';}
-c.appendChild(a);c.appendChild(document.createTextNode(' · Google'));}});}).catch(function(){});})();
+if(f.autor){if(el.tagName==='IMG'){el.alt=(el.alt?el.alt+'. ':'')+'Foto: '+f.autor;}else{el.setAttribute('role','img');el.setAttribute('aria-label','Foto: '+f.autor);}}});}).catch(function(){});})();
 </script>
 </body>
 </html>
