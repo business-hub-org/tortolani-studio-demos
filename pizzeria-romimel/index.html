@@ -174,6 +174,30 @@
     </div>
   </section>
 
+  <!-- PEDIDOS CON ENVÍO -->
+  <section class="px-5 pb-16" aria-labelledby="pedido">
+    <div class="max-w-5xl mx-auto grid gap-8 md:grid-cols-12 items-start">
+      <div class="cartel r2 px-6 py-6 md:px-8 md:col-span-5">
+        <h2 id="pedido" class="marcador text-3xl md:text-4xl leading-tight">Hacemos envíos</h2>
+        <ul class="mt-4 space-y-2 text-base">
+          <li><span class="font-semibold">Demora estimada:</span> 45 a 60 minutos (puede variar según la demanda).</li>
+          <li>Los pedidos se toman por orden de llegada.</li>
+          <li>Completá el pedido acá y te llega armado a nuestro WhatsApp.</li>
+        </ul>
+      </div>
+      <form id="form-pedido" class="liso px-6 py-7 md:px-8 md:col-span-7 grid gap-4" novalidate>
+        <label class="grid gap-1"><span class="font-semibold">Pedido completo</span>
+          <textarea name="pedido" required rows="4" class="papel px-3 py-2 text-base" placeholder="Qué querés y cuántos"></textarea></label>
+        <label class="grid gap-1"><span class="font-semibold">Dirección</span>
+          <input name="direccion" required autocomplete="street-address" class="papel px-3 py-2 text-base min-h-[48px]" placeholder="Calle, número y una referencia"></label>
+        <label class="grid gap-1"><span class="font-semibold">Forma de pago</span>
+          <input name="pago" required class="papel px-3 py-2 text-base min-h-[48px]" placeholder="Cómo vas a pagar"></label>
+        <p id="pedido-error" class="text-sm font-semibold" style="color:var(--tomate)" role="alert" hidden>Completá el pedido, la dirección y la forma de pago.</p>
+        <button type="submit" class="btn-tomate inline-flex items-center justify-center gap-2 px-7 py-3 min-h-[48px] w-full sm:w-auto justify-self-start">Hacer pedido por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
   <!-- HORARIO -->
   <section class="px-5 pb-16" aria-labelledby="horario">
     <div class="max-w-5xl mx-auto">
@@ -258,6 +282,18 @@ if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.
 var c=document.querySelector('[data-foto-credito="'+i+'"]');if(c&&f.autor){c.textContent='Foto: ';
 var a=document.createElement(f.autorUrl?'a':'span');a.textContent=f.autor;if(f.autorUrl){a.href=f.autorUrl;a.target='_blank';a.rel='noopener';}
 c.appendChild(a);c.appendChild(document.createTextNode(' · Google'));}});}).catch(function(){});})();
+</script>
+<script>
+document.getElementById('form-pedido').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, v = function (n) { return f.elements[n].value.trim(); };
+  var err = document.getElementById('pedido-error');
+  if (!v('pedido') || !v('direccion') || !v('pago')) { err.hidden = false; return; }
+  err.hidden = true;
+  var msg = 'Hola Romimel! Quiero hacer un pedido con envío.\n\n' +
+    'Pedido: ' + v('pedido') + '\n' + 'Dirección: ' + v('direccion') + '\n' + 'Forma de pago: ' + v('pago');
+  window.open('https://api.whatsapp.com/send?phone=59899207243&text=' + encodeURIComponent(msg), '_blank', 'noopener');
+});
 </script>
 </body>
 </html>
