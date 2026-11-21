@@ -91,9 +91,10 @@
   .btn-tomate:focus-visible,a:focus-visible{outline:3px solid var(--tinta); outline-offset:3px}
   .tachado{text-decoration:line-through; text-decoration-thickness:3px; text-decoration-color:var(--tomate)}
   .num{font-variant-numeric:tabular-nums}
-  .credito a{text-decoration:underline}
   @media (max-width:767px){ .r1,.r2,.r3{transform:rotate(-.5deg)} .r2{transform:rotate(.5deg)} }
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .btn-tomate{transition:none} }
+  #form-pedido input,#form-pedido textarea{background:#FFFDF7;color:var(--tinta)}
+  #form-pedido ::placeholder{color:#5E5A52;opacity:1}
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -144,7 +145,6 @@
         <h2 id="mostrador" class="marcador text-3xl">Mirá lo que hay en el mostrador</h2>
       </div>
       <div data-foto="3" role="img" aria-label="Foto de Pizzería Romimel publicada en Google" class="foto w-full aspect-[4/3] md:aspect-[16/9]"></div>
-      <p data-foto-credito="3" class="credito text-xs opacity-70 mt-2"></p>
     </div>
   </section>
 
@@ -158,16 +158,13 @@
       <div class="mt-10 grid gap-4 md:grid-cols-12">
         <figure class="md:col-span-7">
           <div data-foto="0" role="img" aria-label="Foto de Pizzería Romimel publicada en Google" class="foto w-full aspect-[4/3] md:h-full md:aspect-auto md:min-h-[22rem]"></div>
-          <figcaption data-foto-credito="0" class="credito text-xs opacity-70 mt-2"></figcaption>
         </figure>
         <div class="md:col-span-5 grid gap-4 content-start">
           <figure>
             <div data-foto="5" role="img" aria-label="Foto de Pizzería Romimel publicada en Google" class="foto w-full aspect-[4/3]"></div>
-            <figcaption data-foto-credito="5" class="credito text-xs opacity-70 mt-2"></figcaption>
           </figure>
           <figure>
             <div data-foto="7" role="img" aria-label="Foto de Pizzería Romimel publicada en Google" class="foto w-full aspect-[4/3]"></div>
-            <figcaption data-foto-credito="7" class="credito text-xs opacity-70 mt-2"></figcaption>
           </figure>
         </div>
       </div>
@@ -279,9 +276,7 @@
 fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
 document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
 if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
-var c=document.querySelector('[data-foto-credito="'+i+'"]');if(c&&f.autor){c.textContent='Foto: ';
-var a=document.createElement(f.autorUrl?'a':'span');a.textContent=f.autor;if(f.autorUrl){a.href=f.autorUrl;a.target='_blank';a.rel='noopener';}
-c.appendChild(a);c.appendChild(document.createTextNode(' · Google'));}});}).catch(function(){});})();
+if(f.autor){var t='Foto de '+f.autor+' en Google';if(el.tagName==='IMG'){el.alt=t;}else{el.setAttribute('role','img');el.setAttribute('aria-label',t);}}});}).catch(function(){});})();
 </script>
 <script>
 document.getElementById('form-pedido').addEventListener('submit', function (e) {
