@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzería La 22 en Maldonado | Pizza por metro</title>
+<meta name="description" content="Pizzería La 22 en Maldonado: pizza por metro, pizzetas, fainá y papas. Martes a domingo de 20 a 00 h. Pedí por WhatsApp al 097 415 782.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#181816">
+<link rel="llms.txt" href="/llms.txt">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pizzería La 22 en Maldonado | Pizza por metro">
+<meta property="og:description" content="1 metro de muzza o con 6 gustos. Martes a domingo de 20 a 00 h. Pedí por WhatsApp al 097 415 782.">
+<meta property="og:url" content="/">
+<meta property="og:locale" content="es_UY">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Pizzería La 22",
+  "servesCuisine": "Pizza",
+  "telephone": "+59897415782",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. José Batlle y Ordóñez esq. Francisco Aguilar",
+    "addressLocality": "Maldonado",
+    "addressRegion": "Maldonado",
+    "postalCode": "20000",
+    "addressCountry": "UY"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "20:00", "closes": "00:00" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--pizarron:#181816;--tomate:#D3222A;--cinta:#F4C20D;--albahaca:#4F7A32;--tiza:#F1EDE2;--tiza-muted:#B9B5A8}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tiza);color:#181816;font-family:'DM Sans',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+.anton{font-family:'Anton','Bebas Neue',Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
+.marker{font-family:'Permanent Marker','Caveat Brush',cursive}
+.tab{font-variant-numeric:tabular-nums}
+.chalk{background:var(--pizarron);color:var(--tiza);position:relative}
+.chalk::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.chalk>*{position:relative}
+.filete{border:2px solid var(--tiza);border-radius:2px 5px 3px 6px/5px 2px 6px 3px;opacity:.9}
+.skip{position:absolute;left:-999px;top:0;background:var(--cinta);color:#181816;padding:.75rem 1rem;z-index:100}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:3px solid var(--cinta);outline-offset:3px}
+
+/* barra de cinta que avanza con el scroll */
+#barra{position:fixed;top:0;left:0;right:0;height:30px;z-index:60;background:#0e0e0d;border-bottom:2px solid #0e0e0d}
+#barra .relleno{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--cinta);
+  background-image:repeating-linear-gradient(90deg,transparent 0 9px,#181816 9px 10px);
+  background-size:10px 100%}
+#barra .marcas{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent 0 calc(10% - 2px),var(--tomate) calc(10% - 2px) 10%);opacity:.9}
+#barra .cm{position:absolute;right:8px;top:0;height:100%;display:flex;align-items:center;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:.05em;color:var(--tiza);background:#181816;padding:0 8px;border-left:2px solid var(--cinta)}
+
+/* cinta del hero */
+.cinta-wrap{margin:2.5rem -2rem 0;overflow:hidden;padding:2.2rem 0}
+.cinta{transform:rotate(-3deg);background:var(--cinta);color:#181816;height:92px;position:relative;
+  background-image:repeating-linear-gradient(90deg,#181816 0 2px,transparent 2px 10%);
+  background-size:100% 26px;background-repeat:repeat-x;background-position:0 0;
+  border-top:3px solid #181816;border-bottom:3px solid #181816;width:112%;margin-left:-6%}
+.cinta::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;
+  background-image:repeating-linear-gradient(90deg,#181816 0 2px,transparent 2px 1%);}
+.hito{position:absolute;top:0;height:100%;display:flex;flex-direction:column;justify-content:flex-start;transform:translateX(-1px)}
+.hito::before{content:"";position:absolute;left:0;top:0;width:4px;height:60px;background:var(--tomate)}
+.hito span{padding:26px 0 0 10px;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.35rem;line-height:1;color:#181816;white-space:nowrap}
+.hito small{display:block;padding-left:10px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;color:#181816}
+
+.hito-fin{align-items:flex-end;text-align:right}
+.hito-fin span,.hito-fin small{padding-left:0;padding-right:6px}
+.hito-fin::before{left:auto;right:0}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--tomate);color:var(--tiza);font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:1.25rem;padding:.95rem 1.6rem;min-height:48px;text-decoration:none;border:2px solid var(--tiza);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-tiza{background:var(--tiza);color:var(--tomate);border-color:var(--tiza);font-size:1.6rem;padding:1.1rem 2.2rem}
+
+.subrayado{background:linear-gradient(var(--cinta),var(--cinta)) 0 92%/100% .28em no-repeat;padding-bottom:.05em}
+
+.tira{display:grid;gap:10px;grid-template-columns:1fr}
+.tira>*{background:var(--pizarron);background-size:cover;background-position:center;width:100%;display:block;object-fit:cover}
+.largas{aspect-ratio:3/4}
+.apaisada{aspect-ratio:4/3}
+
+.dia{display:flex;justify-content:space-between;align-items:baseline;padding:.65rem .25rem;border-bottom:2px dashed rgba(241,237,226,.28);font-size:1.05rem}
+.dia b{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:1.3rem}
+.dia.hoy{background:rgba(244,194,13,.14);box-shadow:inset 5px 0 0 var(--cinta);padding-left:.9rem}
+.dia.cerrado span{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--tiza);color:var(--tiza-muted)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{transform:none;transition:opacity .4s}.btn:hover{transform:none}html{scroll-behavior:auto}}
+
+@media(min-width:768px){
+ .tira{grid-template-columns:repeat(3,1fr)}
+ .cinta-wrap{margin-left:0;margin-right:0}
+}
+@media(max-width:600px){
+ .hito span{font-size:.95rem;padding-left:6px}
+ .hito small{font-size:.6rem;padding-left:6px}
+ .cinta{height:84px}
+}
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+
+<div id="barra" aria-hidden="true"><div class="relleno" id="relleno"></div><div class="marcas"></div><div class="cm tab"><span id="cm">0</span>&nbsp;cm</div></div>
+
+<main id="contenido">
+
+<!-- HERO -->
+<header class="chalk overflow-hidden" style="padding-top:30px">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pt-12 pb-10 md:pt-20">
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-8">
+        <p class="anton text-lg tracking-widest" style="color:var(--cinta)">Pizzería · Maldonado</p>
+        <div class="flex items-baseline gap-4 flex-wrap mt-2">
+          <span class="anton leading-none" style="font-size:clamp(3.2rem,12vw,9rem)">Pizzería</span>
+          <span class="marker leading-none" style="font-size:clamp(4.5rem,17vw,13rem);color:var(--tomate);transform:rotate(-5deg);display:inline-block">La&nbsp;22</span>
+        </div>
+        <h1 class="anton mt-6" style="font-size:clamp(1.6rem,4vw,2.9rem);line-height:1.1">Pizza por metro en Maldonado, de martes a domingo</h1>
+        <p class="mt-4 max-w-xl" style="color:var(--tiza-muted)">Cená pizza de un metro: 1 metro de muzza o con 6 gustos. Pasá por el local o pedila por WhatsApp, de martes a domingo de noche.</p>
+        <div class="mt-7 flex flex-wrap items-center gap-5">
+          <a class="btn" href="https://api.whatsapp.com/send?phone=59897415782&text=Hola%2C%20quiero%20pedir..." target="_blank" rel="noopener">Pedí por WhatsApp</a>
+          <p class="text-sm" style="color:var(--tiza-muted)">5,0 en Google · 3 reseñas</p>
+        </div>
+      </div>
+      <div class="md:col-span-4">
+        <div class="filete p-2">
+          <div data-foto="0" role="img" aria-label="Pizza larga con albahaca y tomate de Pizzería La 22" style="background:var(--tomate) center/cover;aspect-ratio:3/4;width:100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cinta-wrap" aria-label="Cinta métrica: 25 cm un cuarto, 50 cm media, 75 cm tres cuartos, 100 cm un metro de muzza">
+      <div class="cinta" role="presentation">
+        <div class="hito" style="left:25%"><span class="tab">25</span><small>1/4</small></div>
+        <div class="hito" style="left:50%"><span class="tab">50</span><small>1/2</small></div>
+        <div class="hito" style="left:75%"><span class="tab">75</span><small>3/4</small></div>
+        <div class="hito hito-fin" style="right:10px"><span class="tab">100</span><small>1 metro de muzza</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CÓMO SE PIDE -->
+<section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24" aria-labelledby="pide">
+  <div class="grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-7 rv">
+      <h2 id="pide" class="anton" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05">Cómo se pide</h2>
+      <div class="chalk mt-6 p-6 md:p-8 filete" style="border-color:#181816">
+        <ul class="anton tab" style="font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.5;list-style:none;padding:0;margin:0">
+          <li class="flex justify-between border-b-2 border-dashed border-white/20"><span>1/4</span><span class="text-base" style="color:var(--tiza-muted)">25 cm</span></li>
+          <li class="flex justify-between border-b-2 border-dashed border-white/20"><span>1/2</span><span class="text-base" style="color:var(--tiza-muted)">50 cm</span></li>
+          <li class="flex justify-between border-b-2 border-dashed border-white/20"><span>3/4</span><span class="text-base" style="color:var(--tiza-muted)">75 cm</span></li>
+          <li class="flex justify-between border-b-2 border-dashed border-white/20"><span class="subrayado">1 metro de muzza</span><span class="text-base" style="color:var(--tiza-muted)">100 cm</span></li>
+          <li class="flex justify-between"><span>1 metro con 6 gustos</span><span class="text-base" style="color:var(--tiza-muted)">100 cm</span></li>
+        </ul>
+        <p class="mt-6 anton text-lg" style="color:var(--cinta)">Precios y gustos del día por WhatsApp</p>
+      </div>
+      <p class="mt-8 anton text-xl tracking-wide" style="color:var(--tomate)">También</p>
+      <p class="anton" style="font-size:clamp(1.4rem,3vw,2rem);line-height:1.35">Pizza redonda · Pizzetas · Fainá · Papas</p>
+      <p class="mt-4 max-w-md">Pasás a buscar o pedís por WhatsApp con el mensaje ya armado: un toque y listo.</p>
+    </div>
+    <div class="md:col-span-5 rv">
+      <img data-foto="4" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='4'%3E%3Crect width='3' height='4' fill='%23181816'/%3E%3C/svg%3E" alt="Pizza larga de panceta y cheddar" class="w-full object-cover" style="aspect-ratio:3/4;background:#181816">
+    </div>
+  </div>
+</section>
+
+<!-- FOTOS -->
+<section class="chalk py-16 md:py-24" aria-labelledby="fotos">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <h2 id="fotos" class="anton rv" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05">Así sale <span class="subrayado">el metro</span></h2>
+    <div class="tira mt-10">
+      <img class="largas rv" data-foto="7" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='4'%3E%3Crect width='3' height='4' fill='%23D3222A'/%3E%3C/svg%3E" alt="Pizza larga de jamón sobre la mesada" style="object-position:center">
+      <img class="largas rv" data-foto="3" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='4'%3E%3Crect width='3' height='4' fill='%23181816'/%3E%3C/svg%3E" alt="Pizza con panceta y cheddar en la mano de un cliente">
+      <img class="largas rv" data-foto="2" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='4'%3E%3Crect width='3' height='4' fill='%23D3222A'/%3E%3C/svg%3E" alt="Muzza redonda en su caja">
+    </div>
+  </div>
+</section>
+
+<!-- HORARIO -->
+<section class="chalk py-16 md:py-24" style="border-top:2px solid rgba(241,237,226,.2)" aria-labelledby="horario">
+  <div class="max-w-3xl mx-auto px-5 md:px-8">
+    <h2 id="horario" class="anton rv" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05">Horario</h2>
+    <p id="hoy-texto" class="marker mt-3 text-2xl" style="color:var(--cinta)">Martes a domingo, de 20 a 00 h</p>
+    <div class="mt-8 rv" id="dias">
+      <div class="dia" data-d="2"><b>Martes</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia" data-d="3"><b>Miércoles</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia" data-d="4"><b>Jueves</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia" data-d="5"><b>Viernes</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia" data-d="6"><b>Sábado</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia" data-d="0"><b>Domingo</b><span class="tab">20:00 – 00:00</span></div>
+      <div class="dia cerrado" data-d="1"><b>Lunes</b><span>Cerrado</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DÓNDE -->
+<section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24" aria-labelledby="donde">
+  <div class="grid md:grid-cols-12 gap-10 items-start">
+    <div class="md:col-span-5 rv">
+      <h2 id="donde" class="anton" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05">Dónde estamos</h2>
+      <p class="mt-5 text-lg">Av. Batlle y Ordóñez esquina Francisco Aguilar, Maldonado.</p>
+      <p class="mt-3">Pizzería de barrio: hacemos pizza por metro, pizzetas, fainá y papas. Pasá por el local o pedí por WhatsApp.</p>
+      <p class="mt-3">Teléfono: <a href="tel:+59897415782" class="font-semibold underline" style="text-decoration-color:var(--tomate);text-decoration-thickness:3px">097 415 782</a></p>
+    </div>
+    <div class="md:col-span-7 rv">
+      <iframe title="Mapa de Pizzería La 22 en Maldonado" src="https://www.google.com/maps?q=Pizzeria%20La%2022%2C%20Av.%20Jos%C3%A9%20Batlle%20y%20Ordo%C3%B1ez%20esquina%20Francisco%20Aguilar%2C%20Maldonado%2C%20Uruguay&output=embed" loading="lazy" class="w-full border-0" style="height:360px;border:2px solid #181816" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="pedir" class="text-center px-5 py-20 md:py-32" style="background:var(--tomate);color:var(--tiza);min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center">
+  <p class="marker text-2xl md:text-3xl" style="transform:rotate(-2deg)">1 metro, 100 cm</p>
+  <h2 class="anton mt-4" style="font-size:clamp(2.6rem,9vw,7rem);line-height:1">Pedí tu metro</h2>
+  <p class="mt-5 max-w-md text-lg">Escribinos y decinos qué querés. Martes a domingo de 20 a 00 h.</p>
+  <a id="btn-final" class="btn btn-tiza mt-9" href="https://api.whatsapp.com/send?phone=59897415782&text=Hola%2C%20quiero%20pedir..." target="_blank" rel="noopener">Pedí por WhatsApp</a>
+</section>
+
+</main>
+
+<footer class="chalk py-12">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="anton text-2xl">Pizzería <span class="marker" style="color:var(--tomate)">La 22</span></p>
+      <p class="mt-2" style="color:var(--tiza-muted)">Pizza por metro en Maldonado.</p>
+    </div>
+    <div>
+      <p class="anton tracking-widest" style="color:var(--cinta)">Dirección</p>
+      <p class="mt-2">Av. Batlle y Ordóñez esquina Francisco Aguilar, Maldonado, Uruguay</p>
+      <p class="mt-2">Tel. <a href="tel:+59897415782" class="underline">097 415 782</a></p>
+    </div>
+    <div>
+      <p class="anton tracking-widest" style="color:var(--cinta)">Horario</p>
+      <p class="mt-2 tab">Martes a domingo · 20:00 – 00:00<br>Lunes cerrado</p>
+      <p class="mt-2" style="color:var(--tiza-muted)">5,0 en Google · 3 reseñas</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://api.whatsapp.com/send?phone=59897415782&text=Hola%2C%20quiero%20pedir..." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"
+   class="fixed bottom-5 right-5 z-50 rounded-full p-4 flex items-center gap-2" style="background:var(--tomate);color:var(--tiza);border:2px solid var(--tiza);min-height:56px;min-width:56px">
+  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.7a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200C2.100 6.400 6.500 2 12 2c2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.200c-.2.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span class="hidden md:inline anton tracking-wide">Escribinos</span>
+</a>
+
+<script>
+(function(){
+  // contador de centímetros: 0 arriba, 100 al llegar al botón final
+  var rel=document.getElementById('relleno'),cm=document.getElementById('cm'),fin=document.getElementById('btn-final');
+  function act(){
+    var meta=fin.getBoundingClientRect().bottom+window.scrollY-window.innerHeight+24;
+    var p=meta>0?Math.min(1,Math.max(0,window.scrollY/meta)):1;
+    rel.style.width=(p*100)+'%';cm.textContent=Math.round(p*100);
+  }
+  window.addEventListener('scroll',act,{passive:true});window.addEventListener('resize',act);act();
+
+  // día de hoy en hora de Uruguay
+  try{
+    var f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Montevideo',weekday:'short',hour:'numeric',hour12:false});
+    var parts=f.formatToParts(new Date()),wd=parts.filter(function(x){return x.type==='weekday'})[0].value;
+    var h=parseInt(parts.filter(function(x){return x.type==='hour'})[0].value,10)%24;
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6},d=map[wd];
+    var el=document.querySelector('.dia[data-d="'+d+'"]');if(el)el.classList.add('hoy');
+    var t=document.getElementById('hoy-texto');
+    if(d===1){t.textContent='Hoy cerramos, volvemos mañana';}
+    else if(h<20){t.textContent='Hoy abrimos a las 20:00';}
+    else{t.textContent='Hoy estamos abiertos hasta las 00:00';}
+  }catch(e){}
+
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+<script>
+(function(){var h=location.hostname,q='?demo='+(h.endsWith('.tortolanistudio.com')?h.split('.')[0]:location.pathname.split('/')[1]);
+fetch('/api/lugar'+q).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.fotos)return;
+document.querySelectorAll('[data-foto]').forEach(function(el){var i=el.getAttribute('data-foto'),f=d.fotos[+i];if(!f)return;
+if(el.tagName==='IMG'){el.src=f.src;el.removeAttribute('srcset');}else{el.style.backgroundImage='url("'+f.src+'")';}
+if(f.autor){if(el.tagName==='IMG'){el.alt=(el.alt?el.alt+'. ':'')+'Foto: '+f.autor;}else{el.setAttribute('role','img');el.setAttribute('aria-label','Foto: '+f.autor);}}});}).catch(function(){});})();
+</script>
+</body>
+</html>
