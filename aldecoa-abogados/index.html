@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aldecoa Abogados | Estudio jurídico en Maldonado</title>
   <meta name="description" content="Estudio jurídico y escribanía en Av. Córdoba esquina Dinamarca, Maldonado. Lun a vie de 10 a 20. 4,7 en Google con 321 reseñas. Consultá por WhatsApp.">
-  <meta name="theme-color" content="#22252A">
+  <meta name="theme-color" content="#1E2124">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_UY">
@@ -54,7 +54,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <script>document.documentElement.classList.add('js')</script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -63,16 +63,16 @@
       theme: {
         extend: {
           colors: {
-            carbon: '#22252A',
-            papel: '#F6F3EE',
-            papel2: '#ECE7DF',
+            carbon: '#1E2124',
+            piedra: '#EEF0EE',
+            piedra2: '#E3E6E3',
             miel: '#B5733A',
             cuaderno: '#3F6B4B',
-            linea: '#D9D2C7',
+            linea: '#CDD2CE',
           },
           fontFamily: {
             display: ['Jost', 'system-ui', 'sans-serif'],
-            body: ['Inter', 'system-ui', 'sans-serif'],
+            body: ['"Public Sans"', 'system-ui', 'sans-serif'],
           },
         },
       },
@@ -80,26 +80,28 @@
   </script>
   <style>
     :root {
-      --carbon: #22252A;
-      --carbon-2: #2B2F35;
-      --papel: #F6F3EE;
-      --papel-2: #ECE7DF;
+      --carbon: #1E2124;
+      --carbon-2: #282C30;
+      --piedra: #EEF0EE;
+      --piedra-2: #E3E6E3;
       --miel: #B5733A;
-      --miel-hover: #9E6231;
+      --miel-hover: #9C6230;
       --cuaderno: #3F6B4B;
-      --ink: #22252A;
-      --muted: #5B5D58;
-      --muted-dark: #A9A59E;
-      --linea: #D9D2C7;
-      --linea-dark: #3A3E45;
+      --cuaderno-claro: #8FBF9C;
+      --ink: #1E2124;
+      --muted: #535A5E;
+      --claro: #C6CBCB;
+      --muted-dark: #9AA1A4;
+      --linea: #CDD2CE;
+      --linea-dark: #363B40;
       --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Public Sans', system-ui, sans-serif;
       font-size: 16px;
       line-height: 1.6;
-      background: var(--papel);
+      background: var(--piedra);
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
     }
@@ -121,14 +123,10 @@
     .t-56 { font-size: 32px; }
     @media (min-width: 768px) { .t-56 { font-size: 56px; } }
 
-    .label {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 500;
-    }
+    .label { font-size: 14px; line-height: 1.4; color: var(--muted); }
     .on-dark .label { color: var(--muted-dark); }
+    .claro { color: var(--claro); }
+    .muted { color: var(--muted); }
 
     /* Wordmark del cartel: única excepción de tracking abierto */
     .wordmark {
@@ -138,7 +136,7 @@
       line-height: 1;
       font-size: clamp(2.5rem, 12vw, 6rem);
       margin-right: -0.32em;
-      text-wrap: nowrap;
+      white-space: nowrap;
     }
     .wordmark-sub {
       font-family: 'Jost', system-ui, sans-serif;
@@ -149,117 +147,115 @@
       color: var(--muted-dark);
     }
 
-    .filete { height: 1px; background: var(--miel); width: 48px; }
+    /* Placa del estudio: la chapa junto a la puerta */
+    .placa { border: 1px solid var(--miel); }
+    .placa-num {
+      font-family: 'Jost', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: .9;
+      letter-spacing: -0.02em;
+      font-size: clamp(2.5rem, 12vw, 6rem);
+      font-variant-numeric: lining-nums;
+    }
 
-    /* Foco visible */
-    a:focus-visible, button:focus-visible, summary:focus-visible {
-      outline: 2px solid var(--miel);
+    .filete { height: 1px; width: 48px; background: var(--linea); }
+    .on-dark .filete { background: var(--linea-dark); }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid currentColor;
       outline-offset: 3px;
     }
 
-    /* Botones */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: .625rem;
       min-height: 48px; padding: 0 1.5rem;
-      font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 15px;
-      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+      font-family: 'Public Sans', system-ui, sans-serif; font-weight: 500; font-size: 15px;
+      transition: background-color .2s ease;
       text-decoration: none;
     }
-    .btn-miel { background: var(--miel); color: #fff; }
+    .btn-miel { background: var(--miel); color: var(--piedra); }
     .btn-miel:hover { background: var(--miel-hover); }
-    .btn-line { border: 1px solid currentColor; }
-    .btn-line:hover { background: var(--carbon); color: var(--papel); border-color: var(--carbon); }
-    .on-dark .btn-line:hover { background: var(--papel); color: var(--carbon); border-color: var(--papel); }
 
     .link {
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 4px;
-      text-decoration-color: var(--miel);
+      text-decoration-color: var(--linea);
       transition: text-decoration-color .2s ease;
     }
+    .on-dark .link { text-decoration-color: #5A6066; }
     .link:hover { text-decoration-color: currentColor; }
 
     /* Estado en vivo */
-    .dot {
-      width: 8px; height: 8px; border-radius: 999px; display: inline-block; flex: none;
-      background: var(--muted-dark);
-    }
-    .dot.abierto { background: var(--cuaderno); box-shadow: 0 0 0 2px rgba(246,243,238,.28); }
-    .estado-claro.abierto-txt { color: var(--cuaderno); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; display: inline-block; flex: none; background: var(--muted-dark); }
+    .dot.abierto { background: var(--cuaderno); }
+    .on-dark .dot.abierto { background: var(--cuaderno-claro); }
+    .estado.abierto-txt { color: var(--cuaderno); }
+    .on-dark .estado.abierto-txt { color: var(--cuaderno-claro); }
 
     /* Acordeones */
-    .acc-panel {
-      display: grid;
-      grid-template-rows: 1fr;
-    }
-    .js .acc-panel {
-      grid-template-rows: 0fr;
-      visibility: hidden;
-      transition: grid-template-rows .4s var(--ease), visibility 0s linear .4s;
-    }
-    .js .acc-item.is-open .acc-panel {
-      grid-template-rows: 1fr;
-      visibility: visible;
-      transition: grid-template-rows .4s var(--ease), visibility 0s;
-    }
+    .acc-panel { display: grid; grid-template-rows: 1fr; }
+    .js .acc-panel { grid-template-rows: 0fr; visibility: hidden; }
+    .js .acc-item.is-open .acc-panel { grid-template-rows: 1fr; visibility: visible; }
     .acc-panel > div { overflow: hidden; }
-    .acc-icon { transition: transform .3s var(--ease); }
     .acc-item.is-open .acc-icon { transform: rotate(45deg); }
-    .acc-btn:hover .acc-title { color: var(--miel-hover); }
+    .acc-btn:hover .acc-title { color: var(--muted); }
 
     /* Galería */
     .foto { background: var(--carbon); }
-    .foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s var(--ease); }
-    .foto-btn:hover img { transform: scale(1.02); }
+    .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     dialog#lightbox {
       padding: 0; border: 0; background: transparent;
       max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh;
     }
-    dialog#lightbox::backdrop { background: rgba(34,37,42,.94); }
+    dialog#lightbox::backdrop { background: rgba(30,33,36,.95); }
     #lightbox .lb-frame { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 4.5rem 1rem 2rem; }
     #lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
     #lightbox img.recorte { width: min(100%, 1100px); aspect-ratio: 4 / 3; max-height: 100%; object-fit: cover; object-position: center 25%; }
 
-    /* Entradas suaves */
-    .js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .4s ease, transform .4s ease; }
-    .js .reveal.is-in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .js .reveal { transform: none; transition: opacity .2s linear; }
-      .acc-panel, .acc-icon, .foto img { transition: none !important; }
+    /* WhatsApp flotante: se oculta mientras un CTA principal está a la vista */
+    #wa-float { transition: background-color .2s ease; }
+    #wa-float.oculto { opacity: 0; pointer-events: none; transform: translateY(8px); }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+      .js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .4s ease, transform .4s ease; }
+      .js .reveal.is-in { opacity: 1; transform: none; }
+      .js .acc-panel { transition: grid-template-rows .4s var(--ease), visibility 0s linear .4s; }
+      .js .acc-item.is-open .acc-panel { transition: grid-template-rows .4s var(--ease), visibility 0s; }
+      .acc-icon { transition: transform .3s var(--ease); }
+      .foto img { transition: transform .6s var(--ease); }
+      .foto-btn:hover img { transform: scale(1.02); }
+      #wa-float { transition: background-color .2s ease, opacity .3s ease, transform .3s var(--ease); }
     }
 
     .skip { position: absolute; left: -9999px; top: 0; }
-    .skip:focus { left: 1rem; top: 1rem; z-index: 100; background: var(--papel); color: var(--carbon); padding: .75rem 1rem; }
-
-    #wa-float { box-shadow: 0 4px 24px rgba(0,0,0,.12); }
+    .skip:focus { left: 1rem; top: 1rem; z-index: 100; background: var(--piedra); color: var(--carbon); padding: .75rem 1rem; }
   </style>
 </head>
 <body>
   <a href="#contenido" class="skip">Saltar al contenido</a>
 
-  <!-- Encabezado -->
-  <header class="absolute top-0 inset-x-0 z-30 text-papel">
+  <header class="absolute top-0 inset-x-0 z-30 text-piedra">
     <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="display t-14 tracking-[0.2em] uppercase" aria-label="Aldecoa Abogados, inicio">Aldecoa</a>
+      <a href="#" class="display t-16" aria-label="Aldecoa Abogados, inicio">Aldecoa Abogados</a>
       <nav aria-label="Secciones" class="hidden md:flex items-center gap-8 t-14">
-        <a href="#areas" class="hover:text-white/70 transition-colors">Áreas</a>
-        <a href="#estudio" class="hover:text-white/70 transition-colors">El estudio</a>
-        <a href="#preguntas" class="hover:text-white/70 transition-colors">Preguntas</a>
-        <a href="#como-llegar" class="hover:text-white/70 transition-colors">Cómo llegar</a>
+        <a href="#areas" class="hover:text-[#C6CBCB] transition-colors">Áreas</a>
+        <a href="#estudio" class="hover:text-[#C6CBCB] transition-colors">El estudio</a>
+        <a href="#preguntas" class="hover:text-[#C6CBCB] transition-colors">Preguntas</a>
+        <a href="#como-llegar" class="hover:text-[#C6CBCB] transition-colors">Cómo llegar</a>
       </nav>
       <a href="tel:+59892140269" class="md:hidden t-14 min-h-[44px] inline-flex items-center">092 140 269</a>
     </div>
   </header>
 
   <main id="contenido">
-    <!-- Hero: la fachada y el cartel -->
-    <section aria-labelledby="titulo-hero" class="bg-carbon text-papel on-dark">
+    <!-- Hero: la fachada, el cartel y la placa -->
+    <section aria-labelledby="titulo-hero" class="bg-carbon text-piedra on-dark">
       <div class="relative w-full h-[52vh] min-h-[320px] md:h-[68vh] md:min-h-[480px] overflow-hidden foto">
         <img data-foto="1"
-             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E"
+             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E"
              alt="Fachada de Aldecoa Abogados con el cartel del estudio, en Av. Córdoba esquina Dinamarca"
              class="absolute inset-0 w-full h-full object-cover"
              fetchpriority="high" loading="eager">
@@ -267,8 +263,8 @@
       </div>
 
       <div class="max-w-6xl mx-auto px-5 md:px-8 pt-12 pb-16 md:pt-16 md:pb-24">
-        <div class="grid md:grid-cols-12 gap-12 md:gap-8 items-end">
-          <div class="md:col-span-8">
+        <div class="grid md:grid-cols-12 gap-12 md:gap-8">
+          <div class="md:col-span-7">
             <h1 id="titulo-hero">
               <span class="sr-only">Aldecoa Abogados, estudio jurídico en Maldonado</span>
               <span aria-hidden="true" class="block wordmark">Aldecoa</span>
@@ -278,35 +274,39 @@
             <div class="filete mt-10"></div>
 
             <p class="display t-32 mt-8 max-w-xl">Tu consulta legal empieza con un mensaje</p>
-            <p class="t-16 mt-4 max-w-lg text-[#CFCAC2]">Estudio jurídico con escribanía en Av. Córdoba esquina Dinamarca, Maldonado. Atendemos de lunes a viernes, de 10 a 20.</p>
+            <p class="t-16 mt-4 max-w-lg claro">Estudio jurídico con escribanía en Av. Córdoba esquina Dinamarca, Maldonado. Atendemos de lunes a viernes, de 10 a 20.</p>
 
-            <ul class="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2 t-14 text-[#CFCAC2]">
-              <li class="flex items-center gap-2.5">
-                <span class="dot" data-estado-dot aria-hidden="true"></span>
-                <span><span data-estado-txt>Lunes a viernes</span> · lun a vie 10 a 20</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <svg class="w-3.5 h-3.5 text-miel" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-                <span>4,7 en Google · 321 reseñas</span>
-              </li>
-            </ul>
+            <p class="mt-8 flex items-center gap-2.5 t-14 claro estado" data-estado>
+              <span class="dot" data-estado-dot aria-hidden="true"></span>
+              <span data-estado-txt>Lunes a viernes, de 10 a 20</span>
+            </p>
 
-            <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20el%20estudio."
-               target="_blank" rel="noopener" class="btn btn-miel mt-10 w-full sm:w-auto">
+            <a id="cta-hero" href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20el%20estudio."
+               target="_blank" rel="noopener" class="btn btn-miel mt-8 w-full sm:w-auto">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.02c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
               Escribinos por WhatsApp
             </a>
           </div>
 
-          <figure class="md:col-span-4 md:pl-6">
-            <div class="foto aspect-[4/3] w-full max-w-[320px] md:max-w-none overflow-hidden">
-              <img data-foto="3"
-                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%232B2F35'/%3E%3C/svg%3E"
-                   alt="Cartel de Aldecoa Abogados sobre la puerta del estudio"
-                   loading="lazy" width="640" height="480">
+          <div class="md:col-span-5 md:pl-6 flex flex-col gap-10">
+            <!-- Placa de la puerta: el único lugar donde la nota se destaca -->
+            <div class="placa p-6 md:p-8">
+              <p class="sr-only">4,7 sobre 5 en Google, con 321 reseñas.</p>
+              <p class="placa-num" aria-hidden="true">4,7</p>
+              <p class="t-16 mt-5" aria-hidden="true">321 reseñas en Google</p>
+              <a href="https://maps.google.com/?cid=10997322205072930264" target="_blank" rel="noopener" class="link t-14 claro mt-3 inline-flex items-center min-h-[44px]">Ver las reseñas en Google</a>
             </div>
-            <figcaption class="t-12 mt-3 text-[#A9A59E]">El cartel, en la esquina de Av. Córdoba y Dinamarca</figcaption>
-          </figure>
+
+            <figure>
+              <div class="foto aspect-[4/3] w-full max-w-[320px] md:max-w-[360px] overflow-hidden">
+                <img data-foto="3"
+                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%23282C30'/%3E%3C/svg%3E"
+                     alt="Cartel de Aldecoa Abogados sobre la puerta del estudio"
+                     loading="lazy" width="640" height="480">
+              </div>
+              <figcaption class="t-12 mt-3 text-[#9AA1A4]">El cartel, en la esquina de Av. Córdoba y Dinamarca</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -314,42 +314,36 @@
     <!-- Franja de datos -->
     <section aria-label="Datos del estudio" class="border-b border-linea">
       <div class="max-w-6xl mx-auto px-5 md:px-8">
-        <dl class="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 divide-linea">
-          <div class="py-8 lg:pr-8 sm:border-b lg:border-b-0 sm:border-linea">
+        <dl class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-linea">
+          <div class="py-5 md:pr-8">
             <dt class="label">Dónde</dt>
-            <dd class="t-16 mt-2">Av. Córdoba esquina Dinamarca, Maldonado</dd>
+            <dd class="t-16 mt-1.5">Av. Córdoba esquina Dinamarca, Maldonado</dd>
           </div>
-          <div class="py-8 sm:pl-8 sm:border-l sm:border-b lg:border-b-0 border-linea">
+          <div class="py-5 md:px-8">
             <dt class="label">Cuándo</dt>
-            <dd class="t-16 mt-2">Lunes a viernes, 10 a 20.<br><span class="text-[color:var(--muted)]">Sábado y domingo cerrado</span></dd>
-            <dd class="t-14 mt-2 flex items-center gap-2 estado-claro" data-estado-claro>
+            <dd class="t-16 mt-1.5">Lunes a viernes, 10 a 20. <span class="muted">Sábado y domingo cerrado.</span></dd>
+            <dd class="t-14 mt-1.5 flex items-center gap-2 estado" data-estado>
               <span class="dot" data-estado-dot aria-hidden="true"></span><span data-estado-txt></span>
             </dd>
           </div>
-          <div class="py-8 lg:pl-8 lg:border-l border-linea">
+          <div class="py-5 md:pl-8">
             <dt class="label">Cómo</dt>
-            <dd class="t-16 mt-2">WhatsApp <a class="link" href="https://wa.me/59892140269" target="_blank" rel="noopener">092 140 269</a></dd>
-            <dd class="t-14 mt-1 text-[color:var(--muted)]">Teléfono <a class="link" href="tel:+59899577191">099 577 191</a></dd>
-          </div>
-          <div class="py-8 sm:pl-8 sm:border-l border-linea">
-            <dt class="label">En Google</dt>
-            <dd class="t-16 mt-2">4,7 · 321 reseñas</dd>
+            <dd class="t-16 mt-1.5">WhatsApp <a class="link" href="https://wa.me/59892140269" target="_blank" rel="noopener">092 140 269</a></dd>
+            <dd class="t-14 mt-1 muted">Teléfono <a class="link" href="tel:+59899577191">099 577 191</a></dd>
           </div>
         </dl>
       </div>
     </section>
 
     <!-- Áreas de práctica -->
-    <section id="areas" aria-labelledby="titulo-areas" class="py-20 md:py-28">
+    <section id="areas" aria-labelledby="titulo-areas" class="py-24 md:py-36">
       <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-10 md:gap-8">
         <div class="md:col-span-4 reveal">
-          <p class="label">Áreas de práctica</p>
-          <h2 id="titulo-areas" class="t-56 mt-4">Áreas en las que trabajamos</h2>
-          <p class="t-16 mt-6 text-[color:var(--muted)] max-w-xs">Seis áreas en un mismo lugar. Elegí la tuya y el chat se abre con tu consulta armada.</p>
+          <h2 id="titulo-areas" class="t-56">Áreas en las que trabajamos</h2>
+          <p class="t-16 mt-6 muted max-w-xs">Seis áreas en un mismo lugar. Elegí la tuya y el chat se abre con tu consulta armada.</p>
         </div>
 
         <div class="md:col-span-8 border-t border-carbon reveal" data-acordeon>
-          <!-- 01 -->
           <div class="acc-item border-b border-linea is-open">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="true" aria-controls="area-1" id="area-1-btn">
@@ -362,12 +356,12 @@
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
                   <p class="t-16 max-w-md">Despidos, diferencias salariales y otras consultas del trabajo. Te escuchamos y vemos cómo seguir.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20laboral." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20laboral." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar un tema laboral&nbsp;→</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 02 -->
+
           <div class="acc-item border-b border-linea">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="false" aria-controls="area-2" id="area-2-btn">
@@ -379,13 +373,13 @@
             <div class="acc-panel" id="area-2" role="region" aria-labelledby="area-2-btn">
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
-                  <p class="t-16 max-w-md">Consultas penales y situaciones de violencia.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20penal." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <p class="t-16 max-w-md">Consultas penales y situaciones de violencia. Se atienden con reserva.</p>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20penal." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar un tema penal&nbsp;→</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 03 -->
+
           <div class="acc-item border-b border-linea">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="false" aria-controls="area-3" id="area-3-btn">
@@ -398,12 +392,12 @@
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
                   <p class="t-16 max-w-md">Si tuviste un accidente de tránsito, revisamos tu situación y el seguro.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20accidente%20de%20tr%C3%A1nsito." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20accidente%20de%20tr%C3%A1nsito." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar por un accidente&nbsp;→</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 04 -->
+
           <div class="acc-item border-b border-linea">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="false" aria-controls="area-4" id="area-4-btn">
@@ -416,12 +410,12 @@
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
                   <p class="t-16 max-w-md">Desalojos, deudas y contratos.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20civil%20(desalojo%2C%20deuda%20o%20contrato)." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20civil%20(desalojo%2C%20deuda%20o%20contrato)." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar un tema civil&nbsp;→</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 05 -->
+
           <div class="acc-item border-b border-linea">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="false" aria-controls="area-5" id="area-5-btn">
@@ -434,12 +428,12 @@
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
                   <p class="t-16 max-w-md">Asuntos de familia y sucesiones, explicados con claridad.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20de%20familia%20o%20sucesi%C3%B3n." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tema%20de%20familia%20o%20sucesi%C3%B3n." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar familia o sucesión&nbsp;→</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 06 -->
+
           <div class="acc-item border-b border-linea">
             <h3>
               <button class="acc-btn w-full flex items-baseline gap-5 md:gap-8 py-6 text-left" aria-expanded="false" aria-controls="area-6" id="area-6-btn">
@@ -452,7 +446,7 @@
               <div>
                 <div class="pl-[3.25rem] md:pl-16 pb-8 pr-2">
                   <p class="t-16 max-w-md">Trámites notariales en el mismo estudio.</p>
-                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tr%C3%A1mite%20de%20escriban%C3%ADa." target="_blank" rel="noopener" class="btn btn-line mt-5 t-14">Consultar por WhatsApp</a>
+                  <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20consultar%20por%20un%20tr%C3%A1mite%20de%20escriban%C3%ADa." target="_blank" rel="noopener" class="link t-16 mt-4 inline-flex items-center min-h-[44px]">Consultar un trámite de escribanía&nbsp;→</a>
                 </div>
               </div>
             </div>
@@ -461,66 +455,38 @@
       </div>
     </section>
 
-    <!-- Cómo empezar -->
-    <section aria-labelledby="titulo-pasos" class="bg-papel2 py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-5 md:px-8">
-        <div class="reveal max-w-xl">
-          <p class="label">Cómo empezar</p>
-          <h2 id="titulo-pasos" class="t-56 mt-4">Así empieza una consulta</h2>
-        </div>
-        <ol class="mt-14 grid md:grid-cols-3 border-t border-carbon reveal">
-          <li class="py-8 md:pr-10 border-b md:border-b-0 border-linea">
-            <span class="display t-32 text-miel tabular-nums">1</span>
-            <h3 class="t-20 mt-4">Escribinos por WhatsApp</h3>
-            <p class="t-16 mt-2 text-[color:var(--muted)]">Contanos en pocas líneas qué necesitás.</p>
-          </li>
-          <li class="py-8 md:px-10 md:border-l border-b md:border-b-0 border-linea">
-            <span class="display t-32 text-miel tabular-nums">2</span>
-            <h3 class="t-20 mt-4">Te respondemos en horario de atención</h3>
-            <p class="t-16 mt-2 text-[color:var(--muted)]">De lunes a viernes, de 10 a 20.</p>
-          </li>
-          <li class="py-8 md:pl-10 md:border-l border-linea">
-            <span class="display t-32 text-miel tabular-nums">3</span>
-            <h3 class="t-20 mt-4">Coordinamos la consulta</h3>
-            <p class="t-16 mt-2 text-[color:var(--muted)]">Te decimos cómo seguir.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
     <!-- El estudio -->
-    <section id="estudio" aria-labelledby="titulo-estudio" class="py-20 md:py-28">
+    <section id="estudio" aria-labelledby="titulo-estudio" class="bg-piedra2 py-24 md:py-36">
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="grid md:grid-cols-12 gap-8 items-end reveal">
           <div class="md:col-span-6">
-            <p class="label">El estudio</p>
-            <h2 id="titulo-estudio" class="t-56 mt-4">El estudio por dentro</h2>
+            <h2 id="titulo-estudio" class="t-56">El estudio por dentro</h2>
           </div>
-          <p class="md:col-span-5 md:col-start-8 t-16 text-[color:var(--muted)]">Aldecoa Abogados es un estudio jurídico con escribanía en Av. Córdoba esquina Dinamarca, Maldonado. Trabajamos seis áreas en un mismo lugar y atendemos de lunes a viernes, de 10 a 20. Consultanos por WhatsApp o por teléfono.</p>
+          <p class="md:col-span-5 md:col-start-8 t-16 muted">Aldecoa Abogados es un estudio jurídico con escribanía en Av. Córdoba esquina Dinamarca, Maldonado. Trabajamos seis áreas en un mismo lugar y atendemos de lunes a viernes, de 10 a 20. Consultanos por WhatsApp o por teléfono.</p>
         </div>
 
         <ul class="mt-12 grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-4 reveal" aria-label="Fotos del estudio">
           <li class="col-span-2 md:col-span-7 md:row-span-2">
             <button type="button" class="foto-btn foto block w-full h-full aspect-[4/3] md:aspect-auto md:min-h-[520px] overflow-hidden" data-lightbox aria-label="Ampliar foto: sala de espera del estudio">
-              <img data-foto="7" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E"
+              <img data-foto="7" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E"
                    alt="Sala de espera del estudio, con sillones blancos y cuadros" loading="lazy" width="1200" height="900">
             </button>
           </li>
           <li class="col-span-1 md:col-span-5">
             <button type="button" class="foto-btn foto block w-full aspect-square md:aspect-[4/3] overflow-hidden" data-lightbox aria-label="Ampliar foto: escritorio de madera con laptop">
-              <img data-foto="4" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E"
+              <img data-foto="4" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E"
                    alt="Escritorio de madera con laptop y estantería" loading="lazy" width="800" height="600">
             </button>
           </li>
           <li class="col-span-1 md:col-span-5">
             <button type="button" class="foto-btn foto block w-full aspect-square md:aspect-[4/3] overflow-hidden" data-lightbox aria-label="Ampliar foto: escritorio con una libreta verde">
-              <img data-foto="2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E"
+              <img data-foto="2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E"
                    alt="Escritorio de madera con una libreta verde" loading="lazy" width="800" height="600">
             </button>
           </li>
           <li class="col-span-2 md:col-span-12">
             <button type="button" class="foto-btn foto block w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden" data-lightbox data-recorte aria-label="Ampliar foto: mesa de trabajo del estudio">
-              <img data-foto="5" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E"
+              <img data-foto="5" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E"
                    alt="Mesa de trabajo del estudio" loading="lazy" width="1600" height="610" style="object-position: center 25%;">
             </button>
           </li>
@@ -528,106 +494,78 @@
       </div>
     </section>
 
-    <!-- Reseñas -->
-    <section aria-labelledby="titulo-resenas" class="border-y border-linea">
-      <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 grid md:grid-cols-12 gap-8 items-center reveal">
-        <div class="md:col-span-5">
-          <p class="label">Reseñas</p>
-          <h2 id="titulo-resenas" class="t-32 mt-4">Lo que dicen en Google</h2>
-        </div>
-        <div class="md:col-span-7 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-10 md:border-l md:border-linea md:pl-10">
-          <div>
-            <p class="display t-56 leading-none">4,7</p>
-            <div class="flex gap-1 mt-3 text-miel" aria-hidden="true">
-              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-              <svg class="w-4 h-4" viewBox="0 0 20 20"><defs><linearGradient id="media"><stop offset="70%" stop-color="currentColor"/><stop offset="70%" stop-color="#D9D2C7"/></linearGradient></defs><path fill="url(#media)" d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L10 14.9l-5.25 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>
-            </div>
-          </div>
-          <div class="sm:pb-1">
-            <p class="t-20">321 reseñas en Google</p>
-            <a href="https://maps.google.com/?cid=10997322205072930264" target="_blank" rel="noopener" class="link t-16 mt-2 inline-flex items-center min-h-[44px]">Ver las reseñas en Google</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Preguntas frecuentes -->
-    <section id="preguntas" aria-labelledby="titulo-faq" class="py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-10 md:gap-8">
+    <section id="preguntas" aria-labelledby="titulo-faq" class="py-12 md:py-16">
+      <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-8">
         <div class="md:col-span-4 reveal">
-          <p class="label">Antes de escribir</p>
-          <h2 id="titulo-faq" class="t-56 mt-4">Preguntas frecuentes</h2>
+          <h2 id="titulo-faq" class="t-32">Preguntas frecuentes</h2>
         </div>
         <div class="md:col-span-8 border-t border-carbon reveal" data-acordeon>
           <div class="acc-item border-b border-linea">
             <h3>
-              <button class="acc-btn w-full flex items-center gap-6 py-5 text-left min-h-[64px]" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
+              <button class="acc-btn w-full flex items-center gap-6 py-4 text-left min-h-[56px]" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
                 <span class="acc-title t-20 flex-1 transition-colors">¿Dónde están?</span>
                 <svg class="acc-icon w-4 h-4 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M8 1v14M1 8h14"/></svg>
               </button>
             </h3>
-            <div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p class="t-16 pb-6 pr-10 text-[color:var(--muted)]">En Av. Córdoba esquina Dinamarca, Maldonado.</p></div></div>
+            <div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p class="t-16 pb-5 pr-10 muted">En Av. Córdoba esquina Dinamarca, Maldonado.</p></div></div>
           </div>
           <div class="acc-item border-b border-linea">
             <h3>
-              <button class="acc-btn w-full flex items-center gap-6 py-5 text-left min-h-[64px]" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
+              <button class="acc-btn w-full flex items-center gap-6 py-4 text-left min-h-[56px]" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
                 <span class="acc-title t-20 flex-1 transition-colors">¿Qué horario tienen?</span>
                 <svg class="acc-icon w-4 h-4 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M8 1v14M1 8h14"/></svg>
               </button>
             </h3>
-            <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p class="t-16 pb-6 pr-10 text-[color:var(--muted)]">Lunes a viernes, de 10 a 20. Sábado y domingo el estudio está cerrado.</p></div></div>
+            <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p class="t-16 pb-5 pr-10 muted">Lunes a viernes, de 10 a 20. Sábado y domingo el estudio está cerrado.</p></div></div>
           </div>
           <div class="acc-item border-b border-linea">
             <h3>
-              <button class="acc-btn w-full flex items-center gap-6 py-5 text-left min-h-[64px]" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
+              <button class="acc-btn w-full flex items-center gap-6 py-4 text-left min-h-[56px]" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
                 <span class="acc-title t-20 flex-1 transition-colors">¿En qué áreas trabajan?</span>
                 <svg class="acc-icon w-4 h-4 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M8 1v14M1 8h14"/></svg>
               </button>
             </h3>
-            <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p class="t-16 pb-6 pr-10 text-[color:var(--muted)]">Laboral, penal y violencia, accidentes de tránsito (SOA), civil, familia y sucesiones, y escribanía.</p></div></div>
+            <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p class="t-16 pb-5 pr-10 muted">Laboral, penal y violencia, accidentes de tránsito (SOA), civil, familia y sucesiones, y escribanía.</p></div></div>
           </div>
           <div class="acc-item border-b border-linea">
             <h3>
-              <button class="acc-btn w-full flex items-center gap-6 py-5 text-left min-h-[64px]" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
+              <button class="acc-btn w-full flex items-center gap-6 py-4 text-left min-h-[56px]" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
                 <span class="acc-title t-20 flex-1 transition-colors">¿Hacen escribanía?</span>
                 <svg class="acc-icon w-4 h-4 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M8 1v14M1 8h14"/></svg>
               </button>
             </h3>
-            <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p class="t-16 pb-6 pr-10 text-[color:var(--muted)]">Sí, el estudio tiene escribanía.</p></div></div>
+            <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p class="t-16 pb-5 pr-10 muted">Sí, el estudio tiene escribanía.</p></div></div>
           </div>
           <div class="acc-item border-b border-linea">
             <h3>
-              <button class="acc-btn w-full flex items-center gap-6 py-5 text-left min-h-[64px]" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
+              <button class="acc-btn w-full flex items-center gap-6 py-4 text-left min-h-[56px]" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
                 <span class="acc-title t-20 flex-1 transition-colors">¿Cómo hago una consulta?</span>
                 <svg class="acc-icon w-4 h-4 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M8 1v14M1 8h14"/></svg>
               </button>
             </h3>
-            <div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p class="t-16 pb-6 pr-10 text-[color:var(--muted)]">Escribinos por WhatsApp al <a class="link text-carbon" href="https://wa.me/59892140269" target="_blank" rel="noopener">092 140 269</a> o llamá a ese número o al <a class="link text-carbon" href="tel:+59899577191">099 577 191</a>.</p></div></div>
+            <div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p class="t-16 pb-5 pr-10 muted">Escribinos por WhatsApp al <a class="link text-carbon" href="https://wa.me/59892140269" target="_blank" rel="noopener">092 140 269</a> o llamá a ese número o al <a class="link text-carbon" href="tel:+59899577191">099 577 191</a>.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Cómo llegar -->
-    <section id="como-llegar" aria-labelledby="titulo-llegar" class="bg-papel2">
-      <div class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-12 gap-10 md:gap-8 items-start">
+    <section id="como-llegar" aria-labelledby="titulo-llegar" class="bg-piedra2">
+      <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-12 gap-10 md:gap-8 items-start">
         <div class="md:col-span-4 reveal">
-          <p class="label">Ubicación</p>
-          <h2 id="titulo-llegar" class="t-56 mt-4">Cómo llegar al estudio</h2>
+          <h2 id="titulo-llegar" class="t-56">Cómo llegar al estudio</h2>
           <div class="filete mt-8"></div>
           <p class="display t-32 mt-8">Av. Córdoba esquina Dinamarca, Maldonado</p>
-          <p class="t-14 mt-4 text-[color:var(--muted)]">Lunes a viernes, de 10 a 20.</p>
-          <a href="https://maps.google.com/?cid=10997322205072930264" target="_blank" rel="noopener" class="btn btn-line mt-8 w-full sm:w-auto">Abrir en Google Maps</a>
+          <p class="t-14 mt-4 muted">Lunes a viernes, de 10 a 20.</p>
+          <a href="https://maps.google.com/?cid=10997322205072930264" target="_blank" rel="noopener" class="link t-16 mt-6 inline-flex items-center min-h-[44px]">Abrir en Google Maps&nbsp;→</a>
         </div>
         <div class="md:col-span-8 reveal">
-          <div class="aspect-[4/5] sm:aspect-[4/3] md:aspect-[16/11] w-full bg-papel border border-linea">
+          <div class="aspect-[4/5] sm:aspect-[4/3] md:aspect-[16/11] w-full bg-piedra border border-linea">
             <iframe
               src="https://www.google.com/maps?q=Aldecoa%20Abogados%20C%C3%B3rdoba%20esquina%2C%2020000%20Maldonado%2C%20Departamento%20de%20Maldonado%2C%20Uruguay&output=embed"
               title="Mapa: Aldecoa Abogados en Av. Córdoba esquina Dinamarca, Maldonado"
-              class="w-full h-full block border-0" style="filter: grayscale(.35) contrast(1.02);"
+              class="w-full h-full block border-0"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </div>
         </div>
@@ -635,15 +573,14 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" aria-labelledby="titulo-contacto" class="bg-carbon text-papel on-dark">
+    <section id="contacto" aria-labelledby="titulo-contacto" class="bg-carbon text-piedra on-dark">
       <div class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-12 gap-12 md:gap-8">
         <div class="md:col-span-7 reveal">
-          <p class="label">Contacto</p>
-          <h2 id="titulo-contacto" class="t-56 mt-4">Escribinos y coordinamos</h2>
-          <p class="t-16 mt-6 max-w-md text-[#CFCAC2]">Te respondemos en horario de atención, de lunes a viernes de 10 a 20.</p>
-          <a href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener"
+          <h2 id="titulo-contacto" class="t-56">Escribinos y coordinamos</h2>
+          <p class="t-16 mt-6 max-w-md claro">Escribinos por WhatsApp, te respondemos de lunes a viernes de 10 a 20 y coordinamos la consulta.</p>
+          <a id="cta-contacto" href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener"
              class="btn btn-miel mt-10 w-full sm:w-auto min-h-[60px] px-8 t-20">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.02c0-5.2 4.240-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.440-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.890-3.33-8.04z"/></svg>
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.260-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.02c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.960 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
             Escribinos por WhatsApp
           </a>
         </div>
@@ -651,8 +588,8 @@
           <div>
             <dt class="label">Teléfonos</dt>
             <dd class="t-20 mt-2 flex flex-col">
-              <a href="tel:+59892140269" class="min-h-[44px] inline-flex items-center hover:text-white/70 transition-colors">092 140 269</a>
-              <a href="tel:+59899577191" class="min-h-[44px] inline-flex items-center hover:text-white/70 transition-colors">099 577 191</a>
+              <a href="tel:+59892140269" class="min-h-[44px] inline-flex items-center hover:text-[#C6CBCB] transition-colors">092 140 269</a>
+              <a href="tel:+59899577191" class="min-h-[44px] inline-flex items-center hover:text-[#C6CBCB] transition-colors">099 577 191</a>
             </dd>
           </div>
           <div>
@@ -661,19 +598,18 @@
           </div>
           <div>
             <dt class="label">Ahora</dt>
-            <dd class="t-16 mt-2 flex items-center gap-2.5 text-[#CFCAC2]"><span class="dot" data-estado-dot aria-hidden="true"></span><span data-estado-txt>Lunes a viernes, de 10 a 20</span></dd>
+            <dd class="t-16 mt-2 flex items-center gap-2.5 claro estado" data-estado><span class="dot" data-estado-dot aria-hidden="true"></span><span data-estado-txt>Lunes a viernes, de 10 a 20</span></dd>
           </div>
         </dl>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-carbon text-[#CFCAC2] on-dark border-t border-[color:var(--linea-dark)]">
+  <footer class="bg-carbon text-[#C6CBCB] on-dark border-t border-[color:var(--linea-dark)]">
     <div class="max-w-6xl mx-auto px-5 md:px-8 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8 t-14">
       <div>
-        <p class="display t-20 text-papel tracking-[0.2em] uppercase">Aldecoa</p>
-        <p class="mt-1 t-12 tracking-[0.3em] uppercase">Abogados</p>
+        <p class="display t-20 text-piedra">Aldecoa Abogados</p>
+        <p class="mt-1">Estudio jurídico y escribanía</p>
       </div>
       <div>
         <p class="label">Dirección</p>
@@ -685,29 +621,27 @@
       </div>
       <div>
         <p class="label">Teléfonos</p>
-        <p class="mt-2"><a href="tel:+59892140269" class="hover:text-papel transition-colors">092 140 269</a> · <a href="tel:+59899577191" class="hover:text-papel transition-colors">099 577 191</a></p>
-        <p class="mt-1"><a href="https://www.instagram.com/aldecoa_abogados/" target="_blank" rel="noopener" class="hover:text-papel transition-colors">Instagram @aldecoa_abogados</a></p>
+        <p class="mt-2"><a href="tel:+59892140269" class="hover:text-piedra transition-colors">092 140 269</a> · <a href="tel:+59899577191" class="hover:text-piedra transition-colors">099 577 191</a></p>
+        <p class="mt-1"><a href="https://www.instagram.com/aldecoa_abogados/" target="_blank" rel="noopener" class="hover:text-piedra transition-colors">Instagram @aldecoa_abogados</a></p>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto px-5 md:px-8 pb-28 md:pb-10 t-12 text-[#A9A59E]">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 pb-28 md:pb-10 t-12 text-[#9AA1A4]">
       <p>© <span data-anio>2026</span> Aldecoa Abogados · Maldonado, Uruguay</p>
     </div>
   </footer>
 
-  <!-- WhatsApp flotante -->
   <a id="wa-float" href="https://wa.me/59892140269?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20el%20estudio."
-     class="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-miel hover:bg-[#9E6231] text-white rounded-full p-4 flex items-center gap-2 transition-colors"
+     class="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-miel hover:bg-[#9C6230] text-piedra rounded-full p-4 flex items-center gap-2"
      target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
-    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.480-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.02c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.02c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
     <span class="hidden md:inline text-sm font-medium pr-1">Escribinos</span>
   </a>
 
-  <!-- Lightbox -->
   <dialog id="lightbox" aria-label="Foto ampliada del estudio">
-    <button type="button" data-cerrar class="fixed top-4 right-4 z-10 w-11 h-11 flex items-center justify-center text-papel border border-white/30 hover:bg-white/10 transition-colors" aria-label="Cerrar foto">
+    <button type="button" data-cerrar class="fixed top-4 right-4 z-10 w-11 h-11 flex items-center justify-center text-piedra border border-[#585E64] hover:bg-[#282C30] transition-colors" aria-label="Cerrar foto">
       <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14"/></svg>
     </button>
-    <div class="lb-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%2322252A'/%3E%3C/svg%3E" alt="" data-lb-img></div>
+    <div class="lb-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%231E2124'/%3E%3C/svg%3E" alt="" data-lb-img></div>
   </dialog>
 
   <script>
@@ -724,17 +658,17 @@
     function estado() {
       var a = ahoraUY(), habil = a.dia >= 1 && a.dia <= 5;
       if (habil && a.min >= 600 && a.min < 1200) return { abierto: true, txt: 'Abierto ahora' };
-      if (habil && a.min < 600) return { abierto: false, txt: 'Cerrado · abre hoy a las 10:00' };
+      if (habil && a.min < 600) return { abierto: false, txt: 'Cerrado · abre hoy a las 10' };
       var sig = a.dia, n = 0;
       do { sig = (sig + 1) % 7; n++; } while (sig === 0 || sig === 6);
-      return { abierto: false, txt: 'Cerrado · abre ' + (n === 1 ? 'mañana' : 'el ' + DIAS[sig]) + ' a las 10:00' };
+      return { abierto: false, txt: 'Cerrado · abre ' + (n === 1 ? 'mañana' : 'el ' + DIAS[sig]) + ' a las 10' };
     }
     function pintar() {
       var e;
       try { e = estado(); } catch (err) { return; }
       document.querySelectorAll('[data-estado-txt]').forEach(function (el) { el.textContent = e.txt; });
       document.querySelectorAll('[data-estado-dot]').forEach(function (el) { el.classList.toggle('abierto', e.abierto); });
-      document.querySelectorAll('[data-estado-claro]').forEach(function (el) { el.classList.toggle('abierto-txt', e.abierto); });
+      document.querySelectorAll('[data-estado]').forEach(function (el) { el.classList.toggle('abierto-txt', e.abierto); });
     }
     pintar();
     setInterval(pintar, 60000);
@@ -758,7 +692,7 @@
       });
     });
 
-    /* Lightbox */
+    /* Lightbox: se abre con toque, se cierra con Esc o toque */
     var dlg = document.getElementById('lightbox');
     var lbImg = dlg.querySelector('[data-lb-img]');
     var origen = null;
@@ -772,9 +706,23 @@
         if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
       });
     });
-    function cerrar() { if (dlg.open) dlg.close(); }
-    dlg.addEventListener('click', cerrar);
+    dlg.addEventListener('click', function () { if (dlg.open) dlg.close(); });
     dlg.addEventListener('close', function () { if (origen) origen.focus(); });
+
+    /* Un solo CTA dominante: el flotante se oculta si el del hero o el de contacto está a la vista */
+    var flot = document.getElementById('wa-float');
+    var ctas = [document.getElementById('cta-hero'), document.getElementById('cta-contacto')];
+    if ('IntersectionObserver' in window && flot) {
+      var visibles = new Set();
+      var ioCta = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) { if (en.isIntersecting) visibles.add(en.target); else visibles.delete(en.target); });
+        var ocultar = visibles.size > 0;
+        flot.classList.toggle('oculto', ocultar);
+        if (ocultar) flot.setAttribute('tabindex', '-1'); else flot.removeAttribute('tabindex');
+        flot.setAttribute('aria-hidden', ocultar ? 'true' : 'false');
+      }, { threshold: 0 });
+      ctas.forEach(function (c) { if (c) ioCta.observe(c); });
+    }
 
     /* Entradas suaves */
     var rev = document.querySelectorAll('.reveal');
